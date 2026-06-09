@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soroi Blue Diani — Activities &amp; Excursions 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SOROI BLUE DIANI — ACTIVITIES & EXCURSIONS 2026
+   10 × A4 page boxes · Lions Bluff-inspired framed layout
+   ============================================================ */
+
+@page { size: A4; margin: 0; }
+
+:root {
+  --sand:      #F5EFE4;
+  --sand-deep: #EDE3D3;
+  --sand-line: #D6C9B4;
+  --ink:       #1E2A22;
+  --ink-mid:   #3D4F44;
+  --ink-lt:    #6B7D72;
+  --bronze:    #C4A265;
+  --cobalt:    #1b998b;
+  --white:     #FFFFFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+@media screen {
+  body { background: #5a5a5a; padding: 28px 0; }
+  .page, .apage { margin: 0 auto 20px; box-shadow: 0 6px 32px rgba(0,0,0,.45); }
+}
+@media print {
+  body { background: none; padding: 0; }
+  .page, .apage { margin: 0; page-break-after: always; }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: var(--ink-mid);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+img { display: block; }
+
+/* ── COVER & BACK PAGES ── */
+.page {
+  width: 210mm; height: 297mm;
+  overflow: hidden; position: relative;
+  background: var(--ink);
+}
+.page-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.page-grad-up {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top,
+    rgba(15,28,20,.90) 0%,
+    rgba(15,28,20,.38) 52%,
+    rgba(15,28,20,.18) 100%);
+}
+.page-grad-down {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(15,28,20,.55) 0%,
+    rgba(15,28,20,.12) 45%,
+    rgba(15,28,20,.60) 100%);
+}
+
+/* Cover content */
+.cover-logo-wrap {
+  position: absolute; top: 14mm; left: 0; right: 0;
+  text-align: center;
+}
+.cover-logo-wrap img {
+  width: 120px; margin: 0 auto;
+  filter: brightness(0) invert(1);
+  opacity: .92;
+}
+.cover-text {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0 16mm 20mm;
+}
+.cover-eyebrow {
+  font-family: 'Cinzel', serif; font-size: 9px;
+  letter-spacing: .32em; text-transform: uppercase;
+  color: rgba(196,162,101,.85); display: block; margin-bottom: 10px;
+}
+.cover-main {
+  font-family: 'Cinzel', serif; font-size: 54px;
+  font-weight: 400; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--white); display: block; line-height: 1.06;
+}
+.cover-main em { color: var(--cobalt); font-style: italic; }
+.cover-year {
+  font-family: 'Cinzel', serif; font-size: 13px;
+  letter-spacing: .34em; text-transform: uppercase;
+  color: rgba(196,162,101,.72); display: block;
+  margin-top: 13px; padding-top: 13px;
+  border-top: 1px solid rgba(196,162,101,.32);
+}
+
+/* Back page content */
+.back-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0 16mm 20mm;
+}
+.back-logo {
+  width: 110px; margin-bottom: 14px;
+  filter: brightness(0) invert(1); opacity: .88;
+}
+.back-tagline {
+  font-family: 'Cinzel', serif; font-size: 11.5px;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(196,162,101,.78); font-style: italic;
+  display: block; margin-bottom: 20px;
+}
+.back-rule { width: 36px; height: 1px; background: rgba(196,162,101,.45); margin-bottom: 18px; }
+.back-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.bc-label {
+  font-family: 'Cinzel', serif; font-size: 7.5px;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: rgba(196,162,101,.72); display: block; margin-bottom: 5px;
+}
+.bc-val { font-size: 12.5px; color: rgba(245,239,228,.78); line-height: 1.65; }
+
+/* ── ACTIVITY PAGES ── */
+.apage {
+  width: 210mm; height: 297mm; overflow: hidden;
+  background: var(--sand);
+  padding: 11mm; display: flex; flex-direction: column;
+}
+
+/* Bordered frame */
+.aframe {
+  border: 1px solid var(--sand-line);
+  flex: 1; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+
+/* Page header strip */
+.fhead {
+  padding: 5px 13px;
+  border-bottom: 1px solid var(--sand-line);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-shrink: 0;
+}
+.fhead-l {
+  font-family: 'Cinzel', serif; font-size: 7.5px;
+  letter-spacing: .26em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.fhead-r {
+  font-size: 7.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-lt);
+}
+
+/* Frame body */
+.fbody { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+
+/* ── FULL-PAGE SPLIT (image left · text right) ── */
+.asplit {
+  display: grid; grid-template-columns: 1.15fr 1fr;
+  flex: 1; overflow: hidden;
+}
+.asplit-img { overflow: hidden; }
+.asplit-img img { width: 100%; height: 100%; object-fit: cover; }
+.asplit-body {
+  padding: 11mm 10mm;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid var(--sand-line);
+}
+
+/* ── TWO-PER-PAGE ROWS ── */
+.aduo { flex: 1; overflow: hidden; display: grid; grid-template-rows: 1fr 1fr; }
+.arow { display: grid; grid-template-columns: 1.15fr 1fr; overflow: hidden; }
+.arow + .arow { border-top: 1px solid var(--sand-line); }
+.arow-img { overflow: hidden; }
+.arow-img img { width: 100%; height: 100%; object-fit: cover; }
+.arow-body {
+  padding: 8mm 8mm;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid var(--sand-line);
+}
+
+/* ── ACTIVITY TEXT — full page ── */
+.a-eyebrow {
+  font-family: 'Cinzel', serif; font-size: 8px;
+  letter-spacing: .30em; text-transform: uppercase;
+  color: var(--cobalt); display: block; margin-bottom: 8px;
+}
+.a-title {
+  font-family: 'Cinzel', serif; font-size: 22px;
+  color: var(--ink); line-height: 1.18;
+}
+.a-rule {
+  display: block; width: 28px; height: 1.5px;
+  background: var(--bronze); margin: 11px 0 14px;
+}
+.a-desc {
+  font-size: 13px; line-height: 1.86;
+  color: var(--ink-mid); flex: 1;
+}
+.a-desc p + p { margin-top: 11px; }
+.a-note {
+  font-size: 11.5px; color: var(--ink-lt);
+  font-style: italic; margin-top: 10px; line-height: 1.7;
+}
+.a-arrange {
+  margin-top: auto; padding-top: 11px;
+  border-top: 1px solid var(--sand-line);
+  flex-shrink: 0;
+}
+.a-arr-label {
+  font-family: 'Cinzel', serif; font-size: 7.5px;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--bronze); display: block; margin-bottom: 5px;
+}
+.a-arr-val { font-size: 12px; color: var(--ink-lt); line-height: 1.64; }
+
+/* ── ACTIVITY TEXT — two-up (compact) ── */
+.arow-body .a-eyebrow { font-size: 7.5px; margin-bottom: 5px; }
+.arow-body .a-title { font-size: 17px; }
+.arow-body .a-rule { margin: 7px 0 9px; width: 22px; }
+.arow-body .a-desc { font-size: 12px; line-height: 1.78; }
+.arow-body .a-note { font-size: 11px; margin-top: 7px; }
+.arow-body .a-arrange { padding-top: 8px; }
+.arow-body .a-arr-val { font-size: 11px; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 1 — COVER
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <img class="page-bg" src="images/aerial.jpg" alt="Soroi Blue Diani from above">
+  <div class="page-grad-up"></div>
+  <div class="cover-logo-wrap">
+    <img src="images/soroi-blue-logo.png" alt="Soroi Blue Diani">
+  </div>
+  <div class="cover-text">
+    <span class="cover-eyebrow">Diani Beach &nbsp;·&nbsp; Kenya's South Coast</span>
+    <span class="cover-main">Activities <em>&amp;</em><br>Excursions</span>
+    <span class="cover-year">Soroi Blue Diani &nbsp;·&nbsp; 2026</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 2 — DIVING & SNORKELLING
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">At the Coast</span>
+    </div>
+    <div class="fbody">
+      <div class="asplit">
+        <div class="asplit-img">
+          <img src="images/snorkeling.jpeg" alt="Diving &amp; Snorkelling at Diani reef">
+        </div>
+        <div class="asplit-body">
+          <span class="a-eyebrow">Signature Experience</span>
+          <span class="a-title">Diving &amp;<br>Snorkelling</span>
+          <span class="a-rule"></span>
+          <div class="a-desc">
+            <p>Kenya's south coast reef is one of the most varied in East Africa — warm, clear, and alive year-round. The fringing reef stretches the full length of Diani Beach, making snorkelling directly off the sand a remarkable experience even for first-timers.</p>
+            <p>For a deeper encounter, Kisite-Mpunguti Marine National Park lies 45 minutes south by boat — one of the most biodiverse marine environments in the Indian Ocean. PADI-certified dive operators work out of Diani daily. Beginner courses and guided reef dives are available subject to conditions. The reef is healthiest and most colourful between October and March, though rewarding throughout the year.</p>
+            <p class="a-note">Ask reception for current dive operators, snorkelling conditions, and the best tides to go.</p>
+          </div>
+          <div class="a-arrange">
+            <span class="a-arr-label">Arrangements</span>
+            <span class="a-arr-val">Arranged through our concierge team. Equipment and guides provided by operators. Rates on request.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 3 — DEEP SEA FISHING
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">At the Coast</span>
+    </div>
+    <div class="fbody">
+      <div class="asplit">
+        <div class="asplit-img">
+          <img src="images/deep-sea-fishing.png" alt="Deep sea fishing in the Indian Ocean">
+        </div>
+        <div class="asplit-body">
+          <span class="a-eyebrow">Sport Fishing</span>
+          <span class="a-title">Deep Sea<br>Fishing</span>
+          <span class="a-rule"></span>
+          <div class="a-desc">
+            <p>The Indian Ocean off Diani is among Kenya's most productive deep-sea fishing grounds. Tuna, marlin, sailfish, and wahoo are regularly landed from these waters — with peak season for large billfish running from October through March.</p>
+            <p>Half-day and full-day charters depart from the beach with experienced captains and all tackle provided. Catch-and-release is encouraged and available on all trips. Whether you are a seasoned angler or stepping onto a charter for the first time, an early morning on the open ocean here is a pursuit worth making time for.</p>
+            <p class="a-note">Half-day charters typically depart 06:30 and return by midday. Full-day departures available on request.</p>
+          </div>
+          <div class="a-arrange">
+            <span class="a-arr-label">Arrangements</span>
+            <span class="a-arr-val">Half-day and full-day charters. All tackle and equipment provided. Arranged through our concierge — rates on request.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 4 — WHALE SHARKS & DOLPHINS · GLASS BOTTOM BOAT
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">At the Coast</span>
+    </div>
+    <div class="fbody">
+      <div class="aduo">
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/whale-shark.jpg" alt="Whale shark encounter off Diani">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Open Water Encounters</span>
+            <span class="a-title">Whale Sharks &amp; Dolphins</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Whale sharks visit Kenya's south coast seasonally — gentle giants in open water, an encounter few people ever forget. Spinner and bottlenose dolphins are resident year-round and frequently encountered on offshore trips. Conditions and sightings vary — the team will advise on current activity before you book.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Seasonal — ask our concierge for current conditions. Rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/glass-boat.jpg" alt="Glass bottom dhow reef tour">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Reef Discovery</span>
+            <span class="a-title">Glass Bottom Boat</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">A traditional dhow fitted with a glass hull panel — a gentle, captivating way to explore the Diani reef without getting wet. Coral gardens, sea turtles, and shoals of reef fish are visible directly beneath the boat. Perfect for children, non-swimmers, or anyone who simply wants to watch. Sunset dhow sailings also available.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Morning and sunset departures available. Arranged through our concierge — rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 5 — SKYDIVING
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">Adventure</span>
+    </div>
+    <div class="fbody">
+      <div class="asplit">
+        <div class="asplit-img">
+          <img src="images/skydive-diani.jpeg" alt="Skydiving over Diani Beach">
+        </div>
+        <div class="asplit-body">
+          <span class="a-eyebrow">Extraordinary Adventure</span>
+          <span class="a-title">Skydiving over the Ocean</span>
+          <span class="a-rule"></span>
+          <div class="a-desc">
+            <p>Diani is one of a very small number of places in Africa where you can freefall over a beach — the Indian Ocean stretching to the horizon, the reef clearly visible from altitude, the coastline curving away in both directions below you.</p>
+            <p>Tandem jumps operate from Ukunda Airstrip, just minutes from Soroi Blue. No experience is required. A brief ground training session is followed by the flight to altitude and a freefall descent over the coast. The landing is on the sand.</p>
+            <p>Whether it is on your list or not, this is one of those experiences that stays with you. Widely regarded as one of East Africa's most spectacular skydiving locations.</p>
+          </div>
+          <div class="a-arrange">
+            <span class="a-arr-label">Arrangements</span>
+            <span class="a-arr-val">Tandem jumps — no prior experience required. Departs from Ukunda Airstrip. Arranged through our concierge — rates on request.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 6 — WASINI ISLAND & KISITE
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">Day Trips</span>
+    </div>
+    <div class="fbody">
+      <div class="asplit">
+        <div class="asplit-img">
+          <img src="images/wasini-dolphins.jpg" alt="Wasini Island and Kisite Marine Park">
+        </div>
+        <div class="asplit-body">
+          <span class="a-eyebrow">Signature Day Trip</span>
+          <span class="a-title">Wasini Island &amp; Kisite</span>
+          <span class="a-rule"></span>
+          <div class="a-desc">
+            <p>The most celebrated full-day excursion from Diani. A traditional dhow departs in the early morning heading south to Kisite-Mpunguti Marine National Park — one of the finest snorkelling sites on the African coast. Dolphins are frequently encountered in open water on the crossing.</p>
+            <p>After a morning on the reef, the dhow sails to Wasini Island — a tiny, car-free Swahili settlement where lunch is served on a shaded terrace above the sea. Freshly caught seafood, crab, coconut rice, and the unhurried flavours of the coast. The return journey brings you back as the afternoon light turns gold.</p>
+            <p class="a-note">Full day. Departs early morning, returns mid-afternoon. Lunch included.</p>
+          </div>
+          <div class="a-arrange">
+            <span class="a-arr-label">Arrangements</span>
+            <span class="a-arr-val">Full-day excursion including lunch and snorkelling equipment. Arranged through our concierge — rates on request.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 7 — SHIMBA HILLS · FORT JESUS & OLD TOWN
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">Day Trips</span>
+    </div>
+    <div class="fbody">
+      <div class="aduo">
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/shimba-hills.jpg" alt="Shimba Hills National Reserve">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">National Reserve</span>
+            <span class="a-title">Shimba Hills</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Forty minutes inland lies a lush forested plateau — a completely different landscape from the coast. Shimba Hills is home to forest elephants, the rare roan antelope, sable, and an extraordinary range of coastal forest birds. The Sheldrick Falls hike is the highlight: a guided walk through indigenous forest to a beautiful waterfall deep in the reserve.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Half-day or full-day. Private vehicle and guide. Arranged through our concierge — rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/fort-jesus-mombasa.jpg" alt="Fort Jesus, Mombasa Old Town">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">UNESCO World Heritage Site</span>
+            <span class="a-title">Fort Jesus &amp; Old Town</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Built by the Portuguese in 1593 at the edge of Mombasa's Old Town, Fort Jesus is one of the most significant monuments on the East African coast. The Old Town surrounding it is a living network of carved Swahili doorways, spice traders, and layered history best explored on foot with a local guide. One of Kenya's most rewarding cultural visits.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Full day. Private transfer from Soroi Blue. Guided tour available. Arranged through our concierge — rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 8 — SEA TURTLE CONSERVATION · COLOBUS CONSERVATION
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">Nature &amp; Conservation</span>
+    </div>
+    <div class="fbody">
+      <div class="aduo">
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/turtle-hatchery.jpeg" alt="Sea turtle conservation hatchery Diani">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Marine Conservation</span>
+            <span class="a-title">Sea Turtle Conservation</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Fifteen minutes south along the coast, this working turtle hatchery supports nesting sea turtles along the Diani shoreline. Visits include a guided tour of the hatchery and — during nesting season — the possibility of seeing eggs or hatchlings up close. A meaningful and memorable visit for guests of any age, directly connected to the health of the reef.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">15 minutes from Soroi Blue. Our concierge can arrange transport — rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/colobus-monkey.jpg" alt="Colobus monkey in the Diani forest">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Forest Wildlife</span>
+            <span class="a-title">Colobus Conservation</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">The Diani coastal forest is one of the last habitats of the black-and-white colobus monkey — one of Kenya's rarest primates. Colobus Conservation runs guided forest walks and offers close encounters with resident troops. The centre also rehabilitates other coastal wildlife. A short, rewarding visit that connects guests directly to local conservation work happening on this stretch of coast.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Short drive from Soroi Blue. Walkable for the adventurous. Arranged through our concierge — rates on request.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 9 — YOGA & WELLNESS · GOLF
+     ════════════════════════════════════════════════════════════ -->
+<div class="apage">
+  <div class="aframe">
+    <div class="fhead">
+      <span class="fhead-l">Soroi Blue Diani &nbsp;·&nbsp; Activities &amp; Excursions</span>
+      <span class="fhead-r">On Property &amp; Nearby</span>
+    </div>
+    <div class="fbody">
+      <div class="aduo">
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/yoga.png" alt="Yoga at Soroi Blue Diani">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Wellness</span>
+            <span class="a-title">Yoga &amp; Beach Wellness</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Complimentary yoga mats are available for all guests. Practice on the beach, in the garden, or from your room at your own pace — the early mornings here, before the heat builds and the beach fills, are a remarkable time to be outside. Private guided sessions can be arranged on request through the hospitality desk.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">Yoga mats complimentary — request from reception. Private guided sessions available on request.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arow">
+          <div class="arow-img">
+            <img src="images/golf.jpg" alt="Golf at Leisure Golf Club Diani">
+          </div>
+          <div class="arow-body">
+            <span class="a-eyebrow">Sport</span>
+            <span class="a-title">Golf at Diani</span>
+            <span class="a-rule"></span>
+            <p class="a-desc">Leisure Golf Club Diani offers a scenic 9-hole course with sweeping Indian Ocean views — a relaxed, beautiful game in a setting that is hard to match. Equipment hire is available on-site and the course is playable year-round. Ten minutes from Soroi Blue. A gentle morning round or a sunset game as the light softens over the water.</p>
+            <div class="a-arrange">
+              <span class="a-arr-label">Arrangements</span>
+              <span class="a-arr-val">10 minutes from Soroi Blue. Equipment hire available at the club. Our concierge can arrange transport.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 10 — BACK / CONTACT
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <img class="page-bg" src="images/pool-night.jpg" alt="Soroi Blue Diani at night">
+  <div class="page-grad-down"></div>
+  <div class="back-content">
+    <img class="back-logo" src="images/soroi-blue-logo.png" alt="Soroi Blue Diani">
+    <span class="back-tagline">A Different Kind of Wild</span>
+    <div class="back-rule"></div>
+    <div class="back-grid">
+      <div>
+        <span class="bc-label">Concierge</span>
+        <span class="bc-val">Dial 0 from your room<br>Available 07:00 – 21:00 daily</span>
+      </div>
+      <div>
+        <span class="bc-label">WhatsApp &amp; Phone</span>
+        <span class="bc-val">+254 738 537 093<br>24-hour line</span>
+      </div>
+      <div>
+        <span class="bc-label">Email &amp; Web</span>
+        <span class="bc-val">reservations@soroi.com<br>www.soroicollection.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

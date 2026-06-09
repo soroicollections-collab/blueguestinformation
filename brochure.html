@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soroi Blue Diani — Guest Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SOROI BLUE DIANI — GUEST GUIDE
+   14 × A4 page boxes · Editorial / magazine aesthetic
+   No white card boxes — typography and photography only
+   ============================================================ */
+
+@page { size: A4; margin: 0; }
+
+:root {
+  --sand:      #F5EFE4;
+  --sand-deep: #EDE3D3;
+  --sand-line: #D6C9B4;
+  --ink:       #1E2A22;
+  --ink-mid:   #3D4F44;
+  --ink-lt:    #6B7D72;
+  --bronze:    #C4A265;
+  --cobalt:    #1b998b;
+  --white:     #FFFFFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+@media screen {
+  body { background: #5a5a5a; padding: 28px 0; }
+  .page { margin: 0 auto 20px; box-shadow: 0 6px 32px rgba(0,0,0,.45); }
+}
+@media print {
+  body { background: none; padding: 0; }
+  .page { margin: 0; page-break-after: always; }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: var(--ink-mid);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── CORE PAGE BOX ── */
+.page { width: 210mm; height: 297mm; overflow: hidden; position: relative; background: var(--sand); }
+
+/* ── INNER PADDED COLUMN ── */
+.pi { width: 210mm; height: 297mm; padding: 14mm 18mm; box-sizing: border-box; display: flex; flex-direction: column; }
+
+/* ── TYPOGRAPHY ── */
+h2 { font-family:'Cinzel',serif; font-size:27px; font-weight:400; letter-spacing:.05em; line-height:1.12; color:var(--ink); }
+h3 { font-family:'Cinzel',serif; font-size:12.5px; font-weight:500; letter-spacing:.13em; text-transform:uppercase; color:var(--ink); }
+h4 { font-family:'Cinzel',serif; font-size:10.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--ink); }
+h5 { font-family:'Cinzel',serif; font-size:8.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-lt); }
+p  { font-size:15px; line-height:1.88; color:var(--ink-mid); font-weight:300; }
+ul { list-style:none; }
+img { display:block; }
+strong { font-weight:500; }
+.cobalt-i { font-style:italic; color:var(--cobalt); }
+
+.eyebrow {
+  font-family:'Cinzel',serif; font-size:9px;
+  letter-spacing:.34em; text-transform:uppercase;
+  color:var(--bronze); display:block; margin-bottom:8px;
+}
+.rule { display:block; height:1px; background:var(--bronze); width:36px; margin:13px 0 20px; }
+
+/* ── SECTION RULES ── */
+.h-rule { height:1px; background:var(--sand-line); margin:18px 0; flex-shrink:0; }
+.h-rule-cobalt { height:1px; background:var(--cobalt); margin:18px 0; opacity:.35; flex-shrink:0; }
+
+/* ============================================================
+   COVER PAGES (1 & 14)
+   ============================================================ */
+.page-cover img.cover-bg { display:block; width:210mm; height:297mm; object-fit:cover; }
+.cover-grad { position:absolute; inset:0; background:linear-gradient(to top,rgba(15,28,20,.78) 0%,rgba(15,28,20,.2) 55%,transparent 100%); }
+.cover-text { position:absolute; top:37%; left:0; right:0; text-align:center; padding:0 18mm; }
+.cover-main { font-family:'Cinzel',serif; font-size:56px; font-weight:400; letter-spacing:.22em; text-transform:uppercase; color:var(--white); display:block; line-height:1.08; text-shadow:0 2px 20px rgba(0,0,0,.5); }
+.cover-sub  { font-family:'Cinzel',serif; font-size:23px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--cobalt); display:block; margin-top:8px; }
+.cover-tag  { font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(245,239,228,.58); display:block; margin-top:14px; }
+.back-foot  { position:absolute; bottom:0; left:0; right:0; padding:0 14mm 13mm; }
+.back-rule  { width:28px; height:1px; background:rgba(196,162,101,.6); margin-bottom:11px; }
+.back-prop  { font-family:'Cinzel',serif; font-size:14px; letter-spacing:.26em; text-transform:uppercase; color:rgba(245,239,228,.92); margin-bottom:4px; }
+.back-tagline { font-family:'Cinzel',serif; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:rgba(196,162,101,.75); margin-bottom:11px; font-style:italic; }
+.back-addr  { font-size:12px; color:rgba(245,239,228,.52); margin-bottom:9px; }
+.back-web   { font-family:'Cinzel',serif; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--bronze); }
+
+/* ============================================================
+   PAGE 2 — WELCOME
+   ============================================================ */
+.welcome-top { text-align:center; padding-bottom:15px; border-bottom:1px solid var(--sand-line); margin-bottom:15px; flex-shrink:0; }
+.welcome-logo { width:165px; margin:0 auto 12px; }
+.welcome-wild { font-family:'Cinzel',serif; font-size:22px; letter-spacing:.1em; text-transform:uppercase; color:var(--cobalt); display:block; margin-bottom:6px; }
+.welcome-sub  { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-lt); }
+.welcome-body p { font-size:14.5px; line-height:1.84; }
+.welcome-body p+p { margin-top:9px; }
+
+/* ============================================================
+   PAGE 3 — ESSENTIALS (editorial — no white boxes)
+   ============================================================ */
+.ess-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; flex-shrink:0; }
+.ess-item { padding:14px 18px 14px 0; border-top:2px solid var(--cobalt); }
+.ess-item:nth-child(even) { padding-left:18px; padding-right:0; border-left:1px solid var(--sand-line); }
+.ess-item h4 { color:var(--cobalt); margin-bottom:7px; }
+.ess-item p  { font-size:13.5px; line-height:1.75; }
+.am-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:18px; flex-shrink:0; }
+.am-item { padding:12px 14px 12px 0; border-top:1px solid var(--sand-line); }
+.am-item:nth-child(3n+2) { padding-left:14px; border-left:1px solid var(--sand-line); }
+.am-item:nth-child(3n+3) { padding-left:14px; border-left:1px solid var(--sand-line); }
+.am-item h5 { color:var(--bronze); margin-bottom:4px; }
+.am-item p  { font-size:12.5px; line-height:1.62; }
+
+/* ============================================================
+   PAGE 4 — DINING
+   ============================================================ */
+.dining-cols { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:16px; flex-shrink:0; }
+.dining-col h3 { color:var(--cobalt); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--sand-line); }
+.mi h4 { color:var(--ink); margin-bottom:3px; }
+.mi p  { font-size:13.5px; line-height:1.72; }
+.mi+.mi { margin-top:12px; border-top:1px solid var(--sand-line); padding-top:12px; }
+.billing { border-top:2px solid var(--bronze); padding-top:14px; margin-top:16px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; flex-shrink:0; }
+.bi h5 { color:var(--bronze); margin-bottom:5px; }
+.bi p  { font-size:13.5px; line-height:1.72; }
+
+/* ============================================================
+   PAGE 5 — POOL & BEACH
+   ============================================================ */
+.beach-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; flex-shrink:0; }
+.bch-head { font-family:'Cinzel',serif; font-size:13px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--ink); margin:12px 0 7px; }
+.ibr { display:flex; justify-content:space-between; border-bottom:1px solid var(--sand-line); padding:6px 0; font-size:13px; }
+.ibr-l { color:var(--ink-lt); }
+.ibr-v { color:var(--ink); font-weight:400; }
+.temp-row { display:flex; gap:10px; margin-top:11px; }
+.temp-b { background:var(--cobalt); padding:9px 16px; text-align:center; }
+.temp-v { font-family:'Cinzel',serif; font-size:15px; color:var(--white); display:block; }
+.temp-l { font-size:8px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.68); display:block; margin-top:2px; }
+.env-block { margin-top:18px; padding-top:18px; border-top:1px solid var(--sand-line); flex:1; display:flex; flex-direction:column; min-height:0; }
+.env-block h3 { margin-bottom:13px; flex-shrink:0; }
+.env-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; flex:1; }
+.env-item { padding:0 16px 0 0; border-left:2px solid var(--sand-line); padding-left:14px; }
+.env-item:first-child { border-left:none; padding-left:0; }
+.env-item h4 { color:var(--cobalt); margin-bottom:7px; }
+.env-item p  { font-size:13px; line-height:1.72; }
+.beach-notice { border-left:3px solid var(--bronze); padding:11px 16px; margin-top:14px; flex-shrink:0; }
+.beach-notice p { font-size:13.5px; }
+
+/* ============================================================
+   PAGE 6 — SPA (already editorial — thin rules)
+   ============================================================ */
+.spa-lead { font-size:14px; line-height:1.82; flex-shrink:0; margin-bottom:20px; }
+.spa-cat { margin-bottom:14px; flex-shrink:0; }
+.spa-ch { display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--sand-line); padding-bottom:10px; margin-bottom:5px; }
+.spa-dot { width:5px; height:5px; border-radius:50%; background:var(--cobalt); flex-shrink:0; }
+.spa-ch h3 { font-size:11px; }
+.spa-row { display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:center; padding:8px 0; border-bottom:1px solid var(--sand-line); }
+.spa-row.nd { grid-template-columns:1fr auto; }
+.spa-n { font-family:'Cinzel',serif; font-size:12.5px; color:var(--ink); display:block; margin-bottom:2px; }
+.spa-d { font-size:11px; color:var(--ink-lt); }
+.spa-t { font-family:'Cinzel',serif; font-size:11px; color:var(--ink-lt); white-space:nowrap; }
+.spa-p { font-family:'Cinzel',serif; font-size:12.5px; color:var(--ink); white-space:nowrap; }
+.spa-foot { margin-top:14px; border-left:2px solid var(--bronze); padding:10px 14px; }
+.spa-foot p { font-size:12px; color:var(--ink-lt); font-style:italic; }
+
+/* ============================================================
+   PAGES 7–9 — EXPLORE
+   ============================================================ */
+.cat-band { display:flex; align-items:baseline; gap:12px; padding-bottom:9px; border-bottom:2px solid var(--ink); margin-bottom:14px; flex-shrink:0; }
+.cat-num   { font-family:'Cinzel',serif; font-size:9px; letter-spacing:.3em; text-transform:uppercase; color:var(--cobalt); }
+.cat-title { font-family:'Cinzel',serif; font-size:22px; color:var(--ink); }
+
+/* Feature split — hero layout */
+.feat { display:grid; grid-template-columns:1.55fr 1fr; flex-shrink:0; overflow:hidden; }
+.feat-panel { background:var(--cobalt); padding:10mm 8mm; display:flex; flex-direction:column; justify-content:center; }
+.feat-lbl { font-family:'Cinzel',serif; font-size:8px; letter-spacing:.28em; text-transform:uppercase; color:rgba(196,162,101,.85); display:block; margin-bottom:10px; }
+.feat-panel h3 { color:var(--white); font-size:16px; margin-bottom:11px; }
+.feat-panel p  { font-size:13.5px; color:rgba(233,245,255,.84); line-height:1.78; }
+.feat-note { font-size:11px; color:rgba(255,255,255,.5); font-style:italic; margin-top:13px; padding-top:10px; border-top:1px solid rgba(255,255,255,.18); }
+
+/* Activity grid */
+.act-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; flex-shrink:0; }
+.act-grid+.act-grid { margin-top:4mm; }
+.act-card { background:var(--sand); }
+.act-info { padding:10px 12px; border-top:2px solid var(--cobalt); }
+.act-name { font-family:'Cinzel',serif; font-size:12px; color:var(--ink); display:block; margin-bottom:3px; }
+.act-note { font-size:12.5px; line-height:1.65; }
+
+/* Nature split */
+.nature-split { display:grid; grid-template-columns:1fr 1fr; flex:1; min-height:0; overflow:hidden; margin-top:4mm; }
+.nat-list { padding:0 0 0 18px; overflow:hidden; }
+.nat-item { padding:11px 0; border-bottom:1px solid var(--sand-line); }
+.nat-item:first-child { padding-top:4px; }
+.nat-item h4 { color:var(--cobalt); margin-bottom:4px; }
+.nat-item p  { font-size:13px; line-height:1.68; }
+
+/* Trip grid */
+.trip-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; flex-shrink:0; }
+.trip-grid+.trip-grid { margin-top:4mm; }
+.trip-card { background:var(--sand); }
+.trip-info { padding:10px 12px; border-top:2px solid var(--cobalt); }
+.trip-name { font-family:'Cinzel',serif; font-size:12px; color:var(--ink); display:block; margin-bottom:3px; }
+.trip-note { font-size:12.5px; line-height:1.65; }
+
+/* ============================================================
+   PAGE 10 — SERVICES & SAFETY (editorial)
+   ============================================================ */
+.svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; flex-shrink:0; }
+.svc-item { padding:14px 16px 14px 0; border-top:2px solid var(--cobalt); }
+.svc-item:nth-child(3n+2) { padding-left:16px; border-left:1px solid var(--sand-line); }
+.svc-item:nth-child(3n+3) { padding-left:16px; border-left:1px solid var(--sand-line); }
+.svc-item:nth-child(n+4) { border-top:1px solid var(--sand-line); }
+.svc-item h4 { color:var(--cobalt); margin-bottom:7px; }
+.svc-item p  { font-size:13px; line-height:1.68; }
+.fire-wrap { margin-top:18px; flex-shrink:0; }
+.fire-wrap h3 { margin-bottom:12px; }
+.fire-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.fire-step { background:var(--ink); padding:13px 14px; }
+.fire-n  { font-family:'Cinzel',serif; font-size:28px; color:rgba(196,162,101,.45); display:block; line-height:1; margin-bottom:7px; }
+.fire-step h4 { color:var(--bronze); font-size:9px; margin-bottom:5px; }
+.fire-step p  { font-size:11.5px; color:rgba(245,239,228,.72); line-height:1.58; }
+
+/* ============================================================
+   PAGE 11 — ACCOMMODATION (editorial)
+   ============================================================ */
+.rooms-intro p { font-size:14px; line-height:1.8; margin-bottom:16px; flex-shrink:0; }
+
+/* Rooms displayed as a clean typographic grid — no boxes */
+.rooms-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; flex-shrink:0; border-top:2px solid var(--cobalt); }
+.room-row { padding:10px 12px; border-bottom:1px solid var(--sand-line); border-right:1px solid var(--sand-line); }
+.room-row:nth-child(4n) { border-right:none; }
+.room-row.suite-row { border-top:1px solid var(--sand-line); }
+.rname { font-family:'Cinzel',serif; font-size:13px; color:var(--ink); display:block; margin-bottom:3px; }
+.rview { font-size:12px; color:var(--cobalt); display:block; }
+.rfloor { font-size:11px; color:var(--ink-lt); display:block; }
+.rbeds  { font-size:11.5px; color:var(--ink-mid); display:block; font-weight:400; margin-top:2px; }
+
+.fac-block { margin-top:16px; padding-top:16px; border-top:1px solid var(--sand-line); flex:1; display:flex; flex-direction:column; }
+.fac-block h3 { margin-bottom:12px; flex-shrink:0; }
+.fac-cols { display:grid; grid-template-columns:1fr 1fr; gap:26px; flex:1; }
+.fac-col h4 { color:var(--cobalt); margin-bottom:9px; padding-bottom:6px; border-bottom:1px solid var(--sand-line); }
+.fac-col li { font-size:13px; padding:6px 0; border-bottom:1px solid var(--sand-line); color:var(--ink-mid); }
+.fac-col li:last-child { border-bottom:none; }
+
+/* ============================================================
+   PAGE 12 — QUICK REFERENCE (editorial)
+   ============================================================ */
+.qr-grid { display:grid; grid-template-columns:1fr 1fr; flex:1; min-height:0; gap:0; }
+.qri { padding:14px 18px; border-bottom:1px solid var(--sand-line); display:flex; flex-direction:column; justify-content:center; }
+.qri:nth-child(odd) { border-right:1px solid var(--sand-line); }
+.qri h5 { color:var(--bronze); margin-bottom:5px; }
+.qri-v { font-family:'Cinzel',serif; font-size:17px; color:var(--ink); line-height:1.2; }
+.qri-s { font-size:12px; color:var(--ink-lt); margin-top:3px; }
+
+/* ============================================================
+   PAGE 13 — DISCOVER MORE
+   ============================================================ */
+.dest-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin:15px 0; flex-shrink:0; border-top:1px solid var(--sand-line); border-bottom:1px solid var(--sand-line); }
+.dest-item { padding:13px 14px 13px 0; }
+.dest-item:nth-child(n+2) { padding-left:16px; border-left:1px solid var(--sand-line); }
+.dest-item h4 { color:var(--cobalt); margin-bottom:5px; }
+.dest-item p  { font-size:12.5px; line-height:1.68; }
+.prop-grid { display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); gap:10px; flex:1; min-height:0; }
+.prop-card { position:relative; overflow:hidden; height:100%; }
+.prop-card img { display:block; width:100%; height:100%; object-fit:cover; }
+.prop-ov { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(15,28,20,.88),transparent); padding:11px 13px; }
+.prop-ov span  { font-family:'Cinzel',serif; font-size:11.5px; letter-spacing:.07em; color:var(--white); display:block; }
+.prop-ov small { font-size:10.5px; color:rgba(196,162,101,.85); }
+.contact-bar { background:var(--ink); padding:11px 16px; display:flex; gap:30px; align-items:center; margin-top:12px; flex-shrink:0; }
+.ci h5 { color:var(--bronze); margin-bottom:4px; }
+.ci p  { font-size:12.5px; color:rgba(245,239,228,.75); }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 1 — COVER
+     ════════════════════════════════════════════════════════════ -->
+<div class="page page-cover">
+  <img class="cover-bg" src="images/cover-front.png" alt="Soroi Blue Diani">
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 2 — WELCOME
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <div class="welcome-top">
+      <img class="welcome-logo" src="images/soroi-blue-logo.png" alt="Soroi Blue Diani">
+      <span class="welcome-wild">A Different Kind of Wild</span>
+      <span class="welcome-sub">Guest Information Guide &nbsp;·&nbsp; Soroi Blue Diani</span>
+    </div>
+    <div class="welcome-body" style="flex-shrink:0;">
+      <p>Welcome. We are so glad you are here.</p>
+      <p>Whether you are just beginning your journey along the coast, or gently bringing it to a close, we are truly delighted to have you with us. Here, on the pristine shores of Diani Beach, we hope you will find a place to pause, to breathe, and to simply feel at home.</p>
+      <p>Soroi Blue Diani is a small property, and we like it that way. Our team knows most guests by name within a day. If there is anything you need — a restaurant recommendation, a boat trip arranged, a quiet place to read — please ask. We mean that genuinely.</p>
+      <p>This guide has everything you need to find your way around, make the most of the coast, and reach us whenever you need us. Beyond that, all you need to do is relax.</p>
+      <p style="font-style:italic; color:var(--cobalt); margin-top:11px;">Karibu sana — you are most welcome.</p>
+    </div>
+    <div style="flex:1; min-height:0; overflow:hidden; margin-top:15px;">
+      <img src="images/room-suite.jpg" style="display:block; width:100%; height:100%; object-fit:cover;" alt="Soroi Blue Diani suite">
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 3 — THE ESSENTIALS
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Your Stay</span>
+    <h2>The <span class="cobalt-i">Essentials</span></h2>
+    <span class="rule"></span>
+    <div class="ess-grid">
+      <div class="ess-item">
+        <h4>Wi-Fi</h4>
+        <p><strong>Network:</strong> SoroiBlue<br><strong>Password:</strong> Available at reception<br>Wi-Fi is available throughout the property. Signal is strongest near the main building.</p>
+      </div>
+      <div class="ess-item">
+        <h4>Check-In &amp; Check-Out</h4>
+        <p><strong>Check-in:</strong> From 12:00<br><strong>Check-out:</strong> By 10:00<br>Early arrivals and late check-outs accommodated on request, subject to availability.</p>
+      </div>
+      <div class="ess-item">
+        <h4>Meals &amp; Dining</h4>
+        <p><strong>Breakfast:</strong> 07:00 – 10:30<br><strong>Lunch:</strong> 12:00 – 15:00<br><strong>Dinner:</strong> 18:30 – 21:30<br>Dietary requirements — please inform the team on arrival.</p>
+      </div>
+      <div class="ess-item">
+        <h4>Contact Us</h4>
+        <p><strong>Reception:</strong> Dial 0 (internal)<br><strong>WhatsApp:</strong> +254 738 537 093<br><strong>Email:</strong> reservations@soroi.com<br>Front desk staffed 24 hours.</p>
+      </div>
+    </div>
+    <div class="h-rule"></div>
+    <div class="am-grid">
+      <div class="am-item">
+        <h5>Room Service</h5>
+        <p>Available 07:00 – 21:30 daily. Call or WhatsApp reception.</p>
+      </div>
+      <div class="am-item">
+        <h5>Laundry</h5>
+        <p>Same-day if dropped before 09:00. Collected from your door.</p>
+      </div>
+      <div class="am-item">
+        <h5>Airport Transfers</h5>
+        <p>Mombasa / Ukunda airstrip. Book 12 hours in advance.</p>
+      </div>
+      <div class="am-item">
+        <h5>In-Room Safe</h5>
+        <p>Electronic safe in all rooms. Reception resets if needed.</p>
+      </div>
+      <div class="am-item">
+        <h5>Power Sockets</h5>
+        <p>Kenya 3-pin square (UK Type G), 240V. Adaptors at reception.</p>
+      </div>
+      <div class="am-item">
+        <h5>Concierge</h5>
+        <p>Activities, day trips, taxis. Available 07:00 – 21:00 daily.</p>
+      </div>
+      <div class="am-item">
+        <h5>Library &amp; Games</h5>
+        <p>Books, board games, and pool table in the main lounge.</p>
+      </div>
+      <div class="am-item">
+        <h5>Eco Practices</h5>
+        <p>Refillable water bottles encouraged. Towel reuse appreciated.</p>
+      </div>
+      <div class="am-item">
+        <h5>Medical</h5>
+        <p>Diani Beach Hospital 10 min. Dr. Onkoba on call. First aid on site.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 4 — DINING & PAYMENTS
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Food &amp; Drink</span>
+    <h2>Dining <span class="cobalt-i">&amp; Payments</span></h2>
+    <span class="rule"></span>
+    <img src="images/dining.jpg" style="display:block; width:100%; height:56mm; object-fit:cover; flex-shrink:0;" alt="Dining at Soroi Blue Diani">
+    <div class="dining-cols">
+      <div>
+        <h3>Restaurant</h3>
+        <div class="mi"><h4>Breakfast</h4><p>Full continental and cooked breakfast. 07:00 – 10:30 daily.</p></div>
+        <div class="mi"><h4>Lunch</h4><p>Light coastal menu — fresh fish, salads, and juices. 12:00 – 15:00.</p></div>
+        <div class="mi"><h4>Dinner</h4><p>Table d'hôte and à la carte. Al fresco where possible. 18:30 – 21:30.</p></div>
+        <div class="mi"><h4>Special Requests</h4><p>Celebrations, private dinners, dietary needs — speak to the team in advance.</p></div>
+      </div>
+      <div>
+        <h3>Bar</h3>
+        <div class="mi"><h4>Indoor &amp; Beach Bar</h4><p>Full cocktail and wine list. The bar moves outside at sundown — cocktails, cold Tusker, and the sound of the Indian Ocean.</p></div>
+        <div class="mi"><h4>Bar Hours</h4><p>Open 07:00 until late. Last orders at 23:00.</p></div>
+        <div class="mi"><h4>Allergens</h4><p>Please inform the team of any food allergies or intolerances before ordering.</p></div>
+      </div>
+    </div>
+    <div class="billing">
+      <div class="bi"><h5>Cards</h5><p>Visa and Mastercard accepted. A small processing fee may apply to card payments.</p></div>
+      <div class="bi"><h5>M-Pesa</h5><p>Mobile money payments accepted. Ask reception for the Paybill number.</p></div>
+      <div class="bi"><h5>USD Cash</h5><p>Notes dated 2006 or later only. Older notes are not accepted at exchange.</p></div>
+    </div>
+    <div style="flex:1; min-height:0; overflow:hidden; margin-top:11px;">
+      <img src="images/bar.jpg" style="display:block; width:100%; height:100%; object-fit:cover;" alt="Bar at Soroi Blue Diani">
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 5 — POOL, BEACH & ENVIRONMENT
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Outside</span>
+    <h2>The Beach <span class="cobalt-i">&amp; Pool</span></h2>
+    <span class="rule"></span>
+    <div class="beach-grid">
+      <div>
+        <img src="images/pool.jpg" style="display:block; width:100%; height:80mm; object-fit:cover;" alt="Soroi Blue pool">
+        <p class="bch-head">The Pool</p>
+        <p style="font-size:13.5px;">The pool is yours to enjoy at your leisure. Children must be supervised at all times. A kids pool is also available. No glassware in the pool area.</p>
+        <div class="ibr"><span class="ibr-l">Pool hours</span><span class="ibr-v">07:00 – 20:00 daily</span></div>
+        <div class="ibr"><span class="ibr-l">Kids pool</span><span class="ibr-v">Available · same hours</span></div>
+        <p style="font-size:12px; color:var(--ink-lt); margin-top:6px;">Loungers and towels set out each morning. Pool at your own risk.</p>
+      </div>
+      <div>
+        <img src="images/beach.jpg" style="display:block; width:100%; height:80mm; object-fit:cover;" alt="Diani Beach">
+        <p class="bch-head">Diani Beach</p>
+        <p style="font-size:13.5px;">Kenya's beaches are beautifully open and shared by all. We've created a peaceful sandy stretch — feel free to wander, and please help us keep it pristine.</p>
+        <div class="temp-row">
+          <div class="temp-b"><span class="temp-v">25–29°C</span><span class="temp-l">Sea Temp</span></div>
+          <div class="temp-b"><span class="temp-v">20–42°C</span><span class="temp-l">Air Temp</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="env-block">
+      <h3>Our Commitment to the Coast</h3>
+      <div class="env-grid">
+        <div class="env-item">
+          <h4>Reef Protection</h4>
+          <p>Please take care not to touch or stand on coral while snorkelling or swimming. A healthy reef is a living reef — please do not collect shells or sea life.</p>
+        </div>
+        <div class="env-item">
+          <h4>Zero Single-Use Plastic</h4>
+          <p>We are committed to eliminating single-use plastic from the property. Refillable water bottles are provided in every room — please use them.</p>
+        </div>
+        <div class="env-item">
+          <h4>Marine &amp; Wildlife</h4>
+          <p>Please admire all marine life from a respectful distance. Feeding or handling animals is harmful and actively discouraged along this coastline.</p>
+        </div>
+      </div>
+      <div class="beach-notice">
+        <p>Beach vendors and hawkers operate independently from Soroi Blue. Let our team know if you feel uncomfortable — we are always here to help you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 6 — THE FRANGIPANI SPA
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Wellness</span>
+    <h2>The Frangipani <span class="cobalt-i">Spa</span></h2>
+    <span class="rule"></span>
+    <p class="spa-lead">A place to slow down further still. Contact the hospitality desk to book — advance booking is recommended. Complimentary yoga mats on request. All prices in Kenyan Shillings.</p>
+    <div class="spa-cat">
+      <div class="spa-ch"><span class="spa-dot"></span><h3>Massage &amp; Body Treatments</h3></div>
+      <div class="spa-row"><div><span class="spa-n">Drift Away</span><span class="spa-d">Head, shoulder and back massage — melts tension and leaves you calm.</span></div><span class="spa-t">50 min</span><span class="spa-p">4,500</span></div>
+      <div class="spa-row"><div><span class="spa-n">Tidal Flow</span><span class="spa-d">Rhythmic Swedish massage — softens muscles, deepens relaxation.</span></div><span class="spa-t">60 min</span><span class="spa-p">5,000</span></div>
+      <div class="spa-row"><div><span class="spa-n">Blue Reset Ritual</span><span class="spa-d">Lemongrass body polish with your choice of massage.</span></div><span class="spa-t">60 min</span><span class="spa-p">6,500</span></div>
+      <div class="spa-row"><div><span class="spa-n">Citrus Drift Ritual</span><span class="spa-d">Deep tissue massage paired with a revitalising body scrub.</span></div><span class="spa-t">90 min</span><span class="spa-p">6,500</span></div>
+      <div class="spa-row"><div><span class="spa-n">Jumbo Joy Prenatal</span><span class="spa-d">Gentle, nurturing massage — designed to support your changing body.</span></div><span class="spa-t">60 min</span><span class="spa-p">6,000</span></div>
+      <div class="spa-row"><div><span class="spa-n">Soroi Signature Escape</span><span class="spa-d">Lemongrass scrub, full-body massage, and head &amp; shoulder ritual.</span></div><span class="spa-t">2–3 hrs</span><span class="spa-p">12,500</span></div>
+    </div>
+    <div class="spa-cat">
+      <div class="spa-ch"><span class="spa-dot"></span><h3>Facials</h3></div>
+      <div class="spa-row"><div><span class="spa-n">Tidal Calm Facial</span><span class="spa-d">Deeply moisturising — hydrates, rejuvenates, and restores radiance.</span></div><span class="spa-t">60 min</span><span class="spa-p">6,000</span></div>
+      <div class="spa-row"><div><span class="spa-n">Ocean Drift Renewal Facial</span><span class="spa-d">Soothes sun-stressed skin — relief, healing, and restored balance.</span></div><span class="spa-t">45 min</span><span class="spa-p">5,000</span></div>
+    </div>
+    <div class="spa-cat">
+      <div class="spa-ch"><span class="spa-dot"></span><h3>Manicure &amp; Pedicure</h3></div>
+      <div class="spa-row nd"><div><span class="spa-n">Ocean Ease Manicure</span><span class="spa-d">Perfectly polished nails and deeply hydrated skin.</span></div><span class="spa-p">Gel 3,500 &nbsp;·&nbsp; Non-Gel 2,000</span></div>
+      <div class="spa-row nd"><div><span class="spa-n">Barefoot Drift Pedicure</span><span class="spa-d">Refreshed, revitalised, perfectly pedicured feet for the beach.</span></div><span class="spa-p">Gel 4,500 &nbsp;·&nbsp; Non-Gel 3,000</span></div>
+    </div>
+    <div class="spa-foot">
+      <p>Contact the hospitality desk to schedule. All prices in Kenyan Shillings.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 7 — EXPLORE: DIVING & SNORKELLING (Hero)
+     Diving & snorkelling featured alone — large and prominent.
+     Activity grids on Page 8.
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Beyond the Property</span>
+    <h2>Discover <span class="cobalt-i">&amp; Drift</span></h2>
+    <span class="rule"></span>
+    <div class="cat-band" style="border-bottom-color:var(--cobalt); margin-top:0;">
+      <span class="cat-num">01</span>
+      <span class="cat-title">At the Coast</span>
+    </div>
+    <!-- Hero feature split — full height, diving & snorkelling on its own -->
+    <div class="feat" style="height:118mm; flex-shrink:0;">
+      <img src="images/snorkeling.jpeg" style="display:block; width:100%; height:118mm; object-fit:cover;" alt="Snorkelling on the Diani reef">
+      <div class="feat-panel">
+        <span class="feat-lbl">Signature Experience</span>
+        <h3>Diving &amp; Snorkelling</h3>
+        <p>Kenya's south coast reef is one of the most varied in East Africa — warm, clear, and alive year-round. Dive Kisite-Mpunguti Marine Park or snorkel directly off the beach. Both experiences are extraordinary, and accessible to all levels. Ask reception for current operators and the best tides to go.</p>
+      </div>
+    </div>
+    <!-- Spacer text — introduces the activity pages to follow -->
+    <div style="flex-shrink:0; margin-top:14px; padding-top:13px; border-top:1px solid var(--sand-line);">
+      <p style="font-size:13.5px; color:var(--ink-mid); line-height:1.78;">The coast beyond the property offers one of East Africa's most varied menus of activity — from deep-sea fishing to sacred forest walks. The following pages cover everything available. Our concierge team can arrange any of it.</p>
+    </div>
+    <!-- Atmospheric footer image — fills remaining space -->
+    <div style="flex:1; min-height:0; overflow:hidden; margin-top:14px;">
+      <img src="images/dhow-at-sand-bank.jpg" style="display:block; width:100%; height:100%; object-fit:cover;" alt="Dhow on the Diani coast">
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 8 — EXPLORE: ACTIVITIES & NATURE
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Beyond the Property — At the Coast</span>
+    <h2>Activities <span class="cobalt-i">&amp; Nature</span></h2>
+    <span class="rule"></span>
+    <!-- Activity row 1 -->
+    <div class="act-grid">
+      <div class="act-card">
+        <img src="images/deep-sea-fishing.png" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Deep sea fishing">
+        <div class="act-info"><span class="act-name">Deep Sea Fishing</span><p class="act-note">Tuna, marlin, and sailfish. Half-day and full-day charters available from Diani.</p></div>
+      </div>
+      <div class="act-card">
+        <img src="images/whale-shark.jpg" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Whale sharks">
+        <div class="act-info"><span class="act-name">Whale Sharks &amp; Dolphins</span><p class="act-note">Seasonal open-water encounters. Ask the team for current conditions before booking.</p></div>
+      </div>
+      <div class="act-card">
+        <img src="images/skydive-diani.jpeg" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Skydiving">
+        <div class="act-info"><span class="act-name">Skydiving</span><p class="act-note">One of the few places in Africa to freefall over a beach. Spectacular views of the Indian Ocean.</p></div>
+      </div>
+    </div>
+    <!-- Activity row 2 -->
+    <div class="act-grid">
+      <div class="act-card">
+        <img src="images/golf.jpg" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Golf">
+        <div class="act-info"><span class="act-name">Golf</span><p class="act-note">Leisure Golf Club Diani — 9-hole course with Indian Ocean views. Equipment hire available.</p></div>
+      </div>
+      <div class="act-card">
+        <img src="images/yoga.png" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Yoga">
+        <div class="act-info"><span class="act-name">Yoga &amp; Wellness</span><p class="act-note">Complimentary yoga mats on request for beach or garden practice.</p></div>
+      </div>
+      <div class="act-card">
+        <img src="images/turtle-hatchery.jpeg" style="display:block; width:100%; height:44mm; object-fit:cover;" alt="Sea turtles">
+        <div class="act-info"><span class="act-name">Sea Turtle Conservation</span><p class="act-note">15 minutes away. A meaningful visit supporting endangered nesting sea turtles.</p></div>
+      </div>
+    </div>
+    <div class="cat-band" style="margin-top:10px;">
+      <span class="cat-num">02</span>
+      <span class="cat-title">Nature &amp; Culture</span>
+    </div>
+    <!-- Nature split fills remaining space -->
+    <div class="nature-split">
+      <img src="images/colobus-monkey.jpg" style="display:block; width:100%; height:100%; object-fit:cover;" alt="Colobus monkey">
+      <div class="nat-list">
+        <div class="nat-item">
+          <h4>Colobus Conservation</h4>
+          <p>The Diani forest is home to one of Kenya's rarest primates. The conservation centre offers guided walks and close encounters with the resident wildlife.</p>
+        </div>
+        <div class="nat-item">
+          <h4>Kaya Kinondo Sacred Forest</h4>
+          <p>An ancient forest, centuries old and spiritually alive. Guided walks with local Digo community members reveal stories the trees have kept for generations.</p>
+        </div>
+        <div class="nat-item">
+          <h4>Kongo Mosque</h4>
+          <p>One of the oldest mosques on the Kenyan coast — a window into the deep Swahili history of this shoreline. Modest dress required.</p>
+        </div>
+        <div class="nat-item">
+          <h4>Community Initiatives</h4>
+          <p>Conservation projects operate all along this stretch of coast. Ask the manager if you'd like to contribute during your stay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 9 — EXPLORE: DAY TRIPS FROM DIANI
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Beyond the Property — Day Trips</span>
+    <h2>Day Trips <span class="cobalt-i">from Diani</span></h2>
+    <span class="rule"></span>
+    <div class="cat-band" style="margin-top:0; margin-bottom:10px;">
+      <span class="cat-num">03</span>
+      <span class="cat-title">Day Trips from Diani</span>
+    </div>
+    <div class="trip-grid">
+      <div class="trip-card">
+        <img src="images/wasini-dolphins.jpg" style="display:block; width:100%; height:54mm; object-fit:cover;" alt="Wasini Island">
+        <div class="trip-info"><span class="trip-name">Wasini Island &amp; Kisite</span><p class="trip-note">A full day by dhow — snorkelling, dolphins in open water, and a long Swahili seafood lunch on the island.</p></div>
+      </div>
+      <div class="trip-card">
+        <img src="images/shimba-hills.jpg" style="display:block; width:100%; height:54mm; object-fit:cover;" alt="Shimba Hills">
+        <div class="trip-info"><span class="trip-name">Shimba Hills National Park</span><p class="trip-note">Forest elephants, rare roan antelope, and the Sheldrick Falls hike. A completely different landscape from the coast.</p></div>
+      </div>
+      <div class="trip-card">
+        <img src="images/fort-jesus-mombasa.jpg" style="display:block; width:100%; height:54mm; object-fit:cover;" alt="Fort Jesus">
+        <div class="trip-info"><span class="trip-name">Fort Jesus &amp; Old Town</span><p class="trip-note">A UNESCO World Heritage Site. Carved doors, spice markets, and the layered history of the Swahili coast.</p></div>
+      </div>
+    </div>
+    <div class="trip-grid">
+      <div class="trip-card">
+        <img src="images/glass-boat.jpg" style="display:block; width:100%; height:54mm; object-fit:cover;" alt="Glass bottom boat">
+        <div class="trip-info"><span class="trip-name">Glass Bottom Boat</span><p class="trip-note">Explore the reef aboard a traditional dhow — no diving experience needed. Spectacular coral views.</p></div>
+      </div>
+      <div class="trip-card">
+        <img src="images/market.jpg" style="display:block; width:100%; height:54mm; object-fit:cover;" alt="Markets">
+        <div class="trip-info"><span class="trip-name">Markets &amp; Shopping</span><p class="trip-note">Diani Shopping Centre, Carrefour, and craft markets. All within 10–15 minutes — ask for a map.</p></div>
+      </div>
+      <div class="trip-card" style="background:var(--cobalt); display:flex; flex-direction:column; justify-content:center; padding:14px;">
+        <h3 style="color:var(--white); margin-bottom:10px; font-size:13px; letter-spacing:.1em;">Arrange Your Trip</h3>
+        <p style="font-size:13px; color:rgba(233,245,255,.88); line-height:1.74;">Our concierge team can arrange all day trips, private transfers, and special experiences. Dial 0 from your room, or ask at reception any time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 10 — SERVICES & FIRE SAFETY
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">On Property</span>
+    <h2>Services <span class="cobalt-i">&amp; Safety</span></h2>
+    <span class="rule"></span>
+    <div class="svc-grid">
+      <div class="svc-item">
+        <h4>Housekeeping</h4>
+        <p>Rooms serviced daily between 09:00 and 13:00. Turndown on request. Place the do-not-disturb sign on your door if you prefer not to be disturbed.</p>
+      </div>
+      <div class="svc-item">
+        <h4>Medical Assistance</h4>
+        <p>Trained first aid staff on site at all times. Diani Beach Hospital and Aga Khan Health Centre both 10 minutes away. Dr. Onkoba available on call 24 hours.</p>
+      </div>
+      <div class="svc-item">
+        <h4>TV Lounge &amp; Pool Table</h4>
+        <p>Available in the main lounge area daily for all guests. Please keep noise levels considerate of other guests after 21:00 in the evenings.</p>
+      </div>
+      <div class="svc-item">
+        <h4>Taxi &amp; Transport</h4>
+        <p>Trusted drivers available at all hours. Fixed rates to Ukunda, Mombasa, and Diani town. Always book through reception — do not arrange rides at the gate.</p>
+      </div>
+      <div class="svc-item">
+        <h4>Currency &amp; Exchange</h4>
+        <p>Reception can advise on the nearest forex bureau. The property accepts USD (2006+ notes) and Kenyan Shillings only. M-Pesa accepted.</p>
+      </div>
+      <div class="svc-item">
+        <h4>Luggage Storage</h4>
+        <p>Secure storage available before check-in and after check-out. Please tag all bags at reception before leaving them with the team.</p>
+      </div>
+    </div>
+    <div class="fire-wrap">
+      <h3>Fire Safety — What to Do</h3>
+      <div class="fire-steps">
+        <div class="fire-step">
+          <span class="fire-n">1</span>
+          <h4>Alert</h4>
+          <p>Raise the alarm. Shout "Fire!" and activate the nearest alarm point. Call reception: Dial 0.</p>
+        </div>
+        <div class="fire-step">
+          <span class="fire-n">2</span>
+          <h4>Evacuate</h4>
+          <p>Leave immediately. Do not use lifts. Close all doors behind you as you go.</p>
+        </div>
+        <div class="fire-step">
+          <span class="fire-n">3</span>
+          <h4>Assembly</h4>
+          <p>Proceed to the assembly point at the main car park. Do not re-enter the building.</p>
+        </div>
+        <div class="fire-step">
+          <span class="fire-n">4</span>
+          <h4>Emergency</h4>
+          <p>Kenya Fire &amp; Rescue: 999 or 112. Please follow all staff instructions calmly.</p>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-height:0; overflow:hidden; margin-top:13px;">
+      <img src="images/aerial.jpg" style="display:block; width:100%; height:100%; object-fit:cover;" alt="Soroi Blue Diani aerial view">
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 11 — ACCOMMODATION
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">Your Room</span>
+    <h2>Accommodation</h2>
+    <span class="rule"></span>
+    <div class="rooms-intro">
+      <p>Eleven rooms, each named after a place along Kenya's coastline. Every room includes air conditioning, ceiling fan, complimentary Wi-Fi, fridge, hair dryer, in-room safe, laundry service, minibar, mosquito nets, satellite TV, and tea and coffee.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-row"><span class="rname">Chale</span><span class="rview">Garden View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + baby cot</span></div>
+      <div class="room-row"><span class="rname">Funzi</span><span class="rview">Garden View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + single</span></div>
+      <div class="room-row"><span class="rname">Lamu</span><span class="rview">Garden View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + single</span></div>
+      <div class="room-row"><span class="rname">Tiwi</span><span class="rview">Garden View</span><span class="rfloor">2nd Floor</span><span class="rbeds">Twin / double</span></div>
+      <div class="room-row"><span class="rname">Kusini</span><span class="rview">Ocean View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + single</span></div>
+      <div class="room-row"><span class="rname">Galu</span><span class="rview">Ocean View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + single</span></div>
+      <div class="room-row"><span class="rname">Wasini</span><span class="rview">Ocean View</span><span class="rfloor">1st Floor</span><span class="rbeds">Twin / double</span></div>
+      <div class="room-row"><span class="rname">Kaskazi</span><span class="rview">Ocean View</span><span class="rfloor">1st Floor</span><span class="rbeds">King + single</span></div>
+      <div class="room-row suite-row"><span class="rname">Shimoni</span><span class="rview">Junior Suite · Ocean</span><span class="rfloor">2nd Floor</span><span class="rbeds">King + twin</span></div>
+      <div class="room-row suite-row" style="grid-column:span 2;"><span class="rname">Bahari Blue</span><span class="rview">Executive Suite · Ocean</span><span class="rfloor">2nd Floor</span><span class="rbeds">King + single + twin &nbsp;·&nbsp; Max 2 adults + 3 children</span></div>
+      <div class="room-row suite-row"><span class="rname">Zanzibar</span><span class="rview">Junior Suite · Ocean</span><span class="rfloor">2nd Floor</span><span class="rbeds">King + queen + single</span></div>
+    </div>
+    <div class="fac-block">
+      <h3>Facilities</h3>
+      <div class="fac-cols">
+        <div class="fac-col">
+          <h4>In Every Room</h4>
+          <ul>
+            <li>Air Conditioning</li>
+            <li>Complimentary Wi-Fi</li>
+            <li>Ceiling Fan</li>
+            <li>Fridge &amp; Minibar</li>
+            <li>Hair Dryer</li>
+            <li>In-Room Safe</li>
+            <li>Laundry Service</li>
+            <li>Mosquito Nets</li>
+            <li>Satellite / Cable TV</li>
+            <li>Tea &amp; Coffee</li>
+          </ul>
+        </div>
+        <div class="fac-col">
+          <h4>On Property</h4>
+          <ul>
+            <li>24-Hour Security</li>
+            <li>Indoor / Beach Bar</li>
+            <li>BBQ &amp; Pizza Oven</li>
+            <li>Swimming Pool</li>
+            <li>Kids Pool</li>
+            <li>The Frangipani Spa</li>
+            <li>Library</li>
+            <li>Pool Table &amp; TV Room</li>
+            <li>Restaurant</li>
+            <li>Secure Parking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 12 — QUICK REFERENCE
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">At a Glance</span>
+    <h2>Quick <span class="cobalt-i">Reference</span></h2>
+    <span class="rule"></span>
+    <div class="qr-grid">
+      <div class="qri"><h5>Emergency Line</h5><span class="qri-v">+254 (0) 738 537 093</span><span class="qri-s">Available 24 hours</span></div>
+      <div class="qri"><h5>Reservations</h5><span class="qri-v" style="font-size:13px;">reservations@soroi.com</span><span class="qri-s">+254 754 351 908</span></div>
+      <div class="qri"><h5>Check-In</h5><span class="qri-v">12:00</span><span class="qri-s">Earlier arrivals accommodated where possible</span></div>
+      <div class="qri"><h5>Check-Out</h5><span class="qri-v">10:00</span><span class="qri-s">Late check-out on request, subject to availability</span></div>
+      <div class="qri"><h5>Breakfast</h5><span class="qri-v">07:00 – 10:30</span><span class="qri-s">Daily · dietary needs accommodated</span></div>
+      <div class="qri"><h5>Dinner</h5><span class="qri-v">18:30 – 21:30</span><span class="qri-s">Last orders 21:00 · al fresco where possible</span></div>
+      <div class="qri"><h5>Pool Hours</h5><span class="qri-v">07:00 – 20:00</span><span class="qri-s">Kids pool same hours · no glassware</span></div>
+      <div class="qri"><h5>Bar</h5><span class="qri-v">07:00 – Late</span><span class="qri-s">Last orders 23:00</span></div>
+      <div class="qri"><h5>Nearest Airstrip</h5><span class="qri-v">Ukunda</span><span class="qri-s">12 minutes · 5.49 km from property</span></div>
+      <div class="qri"><h5>Coordinates</h5><span class="qri-v" style="font-size:13px;">S 04° 16' 18"</span><span class="qri-s">E 39° 35' 50.24" · Sea Level · Diani Beach</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 13 — DISCOVER MORE
+     ════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="pi">
+    <span class="eyebrow">The Soroi Collection</span>
+    <h2>Discover <span class="cobalt-i">More</span></h2>
+    <span class="rule"></span>
+    <div class="prop-grid">
+      <div class="prop-card"><img src="images/discover-mara-bush-camp-2.webp" alt="Soroi Mara Bush Camp"><div class="prop-ov"><span>Soroi Mara Bush Camp</span><small>Maasai Mara</small></div></div>
+      <div class="prop-card"><img src="images/discover-mara-bush-camp.jpg" alt="Soroi Private Wing"><div class="prop-ov"><span>Soroi Private Wing</span><small>Maasai Mara</small></div></div>
+      <div class="prop-card"><img src="images/discover-migration.jpg" alt="Soroi Luxury Migration Camp"><div class="prop-ov"><span>Soroi Luxury Migration Camp</span><small>Maasai Mara</small></div></div>
+      <div class="prop-card"><img src="images/discover-lions-bluff.jpg" alt="Soroi Lions Bluff Lodge"><div class="prop-ov"><span>Soroi Lions Bluff Lodge</span><small>Tsavo / Lumo</small></div></div>
+      <div class="prop-card"><img src="images/discover-leopards-lair.jpg" alt="Soroi Leopards Lair"><div class="prop-ov"><span>Soroi Leopards Lair</span><small>Tsavo / Lumo</small></div></div>
+      <div class="prop-card"><img src="images/discover-cheetah.jpg" alt="Soroi Cheetah Tented Camp"><div class="prop-ov"><span>Soroi Cheetah Tented Camp</span><small>Tsavo / Lumo</small></div></div>
+      <div class="prop-card"><img src="images/discover-larsens.jpg" alt="Soroi Larsens Camp"><div class="prop-ov"><span>Soroi Larsens Camp</span><small>Samburu</small></div></div>
+      <div class="prop-card"><img src="images/discover-samburu-lodge.jpg" alt="Soroi Samburu Lodge"><div class="prop-ov"><span>Soroi Samburu Lodge</span><small>Samburu</small></div></div>
+      <div class="prop-card"><img src="images/discover-amboseli.jpg" alt="Soroi Amboseli"><div class="prop-ov"><span>Soroi Amboseli</span><small>Amboseli</small></div></div>
+    </div>
+    <div class="contact-bar">
+      <div class="ci"><h5>Website</h5><p>www.soroicollection.com</p></div>
+      <div class="ci"><h5>Email</h5><p>reservations@soroi.com</p></div>
+      <div class="ci"><h5>Phone</h5><p>+254 754 351 908</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 14 — BACK COVER
+     ════════════════════════════════════════════════════════════ -->
+<div class="page page-cover">
+  <img class="cover-bg" src="images/cover-back.png" alt="Soroi Blue Diani">
+</div>
+
+</body>
+</html>

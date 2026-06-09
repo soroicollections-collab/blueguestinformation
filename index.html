@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soroi Blue Diani — Guest Information Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SOROI BLUE DIANI — DIGITAL GUEST GUIDE
+   ============================================================ */
+:root {
+  --sand:      #F5EFE4;
+  --sand-deep: #EDE3D3;
+  --sand-line: #D6C9B4;
+  --sand-dark: #C4B49A;
+  --ink:       #1E2A22;
+  --ink-mid:   #3D4F44;
+  --ink-lt:    #6B7D72;
+  --bronze:    #C4A265;
+  --cobalt:    #1b998b;
+  --jordy:     #2bb5a0;
+  --white:     #FFFFFF;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;font-weight:300;background:var(--sand);color:var(--ink-mid);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* Progress Bar */
+#progress-bar{position:fixed;top:0;left:0;width:0;height:2px;background:var(--bronze);z-index:2000;pointer-events:none}
+
+/* Navigation */
+nav#site-nav{position:fixed;top:0;left:0;right:0;z-index:1500;display:flex;align-items:center;justify-content:space-between;padding:28px 52px;transition:padding .6s ease,background .6s ease,backdrop-filter .6s ease,border-color .6s ease;border-bottom:1px solid transparent}
+nav#site-nav.frosted{padding:16px 52px;background:rgba(245,239,228,.88);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-bottom-color:var(--sand-line)}
+.nav-brand{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:10px}
+.nav-dot{width:3px;height:3px;background:var(--bronze);border-radius:50%}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mid);transition:color .25s ease}
+.nav-links a:hover{color:var(--bronze)}
+.hamburger{display:none;cursor:pointer;flex-direction:column;gap:6px;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:20px;height:1px;background:var(--ink);transition:all .35s ease;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;z-index:1400;background:var(--sand);flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.nav-overlay.open{display:flex}
+.nav-overlay a{font-family:'Cinzel',serif;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:color .2s ease}
+.nav-overlay a:hover{color:var(--bronze)}
+.nav-overlay-close{position:absolute;top:24px;right:32px;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-lt);cursor:pointer;background:none;border:none}
+
+/* Typography */
+h1,h2,h3,h4,h5{font-family:'Cinzel',serif;color:var(--ink)}
+h2{font-size:clamp(26px,4vw,48px);font-weight:400;line-height:1.1;letter-spacing:.05em}
+h3{font-size:clamp(13px,1.6vw,17px);font-weight:500;letter-spacing:.13em;text-transform:uppercase}
+h4{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+h5{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-lt)}
+p{font-size:14px;line-height:1.9;font-weight:300;color:var(--ink-mid)}
+p+p{margin-top:14px}
+.eyebrow{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);display:block;margin-bottom:16px}
+.cobalt-italic{font-style:italic;color:var(--cobalt)}
+
+/* Layout */
+.container{max-width:880px;margin:0 auto;padding:0 52px}
+.container-full{max-width:1100px;margin:0 auto;padding:0 52px}
+
+/* Rules */
+.rule{display:block;height:1px;background:var(--bronze);width:40px;margin:20px 0}
+.rule.full{width:100%;background:var(--sand-line)}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .95s cubic-bezier(.25,.46,.45,.94),transform .95s cubic-bezier(.25,.46,.45,.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* Parallax */
+.parallax-wrap{overflow:hidden;position:relative}
+.parallax-inner{position:absolute;left:0;right:0;top:-15%;bottom:-15%;will-change:transform}
+.parallax-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+
+/* Photo Placeholder (fallback) */
+.photo-ph{background:var(--sand-deep);position:relative;overflow:hidden}
+.photo-ph::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0,transparent 10px,rgba(0,0,0,.03) 10px,rgba(0,0,0,.03) 11px);pointer-events:none}
+.ph-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.ph-icon{color:var(--sand-dark)}
+.ph-label{font-size:11px;font-weight:300;color:var(--ink-lt);text-align:center;max-width:64%;line-height:1.6}
+
+/* Page Section */
+.page-section{padding:100px 0 60px}
+
+/* Page Footer */
+.page-footer{display:flex;justify-content:space-between;align-items:center;padding-top:52px;border-top:1px solid var(--sand-line);margin-top:52px}
+.pf-brand{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-dark)}
+.pf-num{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.14em;color:var(--sand-dark)}
+
+/* ============================================================ PAGE 1 — COVER */
+#cover{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--ink)}
+.cover-photo-wrap{position:absolute;inset:0}
+.cover-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cover-logo-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:22vh;pointer-events:none}
+.cover-text-title{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(38px,6vw,80px);letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-shadow:0 2px 24px rgba(0,0,0,.3);opacity:0;animation:textFadeUp 1s ease forwards;animation-delay:1s}
+.cover-text-sub{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(20px,3vw,42px);letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);text-shadow:0 2px 24px rgba(0,0,0,.25);margin-top:12px;opacity:0;animation:textFadeUp 1s ease forwards;animation-delay:2s}
+@keyframes textFadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ============================================================ WELCOME OPENING */
+.welcome-opening{margin-bottom:64px;padding-bottom:52px;border-bottom:1px solid var(--sand-line)}
+.welcome-wild{font-family:'Cinzel',serif;font-size:clamp(26px,3.5vw,44px);font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:20px}
+.welcome-quote-text{font-family:'Poppins',sans-serif;font-size:clamp(14px,1.5vw,17px);font-weight:300;font-style:italic;color:var(--ink-mid);line-height:1.95;max-width:600px}
+
+/* ============================================================ PAGE 2 — WELCOME */
+.welcome-letter{max-width:680px}
+.qr-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--sand-line);border-left:1px solid var(--sand-line)}
+.qr-section{padding:48px 48px 44px;border-right:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line)}
+.qr-section h4{font-family:'Cinzel',serif;font-size:9px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-bottom:24px}
+.ibr-value--note{font-family:'Poppins',sans-serif;font-size:12px;font-weight:300;color:var(--ink-lt);letter-spacing:0}
+.ibr-note{font-style:italic;font-size:11px;color:var(--ink-lt)}
+.info-block{padding:28px 0;border-top:1px solid var(--sand-line);background:none}
+.info-block h4,.emergency-block h4{font-family:'Cinzel',serif;font-size:9px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-bottom:18px}
+.ibr{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0}
+.ibr-label{font-size:11px;font-weight:300;color:var(--ink-lt);letter-spacing:.04em}
+.ibr-value{font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:.06em}
+.ibr-copy-wrap{display:flex;align-items:center;gap:10px}
+.copy-btn{font-family:'Cinzel',serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);background:none;border:1px solid var(--jordy);padding:4px 9px;cursor:pointer;transition:background .2s ease,color .2s ease;flex-shrink:0}
+.copy-btn:hover{background:var(--cobalt);color:var(--white);border-color:var(--cobalt)}
+.copy-btn.copied{background:var(--cobalt);color:var(--white);border-color:var(--cobalt)}
+.emergency-block{padding:28px 0;border-top:1px solid var(--sand-line)}
+.emergency-num{font-family:'Cinzel',serif;font-size:28px;font-weight:700;color:var(--cobalt);letter-spacing:.06em;display:block;margin-bottom:6px}
+.emergency-block p{font-size:11px;color:var(--ink-lt);font-weight:300}
+
+/* ============================================================ PAGE 3 — YOUR ROOM */
+.room-lead-photo{margin-bottom:56px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line)}
+.info-card{background:var(--sand);padding:28px 24px;display:flex;gap:18px;align-items:flex-start}
+.info-card-icon{flex-shrink:0;color:var(--bronze);margin-top:1px}
+.info-card h4{margin-bottom:5px}
+.info-card p{font-size:12px;color:var(--ink-lt);line-height:1.6}
+
+/* ============================================================ PAGE 4 — DINING */
+.dining-hero{margin-bottom:48px}
+.dining-cols{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.dining-section h3{margin-bottom:20px}
+.menu-item{padding:14px 0;border-bottom:1px solid var(--sand-line)}
+.menu-item:first-of-type{border-top:1px solid var(--sand-line)}
+.menu-item-name{font-family:'Cinzel',serif;font-size:13px;color:var(--ink);letter-spacing:.04em;display:block}
+.menu-item-note{font-size:12px;color:var(--ink-lt);margin-top:3px}
+.billing-block{margin-top:56px;padding:36px;border:1px solid var(--sand-line);background:var(--sand-deep)}
+.billing-block h3{margin-bottom:28px}
+.payment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.payment-item h4{margin-bottom:6px}
+.payment-item p{font-size:12px;color:var(--ink-lt);line-height:1.6}
+.billing-note-strip{border-top:1px solid var(--sand-line);padding-top:20px;margin-top:20px;font-size:12px;color:var(--ink-lt);font-style:italic}
+
+/* ============================================================ PAGE 5 — POOL & BEACH */
+.split-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.split-col h3{margin-bottom:16px}
+.temp-badges{display:flex;gap:3px;margin-top:24px}
+.temp-badge{background:linear-gradient(135deg,#0a7c7c 0%,#1b998b 55%,#2bb5a0 100%);padding:28px 24px;text-align:center;position:relative;overflow:hidden;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.temp-badge.shimmer-in{opacity:1;transform:translateY(0)}
+.temp-badge::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transition:left .9s ease}
+.temp-badge.shimmer-in::after{left:160%}
+.temp-val{font-family:'Cinzel',serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:.04em;display:block;line-height:1}
+.temp-label{font-size:9px;color:rgba(255,255,255,.65);letter-spacing:.2em;text-transform:uppercase;display:block;line-height:1}
+.env-strip{margin-top:64px;border-top:1px solid var(--sand-line);padding-top:48px}
+.env-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px}
+.env-card h4{margin-bottom:8px;color:var(--bronze)}
+.env-card p{font-size:13px;color:var(--ink-mid)}
+.beach-notice{margin-top:32px;padding:20px 24px;border-left:2px solid var(--bronze);background:var(--white)}
+.beach-notice p{font-size:13px;color:var(--ink-mid)}
+
+/* ============================================================ PAGE 6 — SPA */
+.spa-lead-photo{margin-bottom:56px}
+.spa-intro p{max-width:540px}
+.spa-menu{margin-top:56px}
+.spa-category{margin-bottom:44px}
+.spa-cat-heading{display:flex;align-items:center;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--sand-line)}
+.spa-cat-dot{width:6px;height:6px;background:#1b998b;border-radius:50%;flex-shrink:0}
+.spa-treatment{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:center;padding:16px 0;border-bottom:1px solid var(--sand-line)}
+.spa-t-name{font-family:'Cinzel',serif;font-size:13px;color:var(--ink);letter-spacing:.04em;display:block;margin-bottom:3px}
+.spa-t-desc{font-size:12px;color:var(--ink-lt);line-height:1.5}
+.spa-t-dur{font-family:'Cinzel',serif;font-size:11px;color:var(--ink-lt);white-space:nowrap;letter-spacing:.04em}
+.spa-t-price{font-family:'Cinzel',serif;font-size:14px;color:var(--ink);white-space:nowrap}
+.spa-mani .spa-treatment{grid-template-columns:1fr auto}
+.spa-footer-note{margin-top:32px;padding:20px 24px;border-left:2px solid var(--bronze)}
+.spa-footer-note p{font-size:12px;color:var(--ink-lt);font-style:italic}
+
+/* ============================================================ PAGE 7 — EXPLORE (editorial) */
+.explore-intro-copy{max-width:600px;font-size:14px;line-height:1.95;color:var(--ink-mid);margin-top:12px}
+
+/* Category bands */
+.explore-cat{margin-top:72px}
+.explore-cat-band{display:flex;align-items:baseline;gap:20px;padding-bottom:24px;border-bottom:2px solid var(--ink)}
+.explore-cat-num{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--cobalt);flex-shrink:0}
+.explore-cat-title{font-family:'Cinzel',serif;font-size:clamp(24px,3.5vw,38px);font-weight:400;color:var(--ink);letter-spacing:.04em;line-height:1}
+
+/* Feature split — large photo + dark editorial panel */
+.explore-feature{display:grid;grid-template-columns:1.55fr 1fr;min-height:400px;margin-top:3px}
+.explore-feature-photo{overflow:hidden;position:relative;background:var(--sand-deep)}
+.explore-feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.explore-feature-panel{background:var(--cobalt);padding:52px 44px;display:flex;flex-direction:column;justify-content:center}
+.explore-feature-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:rgba(196,162,101,.85);display:block;margin-bottom:16px}
+.explore-feature-panel h3{color:var(--white);font-size:clamp(18px,2.2vw,28px);letter-spacing:.05em;margin-bottom:18px;font-weight:400}
+.explore-feature-panel p{font-size:13px;color:rgba(233,245,255,.72);line-height:1.9}
+.explore-feature-panel .feat-note{font-size:11px;color:rgba(255,255,255,.45);margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-style:italic}
+
+/* Activity card grid */
+.explore-act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:transparent;margin-top:20px}
+.explore-act-card{background:var(--sand)}
+.explore-act-photo{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--sand-deep)}
+.explore-act-photo img,.explore-act-photo .photo-ph{width:100%;height:100%;object-fit:cover;display:block}
+.explore-act-photo .photo-ph{position:absolute;inset:0}
+.explore-act-info{padding:20px 20px 24px}
+.explore-act-name{font-family:'Cinzel',serif;font-size:12px;color:var(--ink);letter-spacing:.06em;display:block;margin-bottom:6px}
+.explore-act-note{font-size:12px;color:var(--ink-lt);line-height:1.6}
+
+/* Nature & culture — photo left, list right */
+.explore-nature-split{display:grid;grid-template-columns:1fr 1fr;margin-top:3px}
+.explore-nature-photo{overflow:hidden;position:relative;min-height:400px;background:var(--sand-deep)}
+.explore-nature-photo img,.explore-nature-photo .photo-ph{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
+.explore-nature-list{background:var(--sand-deep);padding:48px 44px;display:flex;flex-direction:column;justify-content:center;gap:0}
+.explore-nature-item{padding:18px 0;border-bottom:1px solid var(--sand-line)}
+.explore-nature-item:first-child{border-top:1px solid var(--sand-line)}
+.explore-nature-item h4{margin-bottom:5px}
+.explore-nature-item p{font-size:12px;color:var(--ink-lt);line-height:1.6}
+
+/* Day trips destination cards */
+.explore-trips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:transparent;margin-top:20px}
+.explore-trip-card{background:var(--sand)}
+.explore-trip-photo{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--sand-deep)}
+.explore-trip-photo img,.explore-trip-photo .photo-ph{width:100%;height:100%;object-fit:cover;display:block}
+.explore-trip-photo .photo-ph{position:absolute;inset:0}
+.explore-trip-info{padding:22px 20px 26px}
+.explore-trip-name{font-family:'Cinzel',serif;font-size:13px;color:var(--ink);letter-spacing:.05em;display:block;margin-bottom:8px}
+.explore-trip-note{font-size:12px;color:var(--ink-lt);line-height:1.7}
+
+/* Concierge strip */
+.explore-concierge{padding:32px 0;display:flex;align-items:center;gap:28px;border-top:1px solid var(--sand-line);margin-top:56px}
+.concierge-rule{width:1px;min-height:48px;background:var(--bronze);flex-shrink:0}
+.explore-concierge p{font-size:13px;color:var(--ink-mid)}
+
+/* ============================================================ PAGE 8 — SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);margin-top:52px}
+.service-card{background:var(--sand);padding:32px 24px;display:flex;flex-direction:column;gap:12px}
+.service-icon{color:var(--bronze)}
+.service-card p{font-size:12px;color:var(--ink-lt);line-height:1.65}
+
+/* ============================================================ PAGE 9 — ACCOMMODATION (text cards — Canva p7 style) */
+.rooms-intro p{max-width:560px}
+.rooms-grid-editorial{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);margin-top:48px}
+.room-card-ed{background:var(--sand-deep);padding:22px 18px 20px;text-align:center}
+.rce-rule,.rce-rule.cobalt-rule{margin-left:auto;margin-right:auto}
+.room-card-ed.ocean{border-top:2px solid var(--jordy)}
+.room-card-ed.suite{border-top:2px solid var(--cobalt)}
+.rce-name{font-family:'Cinzel',serif;font-size:16px;font-weight:400;color:var(--ink);letter-spacing:.06em;display:block;margin-bottom:8px}
+.rce-rule{display:block;width:20px;height:1px;background:var(--bronze);margin-bottom:8px}
+.rce-rule.cobalt-rule{background:#1b998b}
+.rce-view{font-family:'Cinzel',serif;font-size:8px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:4px}
+.rce-floor{font-size:11px;color:var(--ink-lt);display:block;margin-bottom:3px}
+.rce-beds{font-size:11px;color:var(--ink-lt);font-weight:300}
+.facilities-strip{margin-top:48px;border-top:1px solid var(--sand-line);padding-top:32px}
+.facilities-strip h3{margin-bottom:20px}
+.facilities-two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.facility-col h4{margin-bottom:12px;color:var(--ink-lt)}
+.facility-list{list-style:none;display:flex;flex-direction:column}
+.facility-list li{padding:7px 0;border-bottom:1px solid var(--sand-line);font-size:12px;color:var(--ink-mid);display:flex;align-items:center;gap:10px}
+.facility-list li::before{content:'';display:block;width:3px;height:3px;background:var(--bronze);border-radius:50%;flex-shrink:0}
+
+/* ============================================================ PAGE 10 — QUICK REF */
+.qr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);margin-top:48px}
+.qr-item{background:var(--sand);padding:22px 24px}
+.qr-item h5{margin-bottom:7px}
+.qr-val{font-family:'Cinzel',serif;font-size:14px;color:var(--cobalt);letter-spacing:.03em;display:block}
+.qr-sub{font-size:11px;color:var(--ink-lt);margin-top:3px;display:block}
+.fire-section{margin-top:56px}
+.fire-section h3{margin-bottom:8px}
+.fire-intro{font-size:13px;color:var(--ink-lt);margin-bottom:24px;font-style:italic}
+.fire-step{display:flex;gap:20px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--sand-line)}
+.fire-step-num{font-family:'Cinzel',serif;font-size:11px;font-weight:500;color:var(--bronze);flex-shrink:0;width:24px;margin-top:1px}
+.fire-step p{font-size:13px}
+
+/* ============================================================ PAGE 11 — DISCOVER MORE (editorial) */
+.discover-intro{margin-bottom:52px}
+.discover-intro p{max-width:600px;font-size:15px;line-height:2}
+
+/* Editorial property grid */
+.discover-destinations{display:flex;align-items:center;justify-content:center;padding:52px;border-top:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line);margin-bottom:3px}
+.dest-tag{font-family:'Cinzel',serif;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze)}
+.dest-sep{font-size:14px;color:var(--bronze);opacity:.45}
+.discover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.prop-editorial{position:relative;height:420px;overflow:hidden;background:var(--ink)}
+.prop-editorial-img{width:100%;height:120%;object-fit:cover;object-position:center;display:block;transition:transform .8s ease}
+.prop-editorial:hover .prop-editorial-img{transform:scale(1.03)}
+.prop-editorial-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.18) 52%,transparent 100%)}
+.prop-editorial-content{position:absolute;bottom:0;left:0;right:0;padding:28px 24px}
+.prop-ed-header{display:flex;flex-direction:column;gap:7px;margin-bottom:0}
+.prop-ed-region{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze)}
+.prop-ed-sep{display:none}
+.prop-ed-name{font-family:'Cinzel',serif;font-size:18px;font-weight:400;color:var(--white);letter-spacing:.04em;line-height:1.2}
+.prop-ed-copy{font-size:12px;font-weight:300;color:rgba(245,239,228,.72);line-height:1.65;font-style:italic;padding-top:10px;border-top:1px solid rgba(255,255,255,.14)}
+
+.discover-contact-strip{margin-top:52px;border-top:1px solid var(--sand-line);padding-top:40px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.discover-contact-left h3{margin-bottom:16px}
+.contact-row{display:flex;gap:40px;flex-wrap:wrap}
+.contact-pair{display:flex;align-items:baseline;gap:10px}
+.cl-label{font-family:'Cinzel',serif;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-lt);flex-shrink:0}
+.cl-val{font-size:13px;color:var(--ink-mid)}
+.discover-social{text-align:right}
+.discover-social p{font-size:12px;color:var(--ink-lt);margin-bottom:6px}
+.discover-social-handle{font-family:'Cinzel',serif;font-size:14px;letter-spacing:.12em;color:var(--ink)}
+
+/* ============================================================ PAGE 12 — BACK COVER */
+#back-cover{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--ink)}
+.back-photo-wrap{position:absolute;inset:0}
+.back-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,42,34,.9) 0%,rgba(30,42,34,.3) 55%,rgba(30,42,34,.05) 100%);pointer-events:none}
+.back-content{position:absolute;bottom:0;left:0;right:0;padding:0 64px 64px}
+.back-rule{width:32px;height:1px;background:rgba(196,162,101,.5);margin-bottom:16px}
+.back-title{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:rgba(245,239,228,.88);margin-bottom:4px}
+.back-tagline{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(196,162,101,.7);margin-bottom:12px;font-style:italic}
+.back-address{font-family:'Poppins',sans-serif;font-size:12px;font-weight:300;color:rgba(245,239,228,.5);margin-bottom:12px}
+.back-web{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze)}
+
+/* ============================================================ COLOUR SYSTEM — COBALT / JORDY ACCENTS */
+
+/* Section eyebrows: ocean/coastal sections → cobalt, warm sections → bronze */
+#welcome .eyebrow,
+#pool-beach .eyebrow,
+#explore .eyebrow,
+#accommodation .eyebrow,
+#quick-ref .eyebrow,
+#discover .eyebrow { color: var(--cobalt); }
+
+/* Info blocks on welcome: jordy left border accent */
+
+/* Welcome "Welcome home" signature */
+.welcome-signature { font-family:'Cinzel',serif; font-size:13px; color:var(--cobalt); letter-spacing:.04em; display:block; margin-top:20px; }
+
+/* Billing block: jordy border instead of sand-line */
+.billing-block { border-color: var(--jordy); }
+
+/* Pool section: blue tint on the section background */
+#pool-beach { background: rgba(74,127,181,0.04); }
+
+/* Activity and trip card name in cobalt */
+.explore-act-name { color: var(--cobalt); }
+.explore-trip-name { color: var(--cobalt); }
+
+/* Nature list item headings: cobalt */
+.explore-nature-item h4 { color: var(--cobalt); }
+
+/* Discover contact section */
+.discover-social-handle { color: var(--cobalt); }
+
+/* Fire step numbers: cobalt instead of bronze */
+.fire-step-num { color: var(--cobalt); }
+
+/* Quick ref grid gap: jordy */
+.qr-grid { background: var(--jordy); }
+
+/* Quick ref item background stays sand but top border in jordy for ocean items */
+.qr-item { background: var(--sand); border-top: 2px solid transparent; }
+.qr-item:nth-child(1),.qr-item:nth-child(2) { border-top-color: var(--cobalt); }
+
+/* Back cover rule: jordy tint */
+.back-rule { background: rgba(74,127,181,.6); }
+
+/* ============================================================ DISCOVER DIANI */
+.diani-intro-text{max-width:640px;font-size:15px;line-height:2;margin-bottom:52px}
+.diani-cat-block{margin-bottom:48px}
+.diani-cat-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.diani-cat-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);white-space:nowrap}
+.diani-cat-line{flex:1;height:1px;background:var(--sand-line)}
+.diani-venues{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.diani-venues.cols-2{grid-template-columns:repeat(2,1fr)}
+.diani-venue{background:var(--sand-deep);padding:22px 20px}
+.diani-venue-name{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink);display:block;margin-bottom:5px}
+.diani-venue-dist{font-family:'Cinzel',serif;font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:10px}
+.diani-venue-desc{font-size:12px;line-height:1.75;color:var(--ink-mid)}
+.diani-banking-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.diani-bank-tag{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.08em;color:var(--ink-mid);background:var(--sand-deep);padding:8px 14px}
+.diani-concierge{background:var(--sand-deep);padding:36px 40px;border-left:2px solid var(--cobalt);margin-top:52px}
+.diani-concierge h3{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:20px}
+.diani-concierge-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 24px}
+.diani-concierge-item{font-size:12px;color:var(--ink-mid);line-height:1.8}
+.diani-concierge-note{font-size:13px;color:var(--ink-mid);line-height:1.9;margin-top:20px;border-top:1px solid var(--sand-line);padding-top:18px}
+@media(max-width:900px){.diani-venues{grid-template-columns:repeat(2,1fr)}.diani-concierge-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.diani-venues,.diani-venues.cols-2{grid-template-columns:1fr}.diani-concierge-cols{grid-template-columns:1fr}}
+
+/* Spa category dot: keep bronze */
+
+/* ============================================================ RESPONSIVE */
+@media(max-width:1024px){.discover-grid{grid-template-columns:repeat(2,1fr)}.rooms-grid-editorial{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.explore-act-grid{grid-template-columns:repeat(2,1fr)}.explore-trips-grid{grid-template-columns:repeat(2,1fr)}.explore-feature{grid-template-columns:1fr;min-height:auto}.explore-feature-photo{min-height:280px}.explore-nature-split{grid-template-columns:1fr}.explore-nature-photo{min-height:260px;position:relative}}
+@media(max-width:768px){
+  .container,.container-full{padding:0 24px}
+  nav#site-nav{padding:20px 24px}
+  nav#site-nav.frosted{padding:14px 24px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .welcome-grid,.dining-cols,.split-cols,.discover-contact-strip{grid-template-columns:1fr;gap:40px}
+  .info-grid,.services-grid{grid-template-columns:1fr}
+  .rooms-grid-editorial{grid-template-columns:repeat(2,1fr)}
+  .discover-grid{grid-template-columns:1fr}
+  .payment-grid,.qr-grid{grid-template-columns:1fr 1fr}
+  .env-grid{grid-template-columns:1fr 1fr}
+  .explore-act-grid,.explore-trips-grid{grid-template-columns:1fr}
+  .explore-feature{grid-template-columns:1fr}
+  .explore-nature-split{grid-template-columns:1fr}
+  .back-content{padding:0 28px 48px}
+  .prop-editorial{height:320px}
+  .discover-social{text-align:left}
+}
+@media(max-width:480px){
+  .rooms-grid-editorial,.discover-grid,.payment-grid,.qr-grid,.env-grid{grid-template-columns:1fr}
+  .facilities-two{grid-template-columns:1fr}
+  .contact-row{flex-direction:column;gap:16px}
+}
+
+/* ============================================================
+   @MEDIA PRINT — A4 BROCHURE (15 pages)
+   ============================================================ */
+@media print {
+
+/* ——— A4 PAGE SETUP ——— */
+@page { size: A4; margin: 10mm 12mm; }
+
+/* ——— BASE RESET ——— */
+*,*::before,*::after { animation:none !important; transition:none !important; }
+html { scroll-behavior:auto; }
+body { background:var(--sand) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+/* ——— HIDE UI CHROME ——— */
+#progress-bar,nav#site-nav,.nav-overlay,.hamburger,.copy-btn { display:none !important; }
+
+/* ——— REVEAL: force visible ——— */
+.reveal { opacity:1 !important; transform:none !important; }
+.temp-badge { opacity:1 !important; transform:none !important; }
+
+/* ——— PARALLAX: freeze ——— */
+.parallax-wrap { overflow:hidden !important; position:relative !important; }
+.parallax-inner { position:absolute !important; inset:0 !important; top:0 !important; bottom:0 !important; transform:none !important; will-change:auto !important; }
+.parallax-img { width:100% !important; height:100% !important; object-fit:cover !important; }
+
+/* Default section parallax height */
+.page-section .parallax-wrap { height:26mm !important; }
+
+/* ——— CONTAINERS: full A4 width ——— */
+.container,.container-full { max-width:100% !important; padding:0 !important; margin:0 !important; }
+
+/* ——— PAGE SECTIONS: one per A4 page ——— */
+.page-section { padding:14mm 0 6mm !important; margin:0 !important; page-break-before:always; }
+
+/* ——— TYPOGRAPHY SCALE ——— */
+h2 { font-size:20px !important; }
+h3 { font-size:11px !important; }
+h4 { font-size:9px !important; }
+h5 { font-size:7.5px !important; }
+p  { font-size:10.5px !important; line-height:1.6 !important; }
+p+p { margin-top:7px !important; }
+.eyebrow { font-size:8px !important; margin-bottom:8px !important; }
+.rule { margin:10px 0 !important; }
+.section-header { margin-bottom:10px !important; }
+
+/* ============================================================ PAGE 1 — COVER */
+#cover {
+  height:277mm !important; min-height:0 !important;
+  overflow:hidden !important; background:var(--ink) !important;
+  page-break-before:avoid; page-break-after:always; position:relative !important;
+}
+#cover::after {
+  content:''; position:absolute; inset:0;
+  background:url('images/cover.jpg') center/cover no-repeat;
+  opacity:0.85; z-index:0;
+}
+.cover-video { display:none !important; }
+.cover-logo-overlay { position:absolute !important; padding-top:28mm !important; z-index:1 !important; }
+.cover-text-title { font-size:46px !important; opacity:1 !important; }
+.cover-text-sub  { font-size:24px !important; opacity:1 !important; }
+
+/* ============================================================ PAGE 2 — WELCOME */
+.welcome-opening { margin-bottom:18px !important; padding-bottom:16px !important; }
+.welcome-wild { font-size:20px !important; margin-bottom:8px !important; }
+.welcome-quote-text { font-size:11px !important; line-height:1.75 !important; }
+.welcome-letter p { font-size:11px !important; line-height:1.65 !important; }
+.welcome-signature { font-size:11px !important; margin-top:10px !important; }
+
+/* ============================================================ PAGE 3 — QUICK REFERENCE */
+#quick-reference .info-grid { grid-template-columns:repeat(2,1fr) !important; }
+.info-card { padding:14px 14px !important; gap:10px !important; }
+.info-card-icon { width:18px !important; height:18px !important; }
+.info-card h4 { margin-bottom:3px !important; }
+.info-card p { font-size:10px !important; line-height:1.5 !important; }
+
+/* ============================================================ PAGE 4 — YOUR ROOM */
+.room-lead-photo { margin-bottom:16px !important; }
+.room-lead-photo .parallax-wrap { height:40mm !important; }
+#your-room .info-grid { grid-template-columns:repeat(3,1fr) !important; }
+
+/* ============================================================ PAGE 5 — DINING */
+.dining-hero { margin-bottom:14px !important; }
+.dining-hero .parallax-wrap { height:34mm !important; }
+#dining .d2 .parallax-wrap { height:24mm !important; }
+#dining .d2[style] { margin-top:0 !important; margin-bottom:0 !important; }
+.dining-cols { gap:28px !important; }
+.menu-item { padding:6px 0 !important; }
+.menu-item-name { font-size:11px !important; }
+.menu-item-note { font-size:9.5px !important; margin-top:2px !important; }
+.billing-block { margin-top:16px !important; padding:14px 16px !important; }
+.billing-block h3 { margin-bottom:12px !important; }
+.payment-grid { gap:12px !important; }
+.payment-item p { font-size:10px !important; }
+.billing-note-strip { padding-top:10px !important; margin-top:10px !important; font-size:9.5px !important; }
+
+/* ============================================================ PAGE 6 — POOL & BEACH */
+.split-cols { gap:28px !important; }
+.split-cols h3 { margin-bottom:8px !important; margin-top:12px !important; }
+.info-block { padding:8px 0 !important; margin-top:10px !important; }
+.ibr { padding:4px 0 !important; }
+.ibr-value { font-size:12px !important; }
+.temp-badges { margin-top:10px !important; }
+.temp-badge { padding:12px 14px !important; }
+.temp-val { font-size:18px !important; }
+.temp-label { font-size:7px !important; }
+.env-strip { display:none !important; }
+.beach-notice { margin-top:10px !important; padding:10px 14px !important; }
+
+/* ============================================================ PAGE 7 — SPA */
+.spa-lead-photo { margin-bottom:14px !important; }
+.spa-lead-photo .parallax-wrap { height:32mm !important; }
+.spa-intro p { font-size:10px !important; }
+.spa-menu { margin-top:14px !important; }
+.spa-category { margin-bottom:12px !important; }
+.spa-cat-heading { padding-bottom:6px !important; }
+.spa-cat-heading h3 { font-size:10px !important; }
+.spa-treatment { padding:6px 0 !important; gap:10px !important; }
+.spa-t-name { font-size:10px !important; margin-bottom:1px !important; }
+.spa-t-desc { font-size:9.5px !important; line-height:1.35 !important; }
+.spa-t-dur,.spa-t-price { font-size:9.5px !important; }
+.spa-footer-note { margin-top:12px !important; padding:8px 12px !important; }
+.spa-footer-note p { font-size:9.5px !important; }
+
+/* ============================================================ PAGES 8–10 — EXPLORE */
+/* Page 8: intro + At the Coast — inherits .page-section padding-top:14mm */
+.explore-intro-copy { font-size:10px !important; margin-top:5px !important; }
+.explore-cat { margin-top:10px !important; }
+.explore-cat-band { padding-bottom:8px !important; }
+.explore-cat-title { font-size:18px !important; }
+.explore-cat-num { font-size:8px !important; }
+
+/* Feature split */
+.explore-feature { min-height:50mm !important; margin:2px 0 0 !important; }
+.explore-feature-photo { min-height:50mm !important; }
+.explore-feature-panel { padding:16px 20px !important; }
+.explore-feature-label { font-size:7.5px !important; margin-bottom:6px !important; }
+.explore-feature-panel h3 { font-size:12px !important; margin-bottom:6px !important; }
+.explore-feature-panel p { font-size:10px !important; line-height:1.5 !important; }
+.explore-feature-panel .feat-note { font-size:9px !important; margin-top:10px !important; padding-top:10px !important; }
+
+/* Activity cards */
+.explore-act-grid { gap:6px !important; margin:6px 0 0 !important; }
+.explore-act-photo { aspect-ratio:unset !important; height:22mm !important; }
+.explore-act-info { padding:6px 8px 8px !important; }
+.explore-act-name { font-size:9.5px !important; margin-bottom:2px !important; }
+.explore-act-note { font-size:9px !important; line-height:1.35 !important; }
+
+/* Page 9: Nature & Culture */
+#explore > div:nth-child(4) { page-break-before:always; padding-top:14mm !important; margin-top:0 !important; }
+.explore-nature-split { margin:2px 0 0 !important; }
+.explore-nature-photo { min-height:90mm !important; }
+.explore-nature-list { padding:20px 22px !important; }
+.explore-nature-item { padding:10px 0 !important; }
+.explore-nature-item h4 { margin-bottom:3px !important; }
+.explore-nature-item p { font-size:10px !important; }
+
+/* Page 10: Day Trips */
+#explore > div:nth-child(6) { page-break-before:always; padding-top:14mm !important; margin-top:0 !important; }
+.explore-trips-grid { gap:6px !important; margin:6px 0 0 !important; }
+.explore-trip-photo { aspect-ratio:16/9 !important; }
+.explore-trip-info { padding:10px 12px 12px !important; }
+.explore-trip-name { font-size:11px !important; margin-bottom:4px !important; }
+.explore-trip-note { font-size:9.5px !important; line-height:1.45 !important; }
+.explore-concierge { margin-top:14px !important; padding:12px 0 !important; gap:16px !important; }
+.explore-concierge p { font-size:10px !important; }
+
+/* ============================================================ PAGE 11 — SERVICES */
+.services-grid { margin-top:18px !important; grid-template-columns:repeat(3,1fr) !important; }
+.service-card { padding:14px 14px !important; gap:8px !important; }
+.service-icon { width:18px !important; height:18px !important; }
+.service-card h4 { font-size:9px !important; }
+.service-card p { font-size:10px !important; line-height:1.5 !important; }
+.fire-section { margin-top:22px !important; }
+.fire-section h3 { margin-bottom:6px !important; }
+.fire-intro { font-size:10px !important; margin-bottom:10px !important; }
+.fire-step { padding:7px 0 !important; gap:12px !important; }
+.fire-step p { font-size:10px !important; }
+
+/* ============================================================ PAGE 12 — ACCOMMODATION */
+#accommodation .section-header,
+#accommodation .rooms-intro,
+#accommodation .facilities-strip { padding:0 !important; }
+#accommodation .rooms-intro { margin-bottom:10px !important; }
+#accommodation .rooms-intro p { font-size:10px !important; }
+.rooms-grid-editorial { grid-template-columns:repeat(4,1fr) !important; margin:0 !important; }
+.room-card-ed { padding:11px 9px !important; }
+.rce-name { font-size:12px !important; margin-bottom:3px !important; }
+.rce-rule { margin-bottom:3px !important; }
+.rce-view { font-size:7px !important; }
+.rce-floor,.rce-beds { font-size:9px !important; }
+.facilities-strip { margin-top:14px !important; }
+.facilities-strip h3 { margin-bottom:8px !important; }
+.facilities-two { gap:16px !important; }
+.facility-col h4 { margin-bottom:6px !important; }
+.facility-list li { padding:3.5px 0 !important; font-size:9.5px !important; gap:8px !important; }
+
+/* ============================================================ PAGE 13 — QUICK REF */
+#quick-ref .qr-grid { grid-template-columns:repeat(2,1fr) !important; margin-top:18px !important; }
+.qr-item { padding:12px 14px !important; }
+.qr-val { font-size:11px !important; }
+.qr-sub { font-size:8.5px !important; margin-top:2px !important; }
+#quick-ref .fire-section { margin-top:20px !important; }
+
+/* ============================================================ PAGE 14 — DISCOVER */
+#discover .section-header,
+#discover .discover-intro,
+#discover .discover-grid,
+#discover .discover-contact-strip,
+#discover .discover-destinations { padding:0 !important; }
+.discover-intro { margin-bottom:10px !important; }
+.discover-intro p { font-size:10.5px !important; }
+.discover-destinations { padding:10px 0 !important; margin-bottom:0 !important; }
+.dest-tag { font-size:8.5px !important; }
+.discover-grid { grid-template-columns:repeat(3,1fr) !important; gap:3px !important; }
+.prop-editorial { height:54mm !important; }
+.prop-editorial-img { height:100% !important; transform:none !important; }
+.prop-ed-region { font-size:7px !important; }
+.prop-ed-name { font-size:12px !important; }
+.prop-editorial-content { padding:10px 12px !important; }
+.prop-ed-header { gap:4px !important; }
+.prop-ed-copy { display:none !important; }
+.discover-contact-strip { margin-top:14px !important; padding-top:14px !important; flex-wrap:nowrap !important; }
+.discover-contact-left h3 { margin-bottom:8px !important; }
+.contact-row { gap:20px !important; flex-wrap:nowrap !important; }
+.cl-val { font-size:10px !important; }
+.cl-label { font-size:7.5px !important; }
+.discover-social p { font-size:9.5px !important; margin-bottom:3px !important; }
+.discover-social-handle { font-size:12px !important; }
+
+/* ============================================================ PAGE 15 — BACK COVER */
+#back-cover {
+  height:277mm !important; min-height:0 !important;
+  page-break-before:always; overflow:hidden !important; position:relative !important;
+}
+#back-cover .parallax-inner { position:absolute !important; inset:0 !important; top:0 !important; bottom:0 !important; }
+.back-content { padding:0 14mm 14mm !important; }
+.back-title { font-size:11px !important; }
+.back-tagline { font-size:9px !important; }
+.back-address { font-size:10px !important; }
+.back-web { font-size:10px !important; }
+
+} /* end @media print */
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav id="site-nav">
+  <a href="#cover" class="nav-brand">Soroi Blue <span class="nav-dot"></span> Diani</a>
+  <ul class="nav-links">
+    <li><a href="#welcome">Welcome</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#spa">The Frangipani Spa</a></li>
+    <li><a href="#explore">Explore</a></li>
+    <li><a href="#accommodation">Rooms</a></li>
+    <li><a href="#quick-ref">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay">
+  <button class="nav-overlay-close" id="nav-close">Close</button>
+  <a href="#welcome">Welcome</a>
+  <a href="#your-room">Your Room</a>
+  <a href="#dining">Dining</a>
+  <a href="#pool-beach">Pool &amp; Beach</a>
+  <a href="#spa">The Frangipani Spa</a>
+  <a href="#explore">Explore</a>
+  <a href="#services">Services</a>
+  <a href="#accommodation">Rooms</a>
+  <a href="#quick-ref">Contact</a>
+</div>
+
+<!-- ============================================================ PAGE 1 — COVER -->
+<section id="cover">
+  <video id="cover-video" class="cover-video" autoplay muted playsinline>
+    <source src="images/hero.mp4" type="video/mp4">
+  </video>
+  <div class="cover-logo-overlay">
+    <span class="cover-text-title">Soroi Blue</span>
+    <span class="cover-text-sub">Guest Information</span>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 2 — WELCOME -->
+<!-- WIFI_DATA: Update network name and password below once confirmed -->
+<section class="page-section" id="welcome">
+  <div class="container">
+    <div class="welcome-opening reveal">
+      <div style="margin-bottom:20px;text-align:center;">
+        <img src="images/soroi-blue-logo.png" alt="Soroi Blue Diani" style="width:200px;display:block;margin:0 auto 24px;">
+        <span class="welcome-wild" style="margin-bottom:0;">A Different Kind of Wild</span>
+      </div>
+      <p class="welcome-quote-text">Warm water. White sand. Dhows drifting south at dusk. For a few days, the Indian Ocean is entirely yours.</p>
+    </div>
+    <div class="section-header reveal d1">
+      <span class="eyebrow">Welcome</span>
+      <h2>Welcome to Soroi Blue</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="welcome-letter reveal d1">
+      <p>Whether you are just beginning your journey along the coast, or gently bringing it to a close, we are truly delighted to have you with us. Here, on the pristine shores of Diani Beach, we hope you will find a place to pause, to breathe, and to simply feel at home.</p>
+      <p>With just eleven rooms, Soroi Blue is intentionally intimate — crafted to feel less like a hotel, and more like your own private retreat by the sea. A place where you are known, where your preferences matter, and where every detail is quietly taken care of.</p>
+      <p>Our team is here for you in the most natural and unobtrusive way — whether it's arranging a morning by the ocean, a quiet corner for sunset, or simply ensuring your favourite drink is always close at hand. Whatever you need, whenever you need it, please allow us the pleasure of looking after you.</p>
+      <p>We invite you to settle in, unwind, and let the rhythm of the coast carry you.</p>
+      <span class="welcome-signature">Welcome home.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 3 — QUICK REFERENCE -->
+<section class="page-section" id="quick-reference">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">The Essentials</span>
+      <h2>Quick Reference</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="info-grid reveal d1">
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div><h4>Arrival &amp; Departure</h4><p>Check in from 12:00. Check out by 10:00. Late check-out on request, subject to availability and applicable rates.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+        <div>
+          <h4>Wi-Fi Access</h4>
+          <p>Network: Soroi Blue<br>Password: S0r0iblue &nbsp;<button class="copy-btn" data-copy="S0r0iblue" onclick="copyWifi(this)">Copy</button></p>
+          <p>Complimentary throughout the property.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.63 4.35 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.18z"/></svg>
+        <div><h4>Emergency Line</h4><p>+254 (0) 738 537 093. Available 24 hours. Do not hesitate to call — we are always here.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div><h4>Reservations &amp; Enquiries</h4><p>reservations@soroi.com · +254 754 351 908 · soroi.com</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 4 — YOUR ROOM -->
+<section class="page-section" id="your-room">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">In Your Room</span>
+      <h2>All the Essentials</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="room-lead-photo reveal d1">
+      <div class="parallax-wrap" style="height:320px;">
+        <div class="parallax-inner" data-depth="0.2">
+          <img class="parallax-img" src="images/room-suite.jpg" alt="Soroi Blue Diani suite interior">
+        </div>
+      </div>
+    </div>
+    <div class="info-grid reveal d2">
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+        <div><h4>Air Conditioning</h4><p>Climate-controlled for your comfort. Controls beside the bed.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
+        <div><h4>Complimentary Wi-Fi</h4><p>High-speed connection throughout. Network details at the hospitality desk.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M12 10C12 6 16 3 16 3S15 7 12 10"/><path d="M12 14C12 18 8 21 8 21S9 17 12 14"/><path d="M10 12C6 12 3 8 3 8S7 9 10 12"/><path d="M14 12C18 12 21 16 21 16S17 15 14 12"/></svg>
+        <div><h4>Ceiling Fan</h4><p>Natural coastal airflow. Speed controls at the wall switch.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 3h2l2 4H5V3z"/><rect x="3" y="7" width="18" height="14" rx="2"/></svg>
+        <div><h4>Minibar &amp; Fridge</h4><p>Stocked and refreshed daily. Indulgences are added to your room bill for settlement at departure.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="13" rx="2"/></svg>
+        <div><h4>Smart TV &amp; DSTV</h4><p>Smart TVs with DSTV and a range of international channels. Channel guide in your welcome folder.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/></svg>
+        <div><h4>Safe</h4><p>Electronic safe in your room. We recommend storing all money and valuables securely. Soroi Blue cannot accept responsibility for lost or missing items.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <div><h4>Tea &amp; Coffee</h4><p>In-room facility with complimentary supplies. Filtered drinking water also available in your minibar.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8L7 16h10l4-8"/><path d="M7 16v4"/><path d="M17 16v4"/><path d="M9 20h6"/></svg>
+        <div><h4>Hair Dryer</h4><p>Provided in the bathroom drawer for your convenience. Spares available from the hospitality desk.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L3 14h18L12 2z"/><path d="M12 2v12"/><path d="M5 14v6"/><path d="M19 14v6"/><path d="M3 20h18"/></svg>
+        <div><h4>Mosquito Nets</h4><p>Provided in all rooms. Ask housekeeping if you would like them adjusted.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <div><h4>Little Guests</h4><p>Baby cot available in all rooms on request at no extra charge.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg>
+        <div><h4>Laundry &amp; Ironing</h4><p>Available daily. Place items in the laundry bag with the completed form — same-day or next-day return. Ironing on request.</p></div>
+      </div>
+      <div class="info-card">
+        <svg class="info-card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        <div><h4>Wake-up Calls</h4><p>There are no telephones in the rooms. Simply leave your preferred wake-up time with the night waiter before you retire.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 4 — DINING & BILLING -->
+<section class="page-section" id="dining">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Food &amp; Drink</span>
+      <h2>Dine <span class="cobalt-italic">&amp; Delight</span></h2>
+      <span class="rule"></span>
+    </div>
+    <div class="dining-hero reveal d1">
+      <div class="parallax-wrap" style="height:400px;">
+        <div class="parallax-inner" data-depth="0.2">
+          <img class="parallax-img" src="images/dining.jpg" alt="Beach dining at Soroi Blue Diani">
+        </div>
+      </div>
+    </div>
+    <div class="reveal d1" style="margin-bottom:40px;">
+      <p style="max-width:640px;">Ease into coastal time with a refreshing drink in hand — our bar is stocked with a curated selection of beers, wines, and spirits to suit every mood. Meals are best enjoyed al fresco: by the pool, in the garden, or at the ocean stretching out before you. Our menu is thoughtfully crafted with daily chef's specials.</p>
+    </div>
+    <div class="dining-cols reveal d2">
+      <div class="dining-section">
+        <h3>Dining</h3>
+        <div class="menu-item"><span class="menu-item-name">Restaurant</span><p class="menu-item-note">Full breakfast, lunch, and dinner. Daily chef's specials built around Kenya's coastal produce. Ask the team what came in fresh.</p></div>
+        <div class="menu-item"><span class="menu-item-name">BBQ &amp; Pizza Oven</span><p class="menu-item-note">Evenings on request. Reserve through the hospitality desk for a private outdoor dining experience in the garden.</p></div>
+        <div class="menu-item"><span class="menu-item-name">Mini Bar</span><p class="menu-item-note">Replenished daily. Indulgences are added seamlessly to your room bill for settlement at departure.</p></div>
+      </div>
+      <div class="dining-section">
+        <h3>Drinks</h3>
+        <div class="menu-item"><span class="menu-item-name">Indoor &amp; Beach Bar</span><p class="menu-item-note">A full cocktail and wine selection. The bar moves outside at sundown — cocktails, cold Tusker, and the sound of the Indian Ocean.</p></div>
+      </div>
+    </div>
+    <div class="reveal d2" style="margin-top:48px;">
+      <div class="parallax-wrap" style="height:360px;">
+        <div class="parallax-inner" data-depth="0.2">
+          <img class="parallax-img" src="images/bar.jpg" alt="The bar at Soroi Blue Diani">
+        </div>
+      </div>
+    </div>
+    <div class="billing-block reveal d3">
+      <h3>Payments</h3>
+      <div class="payment-grid">
+        <div class="payment-item"><h4>Cards</h4><p>Mastercard and Visa accepted at the hospitality desk.</p></div>
+        <div class="payment-item"><h4>M-Pesa</h4><p>Mobile payments accepted. Ask reception for the till number.</p></div>
+        <div class="payment-item"><h4>USD Cash</h4><p>Notes dated 2006 or later only. Older notes are not accepted.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 5 — POOL, BEACH & ENVIRONMENT -->
+<!-- POOL_HOURS: Confirm opening and closing times with property management -->
+<section class="page-section" id="pool-beach">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Outside</span>
+      <h2>The Beach <span class="cobalt-italic">&amp; Pool</span></h2>
+      <span class="rule"></span>
+    </div>
+    <div class="split-cols">
+      <div class="reveal d1">
+        <div style="margin-bottom:24px;">
+          <div class="parallax-wrap" style="height:260px;">
+            <div class="parallax-inner" data-depth="0.2">
+              <img class="parallax-img" src="images/pool.jpg" alt="Soroi Blue Diani pool">
+            </div>
+          </div>
+        </div>
+        <h3>The Pool</h3>
+        <p style="margin-top:16px;">The pool is yours to enjoy at your leisure. Children must be supervised by an adult at all times. A kids pool is also available. No glassware in the pool area.</p>
+        <div class="info-block" style="margin-top:20px;">
+          <div class="ibr"><span class="ibr-label">Pool hours</span><span class="ibr-value">07:00 – 20:00 daily</span></div>
+          <div class="ibr"><span class="ibr-label">Kids pool</span><span class="ibr-value" style="font-size:12px;">Available · same hours</span></div>
+        </div>
+        <p style="font-size:12px;color:var(--ink-lt);margin-top:12px;">Pool is used at your own risk. Sun loungers and towels laid out each morning.</p>
+      </div>
+      <div class="reveal d2">
+        <div style="margin-bottom:24px;">
+          <div class="parallax-wrap" style="height:260px;">
+            <div class="parallax-inner" data-depth="0.2">
+              <img class="parallax-img" src="images/beach.jpg" alt="Diani Beach">
+            </div>
+          </div>
+        </div>
+        <h3>Diani Beach</h3>
+        <p style="margin-top:16px;">Kenya's beaches are beautifully open and shared by all. We've created a peaceful sandy stretch for you to relax — feel free to wander and please help us keep it clean and pristine.</p>
+        <div class="temp-badges">
+          <div class="temp-badge"><span class="temp-val">25–29°C</span><span class="temp-label">Sea Temperature</span></div>
+          <div class="temp-badge"><span class="temp-val">20–42°C</span><span class="temp-label">Air Temperature</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 6 — THE SPA -->
+<section class="page-section" id="spa">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Wellness</span>
+      <h2>The Frangipani Spa</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="spa-lead-photo reveal d1">
+      <div class="parallax-wrap" style="height:360px;overflow:hidden;border-radius:2px;">
+        <img src="images/massage.png" alt="The Frangipani Spa" class="parallax-inner" data-depth="0.2" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      </div>
+    </div>
+    <div class="spa-intro reveal d1">
+      <p>A place to slow down further still. Please contact the hospitality desk to book your treatment — advance booking is recommended. Complimentary yoga mats are available on request for in-room practice or garden sessions. All prices in Kenyan Shillings.</p>
+    </div>
+    <div class="spa-menu reveal d2">
+      <div class="spa-category">
+        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Massage &amp; Body Treatments</h3></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Drift Away</span><span class="spa-t-desc">Head, shoulder and back massage — melts away tension, leaving you calm and refreshed.</span></div><span class="spa-t-dur">50 mins</span><span class="spa-t-price">4,500</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Tidal Flow</span><span class="spa-t-desc">Rhythmic Swedish massage — softens tight muscles, enhances relaxation.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">5,000</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Blue Reset Ritual</span><span class="spa-t-desc">Lemongrass body polish with your choice of massage — smooth, refresh, and glow.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,500</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Citrus Drift Ritual</span><span class="spa-t-desc">Deep tissue massage paired with a revitalising body scrub — release, renew, awaken.</span></div><span class="spa-t-dur">90 mins</span><span class="spa-t-price">6,500</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Jumbo Joy Prenatal</span><span class="spa-t-desc">Gentle, nurturing massage — designed to ease tension and support your changing body.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,000</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Soroi Signature Escape</span><span class="spa-t-desc">Lemongrass scrub, tailored full-body massage, and head &amp; shoulder ritual — the complete restoration.</span></div><span class="spa-t-dur">2–3 hrs</span><span class="spa-t-price">12,500</span></div>
+      </div>
+      <div class="spa-category">
+        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Facials</h3></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Tidal Calm Facial</span><span class="spa-t-desc">Deeply moisturising — hydrates, rejuvenates, and leaves a radiant glow.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,000</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Ocean Drift Renewal Facial</span><span class="spa-t-desc">Crafted to soothe sun-stressed skin — relief, healing, and restored balance.</span></div><span class="spa-t-dur">45 mins</span><span class="spa-t-price">5,000</span></div>
+      </div>
+      <div class="spa-category spa-mani">
+        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Manicure &amp; Pedicure</h3></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Ocean Ease Manicure</span><span class="spa-t-desc">Perfectly polished nails and deeply hydrated skin.</span></div><span class="spa-t-price">Gel 3,500 &nbsp;|&nbsp; Non-Gel 2,000</span></div>
+        <div class="spa-treatment"><div><span class="spa-t-name">Barefoot Drift Pedicure</span><span class="spa-t-desc">Refreshed, revitalised, and perfectly pedicured feet for the beach ahead.</span></div><span class="spa-t-price">Gel 4,500 &nbsp;|&nbsp; Non-Gel 3,000</span></div>
+      </div>
+    </div>
+    <div class="spa-footer-note reveal d3">
+      <p>Prices in Kenyan Shillings. Please contact the hospitality desk to schedule your treatment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 7 — EXPLORE (editorial) -->
+<section class="page-section" id="explore">
+  <div class="container reveal">
+    <span class="eyebrow">Beyond the Property</span>
+    <h2>Discover <span class="cobalt-italic">&amp; Drift</span></h2>
+    <span class="rule"></span>
+    <p class="explore-intro-copy">Diani and Mombasa offer a beautiful mix of coast, culture, and gentle adventure — perfect for drifting a little further while you're with us. Our team arranges everything. Ask the hospitality desk for the current excursions menu and availability.</p>
+  </div>
+
+  <!-- 01 — AT THE COAST -->
+  <div class="explore-cat container reveal d1">
+    <div class="explore-cat-band" style="border-bottom-color:#1b998b">
+      <span class="explore-cat-num" style="color:#1b998b">01</span>
+      <h2 class="explore-cat-title">At the Coast</h2>
+    </div>
+  </div>
+  <!-- Feature split -->
+  <div class="container-full">
+    <div class="explore-feature reveal d2" style="margin:3px 52px 0;">
+      <div class="explore-feature-photo">
+        <img src="images/snorkeling.jpeg" alt="Diving and snorkelling on the Diani reef">
+      </div>
+      <div class="explore-feature-panel">
+        <span class="explore-feature-label">Signature Experience</span>
+        <h3>Diving &amp; Snorkelling</h3>
+        <p>Kenya's coral reef along the south coast is one of the most varied in East Africa. Dive the fringing reef at Kisite-Mpunguti, or simply snorkel off the beach. The water is warm, clear, and full of life year-round.</p>
+        <p class="feat-note">Ask reception for current diving operators and snorkelling conditions — the reef is best at low tide.</p>
+      </div>
+    </div>
+    <!-- Activity cards — row 1 -->
+    <div class="explore-act-grid reveal d3" style="margin:20px 52px 0;">
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/deep-sea-fishing.png" alt="Deep sea fishing on the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Deep Sea Fishing</span>
+          <p class="explore-act-note">Tuna, marlin, and sailfish. Half-day and full-day charters available from Diani's fishing boats.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/whale-shark.jpg" alt="Whale shark encounter in the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Whale Sharks &amp; Dolphins</span>
+          <p class="explore-act-note">Seasonal encounters in open water. Ask the team for current conditions before you book.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/bush-baby.jpg" alt="Bush baby feeding at dusk" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Bush Baby Feeding</span>
+          <p class="explore-act-note">Every evening at 7pm — these wide-eyed nocturnal creatures emerge from the coastal forest. A magical moment, especially for little ones.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Activity cards — row 2 -->
+    <div class="explore-act-grid reveal d4" style="margin:20px 52px 0;">
+
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/skydive-diani.jpeg" alt="Skydiving over Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Skydiving over Diani</span>
+          <p class="explore-act-note">Tandem jumps with panoramic Indian Ocean views. Diani is one of the best skydiving locations in East Africa.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/golf.jpg" alt="Golf at Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Golf</span>
+          <p class="explore-act-note">18-hole championship course, 5 minutes from the property. Hire available on site.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/yoga.png" alt="Yoga at Soroi Blue Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Yoga &amp; Wellness</span>
+          <p class="explore-act-note">Complimentary yoga mats available on request for beach or garden practice. Ask the hospitality desk to arrange your session.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Activity cards — row 3 -->
+    <div class="explore-act-grid reveal d4" style="margin:20px 52px 0;">
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/turtle-hatchery.jpeg" alt="Sea turtle hatchery Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Sea Turtle Conservation</span>
+          <p class="explore-act-note">15 minutes away. Discover local efforts to protect endangered sea turtles nesting along Kenya's coastline — a meaningful and memorable visit.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/open-water-2.webp" alt="Ocean Tribe Diving Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Ocean Tribe Diving</span>
+          <p class="explore-act-note">10 minutes away. Professional scuba diving and snorkelling excursions on the coral reefs of the Indian Ocean. All levels welcome.</p>
+        </div>
+      </div>
+      <div class="explore-act-card">
+        <div class="explore-act-photo">
+          <img src="images/glass-boat.jpg" alt="Glass bottom boat Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-act-info">
+          <span class="explore-act-name">Ngalawa &amp; Glass Bottom Boat</span>
+          <p class="explore-act-note">Departs from the beachfront. Explore the reef and coastline aboard a traditional local dhow or glass-bottom boat — no diving experience needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 — NATURE & CULTURE -->
+  <div class="explore-cat container reveal" style="margin-top:72px;">
+    <div class="explore-cat-band">
+      <span class="explore-cat-num">02</span>
+      <h2 class="explore-cat-title">Nature &amp; Culture</h2>
+    </div>
+  </div>
+  <div class="container-full">
+    <div class="explore-nature-split reveal d1" style="margin:3px 52px 0;">
+      <div class="explore-nature-photo">
+        <img src="images/colobus-monkey.jpg" alt="Colobus monkey at Diani forest" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="explore-nature-list">
+        <div class="explore-nature-item">
+          <h4>Colobus Conservation</h4>
+          <p>The Diani forest is home to one of Kenya's most rare primates — the black and white colobus. The Colobus Conservation centre offers guided walks and close encounters with the forest and its resident wildlife.</p>
+        </div>
+        <div class="explore-nature-item">
+          <h4>Kaya Kinondo</h4>
+          <p>An ancient sacred forest on the coast, centuries old and still spiritually alive. Guided walks with local Digo community members reveal stories that the trees have kept for generations.</p>
+        </div>
+        <div class="explore-nature-item">
+          <h4>Kongo Mosque</h4>
+          <p>One of the oldest mosques on the Kenyan coast — a working place of worship and a window into the deep Swahili history of this coastline. Modest dress required. Not open to women.</p>
+        </div>
+        <div class="explore-nature-item">
+          <h4>Community Initiatives</h4>
+          <p>Conservation and community projects operate along this stretch of coast. Ask the manager directly if you'd like to get involved or make a contribution during your stay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 — DAY TRIPS -->
+  <div class="explore-cat container reveal" style="margin-top:72px;">
+    <div class="explore-cat-band">
+      <span class="explore-cat-num">03</span>
+      <h2 class="explore-cat-title">Day Trips from Diani</h2>
+    </div>
+  </div>
+  <div class="container-full">
+    <div class="explore-trips-grid reveal d1" style="margin:20px 52px 0;">
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/wasini-dolphins.jpg" alt="Dolphins at Wasini Island" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Wasini Island &amp; Kisite-Mpunguti</span>
+          <p class="explore-trip-note">A full day by dhow — snorkelling over the coral garden, dolphins in open water, and a long, unhurried Swahili seafood lunch on the island. One of the best days the south coast offers.</p>
+        </div>
+      </div>
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/shimba-hills.jpg" alt="Shimba Hills National Park" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Shimba Hills National Park</span>
+          <p class="explore-trip-note">Forest elephants, rare roan antelope, and the Sheldrick Falls hike — all within two hours of Diani. A completely different landscape from the coast.</p>
+        </div>
+      </div>
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/fort-jesus-mombasa.jpg" alt="Fort Jesus & Mombasa Old Town" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Fort Jesus &amp; Mombasa Old Town</span>
+          <p class="explore-trip-note">A UNESCO World Heritage Site — the old Portuguese fort overlooks the harbour where dhows have traded for centuries. Walk into Mombasa Old Town for the carved doors, spice markets, and the layered history of the Swahili coast.</p>
+        </div>
+      </div>
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/dhow-at-sand-bank.jpg" alt="Funzi Island dhow at sandbank" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Funzi Island</span>
+          <p class="explore-trip-note">Peaceful canoe trips through mangrove channels and a quiet island lunch — the kind of half-day that stays with you. A world away from the open ocean, and only an hour's drive south.</p>
+        </div>
+      </div>
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/market.jpg" alt="Local markets and shopping in Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Local Markets &amp; Shopping</span>
+          <p class="explore-trip-note">Diani Beach Shopping Centre, Carrefour, Muthaiga Mini Market, and Chandarana Foodplus are all within 10–15 minutes. Vibrant craft markets are nearby too — ask the team for a map and honest advice on what's worth your time.</p>
+        </div>
+      </div>
+      <div class="explore-trip-card">
+        <div class="explore-trip-photo">
+          <img src="images/nightlife.png" alt="Diani after dark" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="explore-trip-info">
+          <span class="explore-trip-name">Diani After Dark</span>
+          <p class="explore-trip-note">Diani's evenings have their own character — beach bars, live music, and nightlife venues worth exploring. Ask reception for current recommendations and a safe way to get there and back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concierge note -->
+  <div class="container">
+    <div class="explore-concierge reveal">
+      <div class="concierge-rule"></div>
+      <p>Our team arranges all activities and day trips. Ask the hospitality desk for the current excursions menu, availability, and pricing. Advance notice of 24 hours is appreciated for most outings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 8 — SERVICES -->
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">At the Property</span>
+      <h2>Services &amp; Practical Notes</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal d1">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><path d="M13 16h.01M17 16h.01"/></svg>
+        <h4>Car Hire &amp; Taxis</h4>
+        <p>Heading to shops, restaurants, golf, or exploring further afield? We are happy to arrange taxis, chauffeur services, or car hire — just ask the hospitality desk.</p>
+      </div>
+      <div class="service-card reveal d1">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h4>Medical Assistance</h4>
+        <p>Should you need a doctor, our team can arrange this promptly. Nearby facilities include Diani Beach Hospital (10 min), Aga Khan Health Centre (10 min), and Palm Beach Hospital (15 min). For non-emergencies, Dr. Onkoba is available on call via Reception. First aid kit and trained staff on site at all times.</p>
+      </div>
+      <div class="service-card reveal d2">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>24-Hour Security</h4>
+        <p>Soroi Blue has 24-hour on-site security. Emergency line: +254 (0) 738 537 093.</p>
+      </div>
+      <div class="service-card reveal d3">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <h4>Pool Table &amp; TV Room</h4>
+        <p>Both available to all guests. The TV room has satellite and cable channels — ask reception for the channel guide.</p>
+      </div>
+      <div class="service-card reveal d1">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <h4>Intercom</h4>
+        <p>Direct line to reception from your room. Dial 0 for assistance at any hour.</p>
+      </div>
+      <div class="service-card reveal d2">
+        <svg class="service-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10H3M21 6H3M21 14H3M21 18H3"/></svg>
+        <h4>Secure Parking</h4>
+        <p>Available in front of the property. Vehicles are parked at the owner's risk. Please advise reception of your vehicle on arrival.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 9 — ACCOMMODATION (Canva page 7 style — text cards) -->
+<section class="page-section" id="accommodation">
+  <div class="container-full">
+    <div class="section-header reveal" style="padding:0 52px;">
+      <span class="eyebrow">Accommodation</span>
+      <h2>Your Room at Soroi Blue</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="rooms-intro reveal d1" style="padding:0 52px;">
+      <p>Eleven rooms, each named after a place along Kenya's coastline. Every room includes air conditioning, complimentary Wi-Fi, fan, fridge, hair dryer, laundry service, minibar, mosquito nets, safe, satellite television, and tea and coffee. Baby cots are available in all rooms on request.</p>
+    </div>
+    <div class="rooms-grid-editorial reveal d2" style="margin-left:52px;margin-right:52px;">
+      <!-- Garden View — 1st Floor -->
+      <div class="room-card-ed">
+        <span class="rce-name">Chale</span><span class="rce-rule"></span>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + baby cot</span>
+      </div>
+      <div class="room-card-ed">
+        <span class="rce-name">Funzi</span><span class="rce-rule"></span>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
+      </div>
+      <div class="room-card-ed">
+        <span class="rce-name">Lamu</span><span class="rce-rule"></span>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
+      </div>
+      <!-- Garden View — 2nd Floor -->
+      <div class="room-card-ed">
+        <span class="rce-name">Tiwi</span><span class="rce-rule"></span>
+        <span class="rce-view">Garden View</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">Twin / double</span>
+      </div>
+      <!-- Ocean View — 1st Floor -->
+      <div class="room-card-ed ocean">
+        <span class="rce-name">Kusini</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
+      </div>
+      <div class="room-card-ed ocean">
+        <span class="rce-name">Galu</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
+      </div>
+      <div class="room-card-ed ocean">
+        <span class="rce-name">Wasini</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">Twin / double</span>
+      </div>
+      <div class="room-card-ed ocean">
+        <span class="rce-name">Kaskazi</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
+      </div>
+      <!-- Suites — 2nd Floor: Shimoni | Bahari Blue (×2) | Zanzibar -->
+      <div class="room-card-ed suite">
+        <span class="rce-name">Shimoni</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Junior Suite · Ocean</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">King + twin</span>
+      </div>
+      <div class="room-card-ed suite" style="grid-column:span 2;">
+        <span class="rce-name">Bahari Blue</span><span class="rce-rule cobalt-rule" style="width:32px;"></span>
+        <span class="rce-view">Executive Suite · Ocean</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">King + single + twin &nbsp;·&nbsp; Max 2 adults + 3 children</span>
+      </div>
+      <div class="room-card-ed suite">
+        <span class="rce-name">Zanzibar</span><span class="rce-rule cobalt-rule"></span>
+        <span class="rce-view">Junior Suite · Ocean</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">King + queen + single</span>
+      </div>
+    </div>
+    <div class="facilities-strip reveal d3" style="padding:0 52px;">
+      <h3>Facilities</h3>
+      <div class="facilities-two">
+        <div class="facility-col">
+          <h4>Room Facilities — All Rooms</h4>
+          <ul class="facility-list">
+            <li>Air Conditioning</li><li>Complimentary Wi-Fi</li><li>Fan</li>
+            <li>Fridge &amp; Minibar</li><li>Hair Dryer</li><li>Safe</li>
+            <li>Laundry Service</li><li>Mosquito Nets</li><li>Satellite / Cable TV</li><li>Tea &amp; Coffee</li>
+          </ul>
+        </div>
+        <div class="facility-col">
+          <h4>Property Facilities</h4>
+          <ul class="facility-list">
+            <li>24-Hour Security</li><li>Indoor / Beach Bar</li><li>BBQ &amp; Pizza Oven</li>
+            <li>Swimming Pool</li><li>Kids Pool</li><li>Spa</li>
+            <li>Library</li><li>Pool Table</li><li>Restaurant</li>
+            <li>Secure Parking</li><li>TV Room</li><li>Intercom</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 10 — QUICK REFERENCE -->
+<section class="page-section" id="quick-ref">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Essential Information</span>
+      <h2>Quick Reference</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="qr-grid reveal d1">
+      <div class="qr-item"><h5>Emergency Line</h5><span class="qr-val">+254 (0) 738 537 093</span><span class="qr-sub">Available 24 hours</span></div>
+      <div class="qr-item"><h5>Reservations</h5><span class="qr-val" style="font-size:12px;">reservations@soroi.com</span><span class="qr-sub">+254 754 351 908</span></div>
+      <div class="qr-item"><h5>Check-in</h5><span class="qr-val">12:00</span><span class="qr-sub">Earlier arrivals accommodated where possible</span></div>
+      <div class="qr-item"><h5>Check-out</h5><span class="qr-val">10:00</span><span class="qr-sub">Late check-out on request</span></div>
+      <div class="qr-item"><h5>Coordinates</h5><span class="qr-val" style="font-size:12px;">S 04° 16' 18"</span><span class="qr-sub">E 39° 35' 50.24"</span></div>
+      <div class="qr-item"><h5>Altitude</h5><span class="qr-val">Sea Level</span><span class="qr-sub">Diani Beach, South Coast Kenya</span></div>
+      <div class="qr-item"><h5>Nearest Airstrip</h5><span class="qr-val">Ukunda</span><span class="qr-sub">12 minutes · 5.49km</span></div>
+      <div class="qr-item"><h5>Flight from Nairobi</h5><span class="qr-val">approx. 1 hr 20 min</span><span class="qr-sub">Direct scheduled services</span></div>
+      <div class="qr-item"><h5>Website</h5><span class="qr-val">soroi.com</span><span class="qr-sub">@soroicollection</span></div>
+      <div class="qr-item"><h5>Accepted Payments</h5><span class="qr-val" style="font-size:12px;">Mastercard · Visa · M-Pesa</span><span class="qr-sub">USD cash (notes 2006 or later)</span></div>
+    </div>
+    <div class="fire-section reveal d2">
+      <h3>Fire Safety</h3>
+      <p class="fire-intro">In the event of a fire, act swiftly and calmly. Fire exit maps are displayed in each room.</p>
+      <div class="fire-step"><span class="fire-step-num">01</span><p><strong>Call</strong> — Dial <strong>+254 (0) 738 537 093</strong> immediately to report the fire to our team.</p></div>
+      <div class="fire-step"><span class="fire-step-num">02</span><p><strong>Evacuate</strong> — Quickly and safely make your way to the nearest fire assembly point. Fire exit maps are displayed in each room.</p></div>
+      <div class="fire-step"><span class="fire-step-num">03</span><p><strong>Stay Alert</strong> — Once at the assembly point, remain calm and await instructions from the Soroi Blue team. Do not re-enter the building.</p></div>
+      <div class="fire-step"><span class="fire-step-num">04</span><p><strong>First Aid</strong> — Trained staff and a first aid kit are available on site. Kenya emergency services: <strong>999</strong>.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================ PAGE 11 — DISCOVER MORE (editorial) -->
+<section class="page-section" id="discover">
+  <div class="container-full">
+    <div class="section-header reveal" style="padding:0 52px;">
+      <span class="eyebrow">The Collection</span>
+      <h2>Discover More. <span class="cobalt-italic">Drift With Us.</span></h2>
+      <span class="rule"></span>
+    </div>
+    <div class="discover-intro reveal d1" style="padding:0 52px;">
+      <p>Having discovered Soroi Blue, we invite you to continue your journey — to drift a little further and discover a little more. From untamed wilderness to tranquil shores, each Soroi experience carries the same spirit of warm hospitality, thoughtful detail, and a deep sense of place.</p>
+    </div>
+    <div class="discover-destinations reveal d2" style="padding:0 52px;">
+      <span class="dest-tag">Maasai Mara</span>
+      <span class="dest-sep">&nbsp;·&nbsp;</span>
+      <span class="dest-tag">Samburu</span>
+      <span class="dest-sep">&nbsp;·&nbsp;</span>
+      <span class="dest-tag">Amboseli</span>
+      <span class="dest-sep">&nbsp;·&nbsp;</span>
+      <span class="dest-tag">Tsavo</span>
+      <span class="dest-sep">&nbsp;·&nbsp;</span>
+      <span class="dest-tag">Diani</span>
+    </div>
+    <div class="discover-grid reveal d3" style="padding:0 52px;">
+      <a href="https://soroi.com/accommodation/maasai-mara/soroi-mara-bush-camp/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-mara-bush-camp-2.webp" alt="Soroi Mara Bush Camp">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Maasai Mara</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Mara Bush Camp</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/maasai-mara/soroi-private-wing/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-mara-bush-camp.jpg" alt="Soroi Private Wing">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Maasai Mara</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Private Wing</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/maasai-mara/soroi-luxury-migration-camp/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-migration.jpg" alt="Soroi Luxury Migration Camp">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Maasai Mara</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Luxury Migration Camp</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/tsavo/soroi-lions-bluff-lodge/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-lions-bluff.jpg" alt="Soroi Lions Bluff Lodge">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Tsavo / Lumo</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Lions Bluff Lodge</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/tsavo/soroi-leopards-lair/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-leopards-lair.jpg" alt="Soroi Leopards Lair">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Tsavo / Lumo</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Leopards Lair</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/tsavo/soroi-cheetah-tented-camp/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-cheetah.jpg" alt="Soroi Cheetah Tented Camp">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Tsavo / Lumo</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Cheetah Tented Camp</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/samburu/soroi-larsens-camp/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-larsens.jpg" alt="Soroi Larsens Camp">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Samburu</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Larsens Camp</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/samburu/soroi-samburu-lodge/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-samburu-lodge.jpg" alt="Soroi Samburu Lodge">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Samburu</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Samburu Lodge</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="https://soroi.com/accommodation/soroi-amboseli/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+      <div class="prop-editorial">
+        <img class="prop-editorial-img" src="images/discover-amboseli.jpg" alt="Soroi Amboseli">
+        <div class="prop-editorial-overlay"></div>
+        <div class="prop-editorial-content">
+          <div class="prop-ed-header">
+            <span class="prop-ed-region">Amboseli</span>
+            <span class="prop-ed-sep">·</span>
+            <span class="prop-ed-name">Soroi Amboseli</span>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="discover-contact-strip reveal d3" style="padding:0 52px;">
+      <div class="discover-contact-left">
+        <h3>Get in Touch</h3>
+        <div class="contact-row">
+          <div class="contact-pair"><span class="cl-label">Web</span><a href="https://soroi.com" target="_blank" rel="noopener" class="cl-val" style="text-decoration:none;">soroi.com</a></div>
+          <div class="contact-pair"><span class="cl-label">Email</span><a href="mailto:reservations@soroi.com" class="cl-val" style="text-decoration:none;">reservations@soroi.com</a></div>
+          <div class="contact-pair"><span class="cl-label">Tel</span><a href="tel:+254754351908" class="cl-val" style="text-decoration:none;">+254 754 351 908</a></div>
+        </div>
+      </div>
+      <div class="discover-social">
+        <p>Share your stay with us</p>
+        <a href="https://www.instagram.com/soroicollection" target="_blank" rel="noopener" style="text-decoration:none;"><span class="discover-social-handle">@soroicollection</span></a>
+        <div style="display:flex;gap:16px;margin-top:14px;justify-content:flex-end;">
+          <a href="https://www.instagram.com/soroicollection" target="_blank" rel="noopener" title="Instagram" style="color:var(--cobalt);display:flex;align-items:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/soroicollection" target="_blank" rel="noopener" title="Facebook" style="color:var(--cobalt);display:flex;align-items:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@soroicollection" target="_blank" rel="noopener" title="TikTok" style="color:var(--cobalt);display:flex;align-items:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PAGE 12 — BACK COVER -->
+<section id="back-cover">
+  <div class="back-photo-wrap parallax-wrap">
+    <div class="parallax-inner" data-depth="0.2">
+      <img class="parallax-img" src="images/back-cover.jpg" alt="Soroi Blue Diani at dusk">
+    </div>
+  </div>
+  <div class="back-overlay"></div>
+  <div class="back-content">
+    <div class="back-rule"></div>
+    <div class="back-title">Soroi Blue · Diani</div>
+    <div class="back-tagline">Discover More. Drift With Us.</div>
+    <div class="back-address">Diani Beach, Golden Beach Road, Ukunda · South Coast, Kenya</div>
+    <a href="https://soroi.com" target="_blank" rel="noopener" class="back-web" style="text-decoration:none;">soroi.com</a>
+  </div>
+</section>
+
+<script>
+if(history.scrollRestoration){history.scrollRestoration='manual';}
+window.scrollTo(0,0);
+var tempObserver=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      var delay=0;
+      e.target.closest('.temp-badges').querySelectorAll('.temp-badge').forEach(function(b,i){
+        setTimeout(function(){b.classList.add('shimmer-in');},i*180);
+      });
+      tempObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.4});
+document.querySelectorAll('.temp-badges').forEach(function(wrap){
+  var first=wrap.querySelector('.temp-badge');
+  if(first)tempObserver.observe(first);
+});
+
+var coverVideo=document.getElementById('cover-video');
+if(coverVideo){
+  coverVideo.addEventListener('timeupdate',function(){
+    if(coverVideo.currentTime>=15){coverVideo.currentTime=0;}
+  });
+}
+
+function copyWifi(btn){
+  var text=btn.getAttribute('data-copy');
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent='Copied';
+    btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copy';btn.classList.remove('copied');},2000);
+  }).catch(function(){
+    /* fallback for older browsers */
+    var el=document.createElement('textarea');
+    el.value=text;el.style.position='fixed';el.style.opacity='0';
+    document.body.appendChild(el);el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    btn.textContent='Copied';btn.classList.add('copied');
+    setTimeout(function(){btn.textContent='Copy';btn.classList.remove('copied');},2000);
+  });
+}
+
+(function(){
+  'use strict';
+  var bar=document.getElementById('progress-bar');
+  window.addEventListener('scroll',function(){var m=document.body.scrollHeight-window.innerHeight;if(m>0)bar.style.width=(window.scrollY/m*100)+'%';},{passive:true});
+
+  var nav=document.getElementById('site-nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('frosted',window.scrollY>60);},{passive:true});
+  if(window.scrollY>60)nav.classList.add('frosted');
+
+  var hbg=document.getElementById('hamburger'),ovl=document.getElementById('nav-overlay'),cls=document.getElementById('nav-close');
+  function openMenu(){hbg.classList.add('open');ovl.classList.add('open');document.body.style.overflow='hidden';}
+  function closeMenu(){hbg.classList.remove('open');ovl.classList.remove('open');document.body.style.overflow='';}
+  if(hbg)hbg.addEventListener('click',openMenu);
+  if(cls)cls.addEventListener('click',closeMenu);
+  ovl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -20px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
+  }
+
+
+  var prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!prefersReduced){
+    var pEls=document.querySelectorAll('[data-depth]'),ticking=false;
+    function applyP(){
+      if(window.innerWidth<768){pEls.forEach(function(el){el.style.transform='';});ticking=false;return;}
+      var vh=window.innerHeight;
+      pEls.forEach(function(el){
+        var wrap=el.closest('.parallax-wrap');if(!wrap)return;
+        var rect=wrap.getBoundingClientRect();
+        var center=rect.top+rect.height/2-vh/2;
+        var depth=parseFloat(el.getAttribute('data-depth'))||0.2;
+        el.style.transform='translateY('+(center*depth).toFixed(2)+'px)';
+      });
+      ticking=false;
+    }
+    function reqP(){if(!ticking){requestAnimationFrame(applyP);ticking=true;}}
+    window.addEventListener('scroll',reqP,{passive:true});
+    window.addEventListener('resize',reqP,{passive:true});
+    applyP();
+  }
+})();
+</script>
+</body>
+</html>
