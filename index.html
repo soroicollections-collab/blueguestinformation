@@ -320,6 +320,41 @@ p+p{margin-top:14px}
 .review-btn svg{width:28px;height:28px;flex-shrink:0}
 .review-qr{width:140px;height:140px;border:2px solid var(--sand-line);border-radius:4px;padding:8px;background:white}
 
+/* Weather widget */
+.weather-card{margin-top:24px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line);display:flex;align-items:center;gap:20px}
+.weather-icon{width:64px;height:64px;flex-shrink:0}
+.weather-icon svg{width:64px;height:64px;display:none}
+.weather-icon svg.active{display:block}
+.weather-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.weather-icon .wi-fill{fill:var(--cobalt)}
+.moon-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5}
+.moon-icon .wi-fill-dark{fill:var(--ink-lt)}
+.moon-icon .wi-fill-light{fill:var(--sand-deep)}
+.weather-info{flex:1;min-width:0}
+.weather-temp{font-family:'Cinzel',serif;font-size:30px;color:var(--cobalt);line-height:1.1}
+.weather-desc{font-size:14px;color:var(--ink-mid);margin-top:2px}
+.weather-detail{font-size:12px;color:var(--ink-lt);margin-top:6px;letter-spacing:.02em}
+.weather-sun{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
+.weather-sun span{color:var(--cobalt);font-family:'Cinzel',serif;font-size:12px}
+.weather-card.is-error .weather-desc{color:var(--jordy)}
+
+/* Moon widget */
+.moon-row{display:flex;align-items:center;gap:16px}
+.moon-icon{width:48px;height:48px;flex-shrink:0}
+.moon-icon svg{width:48px;height:48px;display:none}
+.moon-icon svg.active{display:block}
+.moon-info{flex:1;min-width:0}
+.moon-phase-name{font-family:'Cinzel',serif;font-size:16px;color:var(--cobalt)}
+.moon-illum{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
+
+/* Tide widget */
+.tide-row{display:flex;align-items:center;gap:16px;margin-top:14px}
+.tide-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.tide-icon svg{width:40px;height:40px;stroke:var(--cobalt);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.tide-info{flex:1;min-width:0}
+.tide-label{font-family:'Cinzel',serif;font-size:14px;color:var(--ink-mid);margin-bottom:2px}
+.tide-time{font-size:12px;color:var(--ink-lt);letter-spacing:.02em}
+
 /* ============================================================ PAGE 12 — BACK COVER */
 #back-cover{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--ink)}
 .back-photo-wrap{position:absolute;inset:0}
@@ -688,6 +723,7 @@ p+p { margin-top:7px !important; }
     <li><a href="#spa">The Frangipani Spa</a></li>
     <li><a href="#explore">Explore</a></li>
     <li><a href="#accommodation">Rooms</a></li>
+    <li><a href="#review-us">Review Us</a></li>
     <li><a href="#quick-ref">Contact</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -740,6 +776,130 @@ p+p { margin-top:7px !important; }
       <p>Our team is here for you in the most natural and unobtrusive way — whether it's arranging a morning by the ocean, a quiet corner for sunset, or simply ensuring your favourite drink is always close at hand. Whatever you need, whenever you need it, please allow us the pleasure of looking after you.</p>
       <p>We invite you to settle in, unwind, and let the rhythm of the coast carry you.</p>
       <span class="welcome-signature">Welcome home.</span>
+    </div>
+
+    <!-- Weather, Moon, and Tide -->
+    <div class="info-block reveal d2">
+      <span class="label" style="margin-bottom:12px;">Right Now</span>
+      <div class="weather-card" id="weather-card" style="margin-top:0;padding:0;background:none">
+        <div class="weather-icon" id="weather-icon">
+          <svg viewBox="0 0 64 64" class="wi-clear"><g class="wi-rays wi-stroke">
+            <line x1="43.5" y1="32" x2="50" y2="32"/>
+            <line x1="40.1" y1="40.1" x2="44.7" y2="44.7"/>
+            <line x1="32" y1="43.5" x2="32" y2="50"/>
+            <line x1="23.9" y1="40.1" x2="19.3" y2="44.7"/>
+            <line x1="20.5" y1="32" x2="14" y2="32"/>
+            <line x1="23.9" y1="23.9" x2="19.3" y2="19.3"/>
+            <line x1="32" y1="20.5" x2="32" y2="14"/>
+            <line x1="40.1" y1="23.9" x2="44.7" y2="19.3"/>
+          </g><circle class="wi-stroke" cx="32" cy="32" r="9"/></svg>
+
+          <svg viewBox="0 0 64 64" class="wi-partly"><g class="wi-rays wi-stroke" style="transform-origin:44px 18px;animation:wi-sun-rotate 90s linear infinite">
+            <line x1="44" y1="9" x2="44" y2="4"/>
+            <line x1="51.3" y1="11.7" x2="55.1" y2="7.9"/>
+            <line x1="53" y1="18" x2="58" y2="18"/>
+          </g><circle class="wi-stroke" cx="44" cy="18" r="7"/>
+          <path class="wi-stroke wi-cloud-front" d="M10 46c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
+
+          <svg viewBox="0 0 64 64" class="wi-cloudy">
+            <path class="wi-stroke wi-cloud-back" d="M34 27c-4 0-6-3-6-6s2-6 6-6c1-4 4-7 9-7s8 3 9 7c4 0 6 3 6 6s-2 6-6 6H34z"/>
+            <path class="wi-stroke wi-cloud-front" d="M10 48c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
+
+          <svg viewBox="0 0 64 64" class="wi-rain">
+            <path class="wi-stroke wi-cloud-front" d="M10 38c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
+            <line class="wi-stroke wi-drop" x1="20" y1="44" x2="17" y2="52"/>
+            <line class="wi-stroke wi-drop" x1="32" y1="44" x2="29" y2="52"/>
+            <line class="wi-stroke wi-drop" x1="44" y1="44" x2="41" y2="52"/></svg>
+
+          <svg viewBox="0 0 64 64" class="wi-storm">
+            <path class="wi-stroke wi-cloud-front" d="M10 34c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
+            <path class="wi-fill" d="M35 30 27 44 33 44 29 58 43 42 36 42 40 30z"/>
+            <line class="wi-stroke wi-drop" x1="16" y1="44" x2="13" y2="52"/>
+            <line class="wi-stroke wi-drop" x1="50" y1="44" x2="47" y2="52"/></svg>
+        </div>
+        <div class="weather-info">
+          <div class="weather-temp" id="weather-temp">--°</div>
+          <div class="weather-desc" id="weather-desc">Loading current conditions…</div>
+          <div class="weather-detail" id="weather-detail"></div>
+          <div class="weather-sun" id="weather-sun"></div>
+        </div>
+      </div>
+
+      <div class="moon-row">
+        <div class="moon-icon" id="moon-icon">
+          <svg viewBox="0 0 48 48" class="moon-new">
+            <defs><clipPath id="moon-clip"><circle cx="24" cy="24" r="16"/></clipPath></defs>
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="64" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-waxing-crescent">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="48" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-first-quarter">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="40" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-waxing-gibbous">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="32" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-full">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="0" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-waning-gibbous">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="16" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-last-quarter">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="8" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+          <svg viewBox="0 0 48 48" class="moon-waning-crescent">
+            <g clip-path="url(#moon-clip)">
+              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
+              <circle cx="0" cy="24" r="16" class="wi-fill-light"/>
+            </g>
+            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
+          </svg>
+        </div>
+        <div class="moon-info">
+          <div class="moon-phase-name" id="moon-phase-name">—</div>
+          <div class="moon-illum" id="moon-illum">—</div>
+        </div>
+      </div>
+
+      <div class="tide-row">
+        <div class="tide-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 13c2-1 4 0 6 0s4 1 6 0 4-1 6 0 4 1 6 0v5H2v-5z"/><path d="M2 10c3-1 5 0 7 0s4 0 6 0 3 1 6 0v2H2v-2z"/></svg>
+        </div>
+        <div class="tide-info">
+          <div class="tide-label" id="tide-label">Tides</div>
+          <div class="tide-time" id="tide-time">High at --:-- · Low at --:--</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1677,6 +1837,123 @@ function copyWifi(btn){
     window.addEventListener('resize',reqP,{passive:true});
     applyP();
   }
+})();
+
+// Weather card (Open-Meteo, Soroi Blue Diani GPS: 4.2718°S 39.5971°E)
+(function(){
+  var WMO={
+    0:{d:'Clear skies',i:'wi-clear'},1:{d:'Mainly clear',i:'wi-partly'},2:{d:'Partly cloudy',i:'wi-partly'},3:{d:'Overcast',i:'wi-cloudy'},
+    45:{d:'Foggy',i:'wi-cloudy'},48:{d:'Foggy',i:'wi-cloudy'},
+    51:{d:'Light drizzle',i:'wi-rain'},53:{d:'Drizzle',i:'wi-rain'},55:{d:'Heavy drizzle',i:'wi-rain'},
+    56:{d:'Freezing drizzle',i:'wi-rain'},57:{d:'Freezing drizzle',i:'wi-rain'},
+    61:{d:'Light rain',i:'wi-rain'},63:{d:'Rain',i:'wi-rain'},65:{d:'Heavy rain',i:'wi-rain'},
+    66:{d:'Freezing rain',i:'wi-rain'},67:{d:'Freezing rain',i:'wi-rain'},
+    71:{d:'Light snow',i:'wi-rain'},73:{d:'Snow',i:'wi-rain'},75:{d:'Heavy snow',i:'wi-rain'},77:{d:'Snow grains',i:'wi-rain'},
+    80:{d:'Rain showers',i:'wi-rain'},81:{d:'Rain showers',i:'wi-rain'},82:{d:'Heavy rain showers',i:'wi-rain'},
+    85:{d:'Snow showers',i:'wi-rain'},86:{d:'Snow showers',i:'wi-rain'},
+    95:{d:'Thunderstorm',i:'wi-storm'},96:{d:'Thunderstorm, hail',i:'wi-storm'},99:{d:'Thunderstorm, hail',i:'wi-storm'}
+  };
+  function hhmm(iso){return iso?iso.slice(11,16):'--:--';}
+  var card=document.getElementById('weather-card');
+  var iconWrap=document.getElementById('weather-icon');
+  var elTemp=document.getElementById('weather-temp');
+  var elDesc=document.getElementById('weather-desc');
+  var elDetail=document.getElementById('weather-detail');
+  var elSun=document.getElementById('weather-sun');
+  var url='https://api.open-meteo.com/v1/forecast?latitude=-4.2718&longitude=39.5971'
+    +'&current=temperature_2m,apparent_temperature,weather_code'
+    +'&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset'
+    +'&timezone=Africa%2FNairobi';
+  fetch(url).then(function(r){if(!r.ok)throw new Error('weather fetch failed');return r.json();}).then(function(data){
+    var cur=data.current,daily=data.daily;
+    var meta=WMO[cur.weather_code]||{d:'—',i:'wi-clear'};
+    var icon=iconWrap.querySelector('.'+meta.i);
+    if(icon)icon.classList.add('active');
+    elTemp.textContent=Math.round(cur.temperature_2m)+'°';
+    elDesc.textContent=meta.d;
+    elDetail.textContent='Feels like '+Math.round(cur.apparent_temperature)+'° · H '+Math.round(daily.temperature_2m_max[0])+'° / L '+Math.round(daily.temperature_2m_min[0])+'°';
+    elSun.innerHTML='Sunrise <span>'+hhmm(daily.sunrise[0])+'</span> &middot; Sunset <span>'+hhmm(daily.sunset[0])+'</span>';
+  }).catch(function(){
+    card.classList.add('is-error');
+    var icon=iconWrap.querySelector('.wi-cloudy');
+    if(icon)icon.classList.add('active');
+    elTemp.textContent='--°';
+    elDesc.textContent='[Conditions unavailable — check with reception]';
+    elDetail.textContent='';
+    elSun.innerHTML='';
+  });
+})();
+
+// Moon phase (calculated client-side, no API)
+(function(){
+  var SYNODIC=29.530588853;
+  var KNOWN_NEW_MOON=Date.UTC(2000,0,6,18,14,0); // 2000-01-06 18:14 UTC
+  var daysSince=(Date.now()-KNOWN_NEW_MOON)/86400000;
+  var phase=(daysSince%SYNODIC)/SYNODIC;
+  if(phase<0)phase+=1;
+  var illum=Math.round((1-Math.cos(2*Math.PI*phase))/2*100);
+  var names=['New Moon','Waxing Crescent','First Quarter','Waxing Gibbous','Full Moon','Waning Gibbous','Last Quarter','Waning Crescent'];
+  var classes=['moon-new','moon-waxing-crescent','moon-first-quarter','moon-waxing-gibbous','moon-full','moon-waning-gibbous','moon-last-quarter','moon-waning-crescent'];
+  var idx=Math.floor(phase*8+0.5)%8;
+  var iconWrap=document.getElementById('moon-icon');
+  var icon=iconWrap.querySelector('.'+classes[idx]);
+  if(icon)icon.classList.add('active');
+  document.getElementById('moon-phase-name').textContent=names[idx];
+  document.getElementById('moon-illum').textContent=illum+'% illuminated';
+})();
+
+// Tides (Diani Beach, East Africa)
+// Based on typical semi-diurnal tides in this region
+(function(){
+  var now=new Date();
+  var hours=now.getHours();
+  var minutes=now.getMinutes();
+
+  // Diani tide approximation: high tides roughly 6:30, 18:45; low tides roughly 0:15, 12:30
+  // Simple model: predict next two tides
+  var tideTimesHigh=[6.5,18.75];
+  var tideTimesLow=[0.25,12.5];
+  var currentHours=hours+minutes/60;
+
+  var nextHigh='--:--',nextLow='--:--';
+
+  for(var i=0;i<tideTimesHigh.length;i++){
+    var t=tideTimesHigh[i];
+    if(t>currentHours){
+      var h=Math.floor(t);
+      var m=Math.round((t-h)*60);
+      nextHigh=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+      break;
+    }
+  }
+  if(nextHigh==='--:--' && tideTimesHigh[0]){
+    var t=tideTimesHigh[0]+(24-currentHours);
+    var h=Math.floor(t);
+    if(h>=24)h-=24;
+    var m=Math.round((t-Math.floor(t))*60);
+    if(m>=60){m-=60;h+=1;}
+    nextHigh=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+  }
+
+  for(var i=0;i<tideTimesLow.length;i++){
+    var t=tideTimesLow[i];
+    if(t>currentHours){
+      var h=Math.floor(t);
+      var m=Math.round((t-h)*60);
+      nextLow=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+      break;
+    }
+  }
+  if(nextLow==='--:--' && tideTimesLow[0]){
+    var t=tideTimesLow[0]+(24-currentHours);
+    var h=Math.floor(t);
+    if(h>=24)h-=24;
+    var m=Math.round((t-Math.floor(t))*60);
+    if(m>=60){m-=60;h+=1;}
+    nextLow=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+  }
+
+  document.getElementById('tide-time').textContent='High at '+nextHigh+' · Low at '+nextLow;
 })();
 </script>
 </body>
