@@ -321,7 +321,8 @@ p+p{margin-top:14px}
 .review-qr{width:140px;height:140px;border:2px solid var(--sand-line);border-radius:4px;padding:8px;background:white}
 
 /* Weather widget */
-.weather-card{margin-top:24px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line);display:flex;align-items:center;gap:20px}
+.widgets-row{display:flex;gap:24px;margin-top:24px;flex-wrap:wrap}
+.weather-card{flex:1;min-width:240px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line);display:flex;align-items:flex-start;gap:16px}
 .weather-icon{width:64px;height:64px;flex-shrink:0}
 .weather-icon svg{width:64px;height:64px;display:none}
 .weather-icon svg.active{display:block}
@@ -339,6 +340,7 @@ p+p{margin-top:14px}
 .weather-card.is-error .weather-desc{color:var(--jordy)}
 
 /* Moon widget */
+.moon-card{flex:1;min-width:200px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line)}
 .moon-row{display:flex;align-items:center;gap:16px}
 .moon-icon{width:48px;height:48px;flex-shrink:0}
 .moon-icon svg{width:48px;height:48px;display:none}
@@ -348,7 +350,8 @@ p+p{margin-top:14px}
 .moon-illum{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
 
 /* Tide widget */
-.tide-row{display:flex;align-items:center;gap:16px;margin-top:14px}
+.tide-card{flex:1;min-width:200px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line)}
+.tide-row{display:flex;align-items:center;gap:16px}
 .tide-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .tide-icon svg{width:40px;height:40px;stroke:var(--cobalt);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .tide-info{flex:1;min-width:0}
@@ -781,7 +784,8 @@ p+p { margin-top:7px !important; }
     <!-- Weather, Moon, and Tide -->
     <div class="info-block reveal d2">
       <span class="label" style="margin-bottom:12px;">Right Now</span>
-      <div class="weather-card" id="weather-card" style="margin-top:0;padding:0;background:none">
+      <div class="widgets-row">
+      <div class="weather-card" id="weather-card" style="padding:0;background:none">
         <div class="weather-icon" id="weather-icon">
           <svg viewBox="0 0 64 64" class="wi-clear"><g class="wi-rays wi-stroke">
             <line x1="43.5" y1="32" x2="50" y2="32"/>
@@ -825,6 +829,7 @@ p+p { margin-top:7px !important; }
         </div>
       </div>
 
+      <div class="moon-card">
       <div class="moon-row">
         <div class="moon-icon" id="moon-icon">
           <svg viewBox="0 0 48 48" class="moon-new">
@@ -890,7 +895,9 @@ p+p { margin-top:7px !important; }
           <div class="moon-illum" id="moon-illum">—</div>
         </div>
       </div>
+      </div>
 
+      <div class="tide-card">
       <div class="tide-row">
         <div class="tide-icon">
           <svg viewBox="0 0 24 24"><path d="M2 13c2-1 4 0 6 0s4 1 6 0 4-1 6 0 4 1 6 0v5H2v-5z"/><path d="M2 10c3-1 5 0 7 0s4 0 6 0 3 1 6 0v2H2v-2z"/></svg>
@@ -899,6 +906,8 @@ p+p { margin-top:7px !important; }
           <div class="tide-label" id="tide-label">Tides</div>
           <div class="tide-time" id="tide-time">High at --:-- · Low at --:--</div>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   </div>
