@@ -100,8 +100,6 @@ p+p{margin-top:14px}
 #cover{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--ink)}
 .cover-photo-wrap{position:absolute;inset:0}
 .cover-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#cover-video::-webkit-media-controls{display:none}
-#cover-video::cue{display:none}
 .cover-logo-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:22vh;pointer-events:none}
 .cover-text-title{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(38px,6vw,80px);letter-spacing:.2em;text-transform:uppercase;color:var(--white);text-shadow:0 2px 24px rgba(0,0,0,.3);opacity:0;animation:textFadeUp 1s ease forwards;animation-delay:1s}
 .cover-text-sub{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(20px,3vw,42px);letter-spacing:.14em;text-transform:uppercase;color:var(--cobalt);text-shadow:0 2px 24px rgba(0,0,0,.25);margin-top:12px;opacity:0;animation:textFadeUp 1s ease forwards;animation-delay:2s}
@@ -173,6 +171,8 @@ p+p{margin-top:14px}
 .beach-notice p{font-size:13px;color:var(--ink-mid)}
 
 /* ============================================================ PAGE 6 — SPA */
+.spa-menu-pages{display:grid;gap:32px;max-width:640px;margin:0 auto}
+.spa-menu-img{display:block;width:100%;height:auto;box-shadow:0 2px 24px rgba(0,0,0,.12)}
 .spa-lead-photo{margin-bottom:56px}
 .spa-intro p{max-width:540px}
 .spa-menu{margin-top:56px}
@@ -210,12 +210,12 @@ p+p{margin-top:14px}
 /* Activity card grid */
 .explore-act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:transparent;margin-top:20px}
 .explore-act-card{background:var(--sand)}
-.explore-act-photo{aspect-ratio:1/1;overflow:hidden;position:relative;background:var(--sand-deep)}
+.explore-act-photo{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--sand-deep)}
 .explore-act-photo img,.explore-act-photo .photo-ph{width:100%;height:100%;object-fit:cover;display:block}
 .explore-act-photo .photo-ph{position:absolute;inset:0}
-.explore-act-info{padding:28px 24px 32px}
-.explore-act-name{font-family:'Cinzel',serif;font-size:16px;color:var(--ink);letter-spacing:.06em;display:block;margin-bottom:10px}
-.explore-act-note{font-size:14px;color:var(--ink-lt);line-height:1.7}
+.explore-act-info{padding:20px 20px 24px}
+.explore-act-name{font-family:'Cinzel',serif;font-size:12px;color:var(--ink);letter-spacing:.06em;display:block;margin-bottom:6px}
+.explore-act-note{font-size:12px;color:var(--ink-lt);line-height:1.6}
 
 /* Nature & culture — photo left, list right */
 .explore-nature-split{display:grid;grid-template-columns:1fr 1fr;margin-top:3px}
@@ -230,12 +230,12 @@ p+p{margin-top:14px}
 /* Day trips destination cards */
 .explore-trips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;background:transparent;margin-top:20px}
 .explore-trip-card{background:var(--sand)}
-.explore-trip-photo{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--sand-deep);height:220px}
+.explore-trip-photo{aspect-ratio:16/10;overflow:hidden;position:relative;background:var(--sand-deep)}
 .explore-trip-photo img,.explore-trip-photo .photo-ph{width:100%;height:100%;object-fit:cover;display:block}
 .explore-trip-photo .photo-ph{position:absolute;inset:0}
-.explore-trip-info{padding:28px 24px 32px}
-.explore-trip-name{font-family:'Cinzel',serif;font-size:15px;color:var(--ink);letter-spacing:.05em;display:block;margin-bottom:10px}
-.explore-trip-note{font-size:13px;color:var(--ink-lt);line-height:1.7}
+.explore-trip-info{padding:22px 20px 26px}
+.explore-trip-name{font-family:'Cinzel',serif;font-size:13px;color:var(--ink);letter-spacing:.05em;display:block;margin-bottom:8px}
+.explore-trip-note{font-size:12px;color:var(--ink-lt);line-height:1.7}
 
 /* Concierge strip */
 .explore-concierge{padding:32px 0;display:flex;align-items:center;gap:28px;border-top:1px solid var(--sand-line);margin-top:56px}
@@ -252,15 +252,15 @@ p+p{margin-top:14px}
 .rooms-intro p{max-width:560px}
 .rooms-grid-editorial{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);margin-top:48px}
 .room-card-ed{background:var(--sand-deep);padding:22px 18px 20px;text-align:center}
-.room-card-ed{background:var(--sand-deep);padding:22px 18px 20px;text-align:center}
 .rce-rule,.rce-rule.cobalt-rule{margin-left:auto;margin-right:auto}
-.room-card-ed{border-top:2px solid var(--cobalt)}
+.room-card-ed.ocean{border-top:2px solid var(--jordy)}
+.room-card-ed.suite{border-top:2px solid var(--cobalt)}
 .rce-name{font-family:'Cinzel',serif;font-size:16px;font-weight:400;color:var(--ink);letter-spacing:.06em;display:block;margin-bottom:8px}
 .rce-rule{display:block;width:20px;height:1px;background:var(--bronze);margin-bottom:8px}
 .rce-rule.cobalt-rule{background:#1b998b}
 .rce-view{font-family:'Cinzel',serif;font-size:8px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:4px}
 .rce-floor{font-size:11px;color:var(--ink-lt);display:block;margin-bottom:3px}
-.rce-beds{font-size:11px;color:var(--ink-lt);font-weight:300;display:none !important}
+.rce-beds{font-size:11px;color:var(--ink-lt);font-weight:300}
 .facilities-strip{margin-top:48px;border-top:1px solid var(--sand-line);padding-top:32px}
 .facilities-strip h3{margin-bottom:20px}
 .facilities-two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
@@ -320,43 +320,6 @@ p+p{margin-top:14px}
 .review-btn svg{width:28px;height:28px;flex-shrink:0}
 .review-qr{width:140px;height:140px;border:2px solid var(--sand-line);border-radius:4px;padding:8px;background:white}
 
-/* Weather widget */
-.widgets-row{display:flex;gap:24px;margin-top:24px;flex-wrap:wrap}
-.weather-card{flex:1;min-width:240px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line);display:flex;align-items:flex-start;gap:16px}
-.weather-icon{width:64px;height:64px;flex-shrink:0}
-.weather-icon svg{width:64px;height:64px;display:none}
-.weather-icon svg.active{display:block}
-.weather-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.weather-icon .wi-fill{fill:var(--cobalt)}
-.moon-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5}
-.moon-icon .wi-fill-dark{fill:var(--ink-lt)}
-.moon-icon .wi-fill-light{fill:var(--sand-deep)}
-.weather-info{flex:1;min-width:0}
-.weather-temp{font-family:'Cinzel',serif;font-size:30px;color:var(--cobalt);line-height:1.1}
-.weather-desc{font-size:14px;color:var(--ink-mid);margin-top:2px}
-.weather-detail{font-size:12px;color:var(--ink-lt);margin-top:6px;letter-spacing:.02em}
-.weather-sun{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
-.weather-sun span{color:var(--cobalt);font-family:'Cinzel',serif;font-size:12px}
-.weather-card.is-error .weather-desc{color:var(--jordy)}
-
-/* Moon widget */
-.moon-card{flex:1;min-width:200px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line)}
-.moon-row{display:flex;align-items:center;gap:16px}
-.moon-icon{width:48px;height:48px;flex-shrink:0}
-.moon-icon svg{width:48px;height:48px;display:none}
-.moon-icon svg.active{display:block}
-.moon-info{flex:1;min-width:0}
-.moon-phase-name{font-family:'Cinzel',serif;font-size:16px;color:var(--cobalt)}
-.moon-illum{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
-
-/* Tide widget */
-.tide-card{flex:1;min-width:200px;padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line)}
-.tide-row{display:flex;align-items:center;gap:16px}
-.tide-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.tide-icon svg{width:40px;height:40px;stroke:var(--cobalt);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.tide-info{flex:1;min-width:0}
-.tide-label{font-family:'Cinzel',serif;font-size:14px;color:var(--ink-mid);margin-bottom:2px}
-.tide-time{font-size:12px;color:var(--ink-lt);letter-spacing:.02em}
 
 /* ============================================================ PAGE 12 — BACK COVER */
 #back-cover{position:relative;height:100vh;min-height:640px;overflow:hidden;background:var(--ink)}
@@ -449,7 +412,6 @@ p+p{margin-top:14px}
   .welcome-grid,.dining-cols,.split-cols,.discover-contact-strip{grid-template-columns:1fr;gap:40px}
   .info-grid,.services-grid{grid-template-columns:1fr}
   .rooms-grid-editorial{grid-template-columns:repeat(2,1fr)}
-  .room-card-ed{padding:40px 24px;min-height:180px}
   .discover-grid{grid-template-columns:1fr}
   .payment-grid,.qr-grid{grid-template-columns:1fr 1fr}
   .env-grid{grid-template-columns:1fr 1fr}
@@ -462,18 +424,75 @@ p+p{margin-top:14px}
 }
 @media(max-width:480px){
   .rooms-grid-editorial,.discover-grid,.payment-grid,.qr-grid,.env-grid{grid-template-columns:1fr}
-  .room-card-ed{padding:40px 24px !important;min-height:180px !important}
-  .rce-name{font-size:12px;margin-bottom:3px}
-  .rce-view{font-size:7px;margin-bottom:1px}
-  .rce-floor{font-size:9px;margin-bottom:0}
   .facilities-two{grid-template-columns:1fr}
   .contact-row{flex-direction:column;gap:16px}
 }
+
+/* Currency converter */
+.converter-row{display:flex;gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);margin-top:20px}
+.converter-amount,.converter-from{background:var(--sand);border:none;font-family:'Cinzel',serif;font-size:17px;color:var(--ink);padding:14px 16px;flex:1;min-width:0;-webkit-appearance:none;appearance:none;border-radius:0}
+.converter-amount:focus,.converter-from:focus{outline:2px solid var(--cobalt);outline-offset:-2px}
+.converter-from{flex:0 0 92px;cursor:pointer;font-size:14px}
+.converter-results{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--sand-line);border:1px solid var(--sand-line);border-top:none}
+.converter-cell{background:var(--sand);padding:14px 8px;text-align:center}
+.converter-cell.is-from{background:linear-gradient(135deg,#0a7c7c 0%,#1b998b 55%,#2bb5a0 100%)}
+.converter-cell.is-from .k,.converter-cell.is-from .v{color:#fff}
+.converter-cell .k{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:5px}
+.converter-cell .v{font-family:'Cinzel',serif;font-size:13px;color:var(--ink)}
+.currency-note{font-size:11px;color:var(--ink-lt);margin-top:10px;font-style:italic}
+@media(max-width:480px){.converter-results{grid-template-columns:1fr 1fr}}
+.currency-note{font-size:11px;color:var(--ink-lt);margin-top:10px;font-style:italic}
+#currency{margin-top:56px}
+#currency .coast-label{color:var(--cobalt)}
+/* Coast Today widgets (live weather / sea / tide / moon) */
+.coast-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:36px}
+.coast-card{padding:20px 22px;background:var(--sand-deep);border:1px solid var(--sand-line)}
+.coast-card.wide{grid-column:span 2}
+.coast-card .weather-card{padding:0;background:none;border:none;min-width:0}
+.coast-card .moon-card{padding:0;background:none;border:none;min-width:0}
+.coast-label{display:block;font-family:'Cinzel',serif;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--bronze);margin-bottom:14px}
+.weather-icon{width:64px;height:64px;flex-shrink:0}
+.weather-icon svg{width:64px;height:64px;display:none}
+.weather-icon svg.active{display:block}
+.weather-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.weather-icon .wi-fill{fill:var(--cobalt)}
+.moon-icon .wi-stroke{fill:none;stroke:var(--cobalt);stroke-width:1.5}
+.moon-icon .wi-fill-dark{fill:var(--ink-lt)}
+.moon-icon .wi-fill-light{fill:var(--sand-deep)}
+.weather-card{display:flex;align-items:flex-start;gap:16px}
+.weather-info{flex:1;min-width:0}
+.weather-temp{font-family:'Cinzel',serif;font-size:30px;color:var(--cobalt);line-height:1.1}
+.weather-desc{font-size:14px;color:var(--ink-mid);margin-top:2px}
+.weather-detail,.weather-sun{font-size:12px;color:var(--ink-lt);margin-top:6px;letter-spacing:.02em}
+.weather-sun span{color:var(--cobalt);font-family:'Cinzel',serif;font-size:12px}
+.moon-row{display:flex;align-items:center;gap:16px}
+.moon-icon{width:48px;height:48px;flex-shrink:0}
+.moon-icon svg{width:48px;height:48px;display:none}
+.moon-icon svg.active{display:block}
+.moon-info{flex:1;min-width:0}
+.moon-phase-name{font-family:'Cinzel',serif;font-size:16px;color:var(--cobalt)}
+.moon-illum{font-size:12px;color:var(--ink-lt);margin-top:4px;letter-spacing:.02em}
+.coast-big{font-family:'Cinzel',serif;font-size:30px;color:var(--cobalt);line-height:1.1}
+.coast-sub{font-size:13px;color:var(--ink-mid);margin-top:2px}
+.coast-note{font-size:11px;color:var(--ink-lt);margin-top:10px;line-height:1.5}
+.coast-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.coast-stat .k{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:3px}
+.coast-stat .v{font-family:'Cinzel',serif;font-size:15px;color:var(--ink)}
+.tide-chart{width:100%;height:auto;display:block;margin-top:14px}
+.tide-chart .t-line{fill:none;stroke:var(--cobalt);stroke-width:2;stroke-linejoin:round}
+.tide-chart .t-area{fill:var(--cobalt);opacity:.12}
+.tide-chart .t-now{stroke:var(--bronze);stroke-width:1.5;stroke-dasharray:3 3}
+.tide-chart .t-dot{fill:var(--bronze)}
+.tide-chart text{font-family:'Poppins',sans-serif;font-size:10px;fill:var(--ink-lt)}
+.tide-chart text.t-ex{fill:var(--ink);font-weight:400}
+.coast-card.is-error .coast-big{color:var(--ink-lt)}
+@media(max-width:640px){.coast-card.wide{grid-column:span 1}}
 
 /* ============================================================
    @MEDIA PRINT — A4 BROCHURE (15 pages)
    ============================================================ */
 @media print {
+#coast-today, #currency { display:none !important; }
 
 /* ——— A4 PAGE SETUP ——— */
 @page { size: A4; margin: 10mm 12mm; }
@@ -523,7 +542,7 @@ p+p { margin-top:7px !important; }
 }
 #cover::after {
   content:''; position:absolute; inset:0;
-  background:url('images/cover.jpg') center/cover no-repeat;
+  background:url('images/cover-portal.jpg') center/cover no-repeat;
   opacity:0.85; z-index:0;
 }
 .cover-video { display:none !important; }
@@ -738,6 +757,7 @@ p+p { margin-top:7px !important; }
   <a href="#your-room">Your Room</a>
   <a href="#dining">Dining</a>
   <a href="#pool-beach">Pool &amp; Beach</a>
+  <a href="#coast-today">Coast Today</a>
   <a href="#spa">The Frangipani Spa</a>
   <a href="#explore">Explore</a>
   <a href="#services">Services</a>
@@ -748,7 +768,7 @@ p+p { margin-top:7px !important; }
 
 <!-- ============================================================ PAGE 1 — COVER -->
 <section id="cover">
-  <video id="cover-video" class="cover-video" autoplay muted playsinline preload="auto">
+  <video id="cover-video" class="cover-video" autoplay muted playsinline>
     <source src="images/hero.mp4" type="video/mp4">
   </video>
   <div class="cover-logo-overlay">
@@ -781,135 +801,6 @@ p+p { margin-top:7px !important; }
       <span class="welcome-signature">Welcome home.</span>
     </div>
 
-    <!-- Weather, Moon, and Tide -->
-    <div class="info-block reveal d2">
-      <span class="label" style="margin-bottom:12px;">Right Now</span>
-      <div class="widgets-row">
-      <div class="weather-card" id="weather-card" style="padding:0;background:none">
-        <div class="weather-icon" id="weather-icon">
-          <svg viewBox="0 0 64 64" class="wi-clear"><g class="wi-rays wi-stroke">
-            <line x1="43.5" y1="32" x2="50" y2="32"/>
-            <line x1="40.1" y1="40.1" x2="44.7" y2="44.7"/>
-            <line x1="32" y1="43.5" x2="32" y2="50"/>
-            <line x1="23.9" y1="40.1" x2="19.3" y2="44.7"/>
-            <line x1="20.5" y1="32" x2="14" y2="32"/>
-            <line x1="23.9" y1="23.9" x2="19.3" y2="19.3"/>
-            <line x1="32" y1="20.5" x2="32" y2="14"/>
-            <line x1="40.1" y1="23.9" x2="44.7" y2="19.3"/>
-          </g><circle class="wi-stroke" cx="32" cy="32" r="9"/></svg>
-
-          <svg viewBox="0 0 64 64" class="wi-partly"><g class="wi-rays wi-stroke" style="transform-origin:44px 18px;animation:wi-sun-rotate 90s linear infinite">
-            <line x1="44" y1="9" x2="44" y2="4"/>
-            <line x1="51.3" y1="11.7" x2="55.1" y2="7.9"/>
-            <line x1="53" y1="18" x2="58" y2="18"/>
-          </g><circle class="wi-stroke" cx="44" cy="18" r="7"/>
-          <path class="wi-stroke wi-cloud-front" d="M10 46c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
-
-          <svg viewBox="0 0 64 64" class="wi-cloudy">
-            <path class="wi-stroke wi-cloud-back" d="M34 27c-4 0-6-3-6-6s2-6 6-6c1-4 4-7 9-7s8 3 9 7c4 0 6 3 6 6s-2 6-6 6H34z"/>
-            <path class="wi-stroke wi-cloud-front" d="M10 48c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
-
-          <svg viewBox="0 0 64 64" class="wi-rain">
-            <path class="wi-stroke wi-cloud-front" d="M10 38c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
-            <line class="wi-stroke wi-drop" x1="20" y1="44" x2="17" y2="52"/>
-            <line class="wi-stroke wi-drop" x1="32" y1="44" x2="29" y2="52"/>
-            <line class="wi-stroke wi-drop" x1="44" y1="44" x2="41" y2="52"/></svg>
-
-          <svg viewBox="0 0 64 64" class="wi-storm">
-            <path class="wi-stroke wi-cloud-front" d="M10 34c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
-            <path class="wi-fill" d="M35 30 27 44 33 44 29 58 43 42 36 42 40 30z"/>
-            <line class="wi-stroke wi-drop" x1="16" y1="44" x2="13" y2="52"/>
-            <line class="wi-stroke wi-drop" x1="50" y1="44" x2="47" y2="52"/></svg>
-        </div>
-        <div class="weather-info">
-          <div class="weather-temp" id="weather-temp">--°</div>
-          <div class="weather-desc" id="weather-desc">Loading current conditions…</div>
-          <div class="weather-detail" id="weather-detail"></div>
-          <div class="weather-sun" id="weather-sun"></div>
-        </div>
-      </div>
-
-      <div class="moon-card">
-      <div class="moon-row">
-        <div class="moon-icon" id="moon-icon">
-          <svg viewBox="0 0 48 48" class="moon-new">
-            <defs><clipPath id="moon-clip"><circle cx="24" cy="24" r="16"/></clipPath></defs>
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="64" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-waxing-crescent">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="48" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-first-quarter">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="40" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-waxing-gibbous">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="32" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-full">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="0" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-waning-gibbous">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="16" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-last-quarter">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="8" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-          <svg viewBox="0 0 48 48" class="moon-waning-crescent">
-            <g clip-path="url(#moon-clip)">
-              <circle cx="24" cy="24" r="16" class="wi-fill-dark"/>
-              <circle cx="0" cy="24" r="16" class="wi-fill-light"/>
-            </g>
-            <circle cx="24" cy="24" r="16" class="wi-stroke"/>
-          </svg>
-        </div>
-        <div class="moon-info">
-          <div class="moon-phase-name" id="moon-phase-name">—</div>
-          <div class="moon-illum" id="moon-illum">—</div>
-        </div>
-      </div>
-      </div>
-
-      <div class="tide-card">
-      <div class="tide-row">
-        <div class="tide-icon">
-          <svg viewBox="0 0 24 24"><path d="M2 13c2-1 4 0 6 0s4 1 6 0 4-1 6 0 4 1 6 0v5H2v-5z"/><path d="M2 10c3-1 5 0 7 0s4 0 6 0 3 1 6 0v2H2v-2z"/></svg>
-        </div>
-        <div class="tide-info">
-          <div class="tide-label" id="tide-label">Tides</div>
-          <div class="tide-time" id="tide-time">High at --:-- · Low at --:--</div>
-        </div>
-      </div>
-      </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -957,7 +848,7 @@ p+p { margin-top:7px !important; }
     <div class="room-lead-photo reveal d1">
       <div class="parallax-wrap" style="height:320px;">
         <div class="parallax-inner" data-depth="0.2">
-          <img class="parallax-img" src="images/room-suite.jpg" alt="Soroi Blue Diani suite interior">
+          <img class="parallax-img" src="images/room-suite-portal.jpg" alt="Soroi Blue Diani suite interior">
         </div>
       </div>
     </div>
@@ -1025,7 +916,7 @@ p+p { margin-top:7px !important; }
     <div class="dining-hero reveal d1">
       <div class="parallax-wrap" style="height:400px;">
         <div class="parallax-inner" data-depth="0.2">
-          <img class="parallax-img" src="images/dining.jpg" alt="Beach dining at Soroi Blue Diani">
+          <img class="parallax-img" src="images/dining-portal.jpg" alt="Beach dining at Soroi Blue Diani">
         </div>
       </div>
     </div>
@@ -1047,7 +938,7 @@ p+p { margin-top:7px !important; }
     <div class="reveal d2" style="margin-top:48px;">
       <div class="parallax-wrap" style="height:360px;">
         <div class="parallax-inner" data-depth="0.2">
-          <img class="parallax-img" src="images/bar.jpg" alt="The bar at Soroi Blue Diani">
+          <img class="parallax-img" src="images/bar-portal.jpg" alt="The bar at Soroi Blue Diani">
         </div>
       </div>
     </div>
@@ -1077,7 +968,7 @@ p+p { margin-top:7px !important; }
         <div style="margin-bottom:24px;">
           <div class="parallax-wrap" style="height:260px;">
             <div class="parallax-inner" data-depth="0.2">
-              <img class="parallax-img" src="images/pool.jpg" alt="Soroi Blue Diani pool">
+              <img class="parallax-img" src="images/pool-portal.jpg" alt="Soroi Blue Diani pool">
             </div>
           </div>
         </div>
@@ -1093,16 +984,126 @@ p+p { margin-top:7px !important; }
         <div style="margin-bottom:24px;">
           <div class="parallax-wrap" style="height:260px;">
             <div class="parallax-inner" data-depth="0.2">
-              <img class="parallax-img" src="images/beach.jpg" alt="Diani Beach">
+              <img class="parallax-img" src="images/beach-portal.jpg" alt="Diani Beach">
             </div>
           </div>
         </div>
         <h3>Diani Beach</h3>
         <p style="margin-top:16px;">Kenya's beaches are beautifully open and shared by all. We've created a peaceful sandy stretch for you to relax — feel free to wander and please help us keep it clean and pristine.</p>
-        <div class="temp-badges">
-          <div class="temp-badge"><span class="temp-val">25–29°C</span><span class="temp-label">Sea Temperature</span></div>
-          <div class="temp-badge"><span class="temp-val">20–42°C</span><span class="temp-label">Air Temperature</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ COAST TODAY (live widgets) -->
+<section class="page-section" id="coast-today">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Right Now</span>
+      <h2>The Coast <span class="cobalt-italic">Today</span></h2>
+      <span class="rule"></span>
+    </div>
+    <p class="reveal d1" style="max-width:560px;">Live conditions for Diani Beach, refreshed each time you open this guide. Handy for planning a swim, a reef walk, a sundowner or a sandbank picnic.</p>
+    <div class="coast-grid reveal d2">
+      <div class="coast-card">
+        <span class="coast-label">Weather</span>
+        <div class="weather-card" id="weather-card" style="padding:0;background:none">
+          <div class="weather-icon" id="weather-icon">
+            <svg viewBox="0 0 64 64" class="wi-clear"><g class="wi-rays wi-stroke">
+              <line x1="43.5" y1="32" x2="50" y2="32"/><line x1="40.1" y1="40.1" x2="44.7" y2="44.7"/>
+              <line x1="32" y1="43.5" x2="32" y2="50"/><line x1="23.9" y1="40.1" x2="19.3" y2="44.7"/>
+              <line x1="20.5" y1="32" x2="14" y2="32"/><line x1="23.9" y1="23.9" x2="19.3" y2="19.3"/>
+              <line x1="32" y1="20.5" x2="32" y2="14"/><line x1="40.1" y1="23.9" x2="44.7" y2="19.3"/>
+            </g><circle class="wi-stroke" cx="32" cy="32" r="9"/></svg>
+            <svg viewBox="0 0 64 64" class="wi-partly"><g class="wi-rays wi-stroke" style="transform-origin:44px 18px;animation:wi-sun-rotate 90s linear infinite">
+              <line x1="44" y1="9" x2="44" y2="4"/><line x1="51.3" y1="11.7" x2="55.1" y2="7.9"/><line x1="53" y1="18" x2="58" y2="18"/>
+            </g><circle class="wi-stroke" cx="44" cy="18" r="7"/>
+            <path class="wi-stroke wi-cloud-front" d="M10 46c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
+            <svg viewBox="0 0 64 64" class="wi-cloudy">
+              <path class="wi-stroke wi-cloud-back" d="M34 27c-4 0-6-3-6-6s2-6 6-6c1-4 4-7 9-7s8 3 9 7c4 0 6 3 6 6s-2 6-6 6H34z"/>
+              <path class="wi-stroke wi-cloud-front" d="M10 48c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/></svg>
+            <svg viewBox="0 0 64 64" class="wi-rain">
+              <path class="wi-stroke wi-cloud-front" d="M10 38c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
+              <line class="wi-stroke wi-drop" x1="20" y1="44" x2="17" y2="52"/><line class="wi-stroke wi-drop" x1="32" y1="44" x2="29" y2="52"/><line class="wi-stroke wi-drop" x1="44" y1="44" x2="41" y2="52"/></svg>
+            <svg viewBox="0 0 64 64" class="wi-storm">
+              <path class="wi-stroke wi-cloud-front" d="M10 34c-5 0-8-4-8-8s3-8 8-8c1-6 6-10 13-10s11 4 13 10c5 0 8 4 8 8s-3 8-8 8H10z"/>
+              <path class="wi-fill" d="M35 30 27 44 33 44 29 58 43 42 36 42 40 30z"/>
+              <line class="wi-stroke wi-drop" x1="16" y1="44" x2="13" y2="52"/><line class="wi-stroke wi-drop" x1="50" y1="44" x2="47" y2="52"/></svg>
+          </div>
+          <div class="weather-info">
+            <div class="weather-temp" id="weather-temp">--°</div>
+            <div class="weather-desc" id="weather-desc">Loading current conditions…</div>
+            <div class="weather-detail" id="weather-detail"></div>
+            <div class="weather-sun" id="weather-sun"></div>
+          </div>
         </div>
+      </div>
+      <div class="coast-card" id="sea-card">
+        <span class="coast-label">The Sea</span>
+        <div class="coast-big" id="sea-temp">--°</div>
+        <div class="coast-sub" id="sea-desc">Loading sea conditions…</div>
+        <div class="coast-stats">
+          <div class="coast-stat"><span class="k">Offshore waves</span><span class="v" id="sea-wave">--</span></div>
+          <div class="coast-stat"><span class="k">Wave period</span><span class="v" id="sea-period">--</span></div>
+        </div>
+        <p class="coast-note">Offshore reading beyond the reef. Water inside the lagoon is usually calmer — ask reception before heading out.</p>
+      </div>
+      <div class="coast-card">
+        <span class="coast-label">Wind &amp; UV</span>
+        <div class="coast-big" id="wind-speed">--</div>
+        <div class="coast-sub" id="wind-desc">Loading wind…</div>
+        <div class="coast-stats">
+          <div class="coast-stat"><span class="k">UV index now</span><span class="v" id="uv-now">--</span></div>
+          <div class="coast-stat"><span class="k">Peak today</span><span class="v" id="uv-max">--</span></div>
+        </div>
+        <p class="coast-note" id="uv-note">Sunscreen, a hat and shade over midday are always a good idea on the coast.</p>
+      </div>
+      <div class="coast-card">
+        <span class="coast-label">Sun</span>
+        <div class="coast-stats" style="margin-top:0;">
+          <div class="coast-stat"><span class="k">Sunrise</span><span class="v" id="sun-rise">--:--</span></div>
+          <div class="coast-stat"><span class="k">Sunset</span><span class="v" id="sun-set">--:--</span></div>
+          <div class="coast-stat"><span class="k">Golden hour</span><span class="v" id="sun-golden">--:--</span></div>
+          <div class="coast-stat"><span class="k">Daylight</span><span class="v" id="sun-len">--</span></div>
+        </div>
+        <p class="coast-note">Golden hour is the hour before sunset, best for beach walks and photographs.</p>
+      </div>
+      <div class="coast-card wide" id="tide-card">
+        <span class="coast-label">Tides · Next 24 Hours</span>
+        <div class="coast-stats" style="margin-top:0;grid-template-columns:repeat(3,1fr);">
+          <div class="coast-stat"><span class="k">Tide now</span><span class="v" id="tide-state">--</span></div>
+          <div class="coast-stat"><span class="k">Next high</span><span class="v" id="tide-high">--:--</span></div>
+          <div class="coast-stat"><span class="k">Next low</span><span class="v" id="tide-low">--:--</span></div>
+        </div>
+        <svg class="tide-chart" id="tide-chart" viewBox="0 0 600 150" role="img" aria-label="Tide chart for the next 24 hours"></svg>
+        <p class="coast-note" id="tide-note">Modelled tide times, indicative only. Reef pools and sandbars are easiest to reach around low tide, so check with reception or your operator before you go.</p>
+      </div>
+      <div class="coast-card wide">
+        <span class="coast-label">Moon</span>
+        <div class="moon-card">
+          <div class="moon-row">
+            
+            <div class="moon-icon" id="moon-icon">
+              <svg viewBox="0 0 48 48" class="moon-new"><defs><clipPath id="moon-clip"><circle cx="24" cy="24" r="16"/></clipPath></defs><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="64" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-waxing-crescent"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="48" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-first-quarter"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="40" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-waxing-gibbous"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="32" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-full"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="0" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-waning-gibbous"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="16" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-last-quarter"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="8" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+              <svg viewBox="0 0 48 48" class="moon-waning-crescent"><g clip-path="url(#moon-clip)"><circle cx="24" cy="24" r="16" class="wi-fill-dark"/><circle cx="0" cy="24" r="16" class="wi-fill-light"/></g><circle cx="24" cy="24" r="16" class="wi-stroke"/></svg>
+            </div>
+            <div class="moon-info">
+              <div class="moon-phase-name" id="moon-phase-name">—</div>
+              <div class="moon-illum" id="moon-illum">—</div>
+            </div>
+          </div>
+        </div>
+        <div class="coast-stats">
+          <div class="coast-stat"><span class="k">Next full moon</span><span class="v" id="moon-full">--</span></div>
+          <div class="coast-stat"><span class="k">Next new moon</span><span class="v" id="moon-new">--</span></div>
+        </div>
+        <p class="coast-note">Tides run strongest around full and new moon, so the water drops further out and comes in higher.</p>
       </div>
     </div>
   </div>
@@ -1116,37 +1117,9 @@ p+p { margin-top:7px !important; }
       <h2>The Frangipani Spa</h2>
       <span class="rule"></span>
     </div>
-    <div class="spa-lead-photo reveal d1">
-      <div class="parallax-wrap" style="height:360px;overflow:hidden;border-radius:2px;">
-        <img src="images/massage.png" alt="The Frangipani Spa" class="parallax-inner" data-depth="0.2" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
-      </div>
-    </div>
-    <div class="spa-intro reveal d1">
-      <p>A place to slow down further still. Please contact the hospitality desk to book your treatment — advance booking is recommended. Complimentary yoga mats are available on request for in-room practice or garden sessions. All prices in Kenyan Shillings.</p>
-    </div>
-    <div class="spa-menu reveal d2">
-      <div class="spa-category">
-        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Massage &amp; Body Treatments</h3></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Drift Away</span><span class="spa-t-desc">Head, shoulder and back massage — melts away tension, leaving you calm and refreshed.</span></div><span class="spa-t-dur">50 mins</span><span class="spa-t-price">4,500</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Tidal Flow</span><span class="spa-t-desc">Rhythmic Swedish massage — softens tight muscles, enhances relaxation.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">5,000</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Blue Reset Ritual</span><span class="spa-t-desc">Lemongrass body polish with your choice of massage — smooth, refresh, and glow.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,500</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Citrus Drift Ritual</span><span class="spa-t-desc">Deep tissue massage paired with a revitalising body scrub — release, renew, awaken.</span></div><span class="spa-t-dur">90 mins</span><span class="spa-t-price">6,500</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Jumbo Joy Prenatal</span><span class="spa-t-desc">Gentle, nurturing massage — designed to ease tension and support your changing body.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,000</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Soroi Signature Escape</span><span class="spa-t-desc">Lemongrass scrub, tailored full-body massage, and head &amp; shoulder ritual — the complete restoration.</span></div><span class="spa-t-dur">2–3 hrs</span><span class="spa-t-price">12,500</span></div>
-      </div>
-      <div class="spa-category">
-        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Facials</h3></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Tidal Calm Facial</span><span class="spa-t-desc">Deeply moisturising — hydrates, rejuvenates, and leaves a radiant glow.</span></div><span class="spa-t-dur">60 mins</span><span class="spa-t-price">6,000</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Ocean Drift Renewal Facial</span><span class="spa-t-desc">Crafted to soothe sun-stressed skin — relief, healing, and restored balance.</span></div><span class="spa-t-dur">45 mins</span><span class="spa-t-price">5,000</span></div>
-      </div>
-      <div class="spa-category spa-mani">
-        <div class="spa-cat-heading"><span class="spa-cat-dot"></span><h3>Manicure &amp; Pedicure</h3></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Ocean Ease Manicure</span><span class="spa-t-desc">Perfectly polished nails and deeply hydrated skin.</span></div><span class="spa-t-price">Gel 3,500 &nbsp;|&nbsp; Non-Gel 2,000</span></div>
-        <div class="spa-treatment"><div><span class="spa-t-name">Barefoot Drift Pedicure</span><span class="spa-t-desc">Refreshed, revitalised, and perfectly pedicured feet for the beach ahead.</span></div><span class="spa-t-price">Gel 4,500 &nbsp;|&nbsp; Non-Gel 3,000</span></div>
-      </div>
-    </div>
-    <div class="spa-footer-note reveal d3">
-      <p>Prices in Kenyan Shillings. Please contact the hospitality desk to schedule your treatment.</p>
+    <div class="spa-menu-pages reveal d1">
+      <img src="images/spa-menu-1.png" alt="Frangipani Spa menu, page 1 of 2" class="spa-menu-img">
+      <img src="images/spa-menu-2.png" alt="Frangipani Spa menu, page 2 of 2" class="spa-menu-img">
     </div>
   </div>
 </section>
@@ -1171,7 +1144,7 @@ p+p { margin-top:7px !important; }
   <div class="container-full">
     <div class="explore-feature reveal d2" style="margin:3px 52px 0;">
       <div class="explore-feature-photo">
-        <img src="images/snorkeling.jpeg" alt="Diving and snorkelling on the Diani reef">
+        <img src="images/snorkeling-portal.jpg" alt="Diving and snorkelling on the Diani reef">
       </div>
       <div class="explore-feature-panel">
         <span class="explore-feature-label">Signature Experience</span>
@@ -1184,7 +1157,7 @@ p+p { margin-top:7px !important; }
     <div class="explore-act-grid reveal d3" style="margin:20px 52px 0;">
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/deep-sea-fishing.png" alt="Deep sea fishing on the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/deep-sea-fishing-portal.jpg" alt="Deep sea fishing on the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Deep Sea Fishing</span>
@@ -1193,7 +1166,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/whale-shark.jpg" alt="Whale shark encounter in the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/whale-shark-portal.jpg" alt="Whale shark encounter in the Indian Ocean" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Whale Sharks &amp; Dolphins</span>
@@ -1215,7 +1188,7 @@ p+p { margin-top:7px !important; }
 
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/skydive-diani.jpeg" alt="Skydiving over Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/skydive-diani-portal.jpg" alt="Skydiving over Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Skydiving over Diani</span>
@@ -1224,7 +1197,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/golf.jpg" alt="Golf at Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/golf-portal.jpg" alt="Golf at Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Golf</span>
@@ -1233,7 +1206,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/yoga.png" alt="Yoga at Soroi Blue Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/yoga-portal.jpg" alt="Yoga at Soroi Blue Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Yoga &amp; Wellness</span>
@@ -1245,7 +1218,7 @@ p+p { margin-top:7px !important; }
     <div class="explore-act-grid reveal d4" style="margin:20px 52px 0;">
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/turtle-hatchery.jpeg" alt="Sea turtle hatchery Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/turtle-hatchery-portal.jpg" alt="Sea turtle hatchery Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Sea Turtle Conservation</span>
@@ -1263,7 +1236,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-act-card">
         <div class="explore-act-photo">
-          <img src="images/glass-boat.jpg" alt="Glass bottom boat Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <img src="images/glass-boat-portal.jpg" alt="Glass bottom boat Diani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="explore-act-info">
           <span class="explore-act-name">Ngalawa &amp; Glass Bottom Boat</span>
@@ -1326,7 +1299,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-trip-card">
         <div class="explore-trip-photo">
-          <img src="images/shimba-hills.jpg" alt="Shimba Hills National Park" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+          <img src="images/shimba-hills-portal.jpg" alt="Shimba Hills National Park" style="width:100%;height:100%;object-fit:cover;object-position:center;">
         </div>
         <div class="explore-trip-info">
           <span class="explore-trip-name">Shimba Hills National Park</span>
@@ -1335,7 +1308,7 @@ p+p { margin-top:7px !important; }
       </div>
       <div class="explore-trip-card">
         <div class="explore-trip-photo">
-          <img src="images/fort-jesus-mombasa.jpg" alt="Fort Jesus & Mombasa Old Town" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;">
+          <img src="images/fort-jesus-mombasa-portal.jpg" alt="Fort Jesus & Mombasa Old Town" style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;">
         </div>
         <div class="explore-trip-info">
           <span class="explore-trip-name">Fort Jesus &amp; Mombasa Old Town</span>
@@ -1421,6 +1394,20 @@ p+p { margin-top:7px !important; }
         <p>Available in front of the property. Vehicles are parked at the owner's risk. Please advise reception of your vehicle on arrival.</p>
       </div>
     </div>
+    <div class="reveal d2" id="currency">
+      <span class="coast-label">Currency Converter · Live Rates</span>
+      <div class="converter-row">
+        <input class="converter-amount" type="number" id="conv-amount" value="100" min="0" inputmode="decimal" aria-label="Amount">
+        <select class="converter-from" id="conv-from" aria-label="From currency"><option value="USD">USD</option><option value="EUR">EUR</option><option value="GBP">GBP</option><option value="KES">KES</option></select>
+      </div>
+      <div class="converter-results" id="conv-results">
+        <div class="converter-cell" data-currency="USD"><span class="k">USD</span><span class="v">—</span></div>
+        <div class="converter-cell" data-currency="EUR"><span class="k">EUR</span><span class="v">—</span></div>
+        <div class="converter-cell" data-currency="GBP"><span class="k">GBP</span><span class="v">—</span></div>
+        <div class="converter-cell" data-currency="KES"><span class="k">KES</span><span class="v">—</span></div>
+      </div>
+      <p class="currency-note">Indicative reference rate only. Please ask reception for the rate applied at the time of payment.</p>
+    </div>
   </div>
 </section>
 
@@ -1433,56 +1420,67 @@ p+p { margin-top:7px !important; }
       <span class="rule"></span>
     </div>
     <div class="rooms-intro reveal d1" style="padding:0 52px;">
-      <p>Eleven beautifully appointed rooms and suites, each named after a place along Kenya's coastline. Our accommodation ranges from intimate garden-facing rooms perfect for couples, to spacious family suites ideal for parents with children. Every room includes air conditioning, complimentary Wi-Fi, ceiling fan, fridge, hair dryer, laundry service, minibar, mosquito nets, safe, satellite television, and tea and coffee. Baby cots are available in all rooms on request.</p>
+      <p>Eleven rooms, each named after a place along Kenya's coastline. Every room includes air conditioning, complimentary Wi-Fi, fan, fridge, hair dryer, laundry service, minibar, mosquito nets, safe, satellite television, and tea and coffee. Baby cots are available in all rooms on request.</p>
     </div>
     <div class="rooms-grid-editorial reveal d2" style="margin-left:52px;margin-right:52px;">
       <!-- Garden View — 1st Floor -->
       <div class="room-card-ed">
         <span class="rce-name">Chale</span><span class="rce-rule"></span>
-        <span class="rce-view">Garden View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Double room. Ideal for couples.</p>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">Double room</span>
       </div>
       <div class="room-card-ed">
         <span class="rce-name">Funzi</span><span class="rce-rule"></span>
-        <span class="rce-view">Garden View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">King bed with day bed. Recommended for children aged six years and under.</p>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + small day bed</span>
       </div>
       <div class="room-card-ed">
         <span class="rce-name">Lamu</span><span class="rce-rule"></span>
-        <span class="rce-view">Garden View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">King bed with additional bed. Suitable for one child or small adult.</p>
+        <span class="rce-view">Garden View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + single</span>
       </div>
       <!-- Garden View — 2nd Floor -->
       <div class="room-card-ed">
         <span class="rce-name">Tiwi</span><span class="rce-rule"></span>
-        <span class="rce-view">Garden View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Queen bed. Most compact room. Best for guides, agents, drivers, or single travellers.</p>
+        <span class="rce-view">Garden View</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">Queen bed</span>
       </div>
       <!-- Ocean View — 1st Floor -->
       <div class="room-card-ed ocean">
         <span class="rce-name">Kusini</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Ocean View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">King bed with day bed. Suitable for two adults and one child.</p>
+        <span class="rce-view">Honeymoon Suite · Ocean</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + day bed + balcony star bed</span>
       </div>
       <div class="room-card-ed ocean">
         <span class="rce-name">Galu</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Ocean View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">King bed with day bed. Suitable for two adults and one child.</p>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + day bed</span>
       </div>
       <div class="room-card-ed ocean">
         <span class="rce-name">Wasini</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Ocean View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Twin beds with day bed. Recommended for families with one child under 10–12 years.</p>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">Twin · two single beds</span>
       </div>
       <div class="room-card-ed ocean">
         <span class="rce-name">Kaskazi</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Ocean View</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Double bed with day bed. Suitable for a family with one small child.</p>
+        <span class="rce-view">Ocean View</span><span class="rce-floor">1st Floor</span>
+        <span class="rce-beds">King + day bed</span>
       </div>
       <!-- Suites — 2nd Floor: Shimoni | Bahari Blue (×2) | Zanzibar -->
       <div class="room-card-ed suite">
         <span class="rce-name">Shimoni</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Junior Suite · Ocean</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Double bed with loft hideaway. Excellent for older children and teenagers.</p>
+        <span class="rce-view">Ocean View Loft</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">King + loft twin beds</span>
       </div>
       <div class="room-card-ed suite" style="grid-column:span 2;">
         <span class="rce-name">Bahari Blue</span><span class="rce-rule cobalt-rule" style="width:32px;"></span>
-        <span class="rce-view">Executive Suite · Ocean</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Two interconnected en-suite rooms with veranda. Master suite with super king bed and day bed. Twin room convertible to double. Ideal for families of up to five guests.</p>
+        <span class="rce-view">Executive Suite · Ocean</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">Super king + day bed, plus twin room &nbsp;·&nbsp; Sleeps 2 adults + 3 children, or 4 adults + 1 child</span>
       </div>
       <div class="room-card-ed suite">
         <span class="rce-name">Zanzibar</span><span class="rce-rule cobalt-rule"></span>
-        <span class="rce-view">Junior Suite · Ocean</span><p style="font-size:12px;color:var(--ink-lt);line-height:1.5;margin-top:6px;">Twin bed with loft hideaway. Excellent for older children and teenagers.</p>
+        <span class="rce-view">Coastal Loft · Ocean</span><span class="rce-floor">2nd Floor</span>
+        <span class="rce-beds">King + loft single</span>
       </div>
     </div>
     <div class="facilities-strip reveal d3" style="padding:0 52px;">
@@ -1502,7 +1500,7 @@ p+p { margin-top:7px !important; }
             <li>24-Hour Security</li><li>Indoor / Beach Bar</li><li>BBQ &amp; Pizza Oven</li>
             <li>Swimming Pool</li><li>Kids Pool</li><li>Spa</li>
             <li>Library</li><li>Pool Table</li><li>Restaurant</li>
-            <li>Secure Parking</li><li>TV Room</li><li>Intercom</li>
+            <li>Secure Parking</li><li>TV Room</li><li>Intercom</li><li>Stairlift to 2nd Floor</li>
           </ul>
         </div>
       </div>
@@ -1745,7 +1743,7 @@ p+p { margin-top:7px !important; }
 <section id="back-cover">
   <div class="back-photo-wrap parallax-wrap">
     <div class="parallax-inner" data-depth="0.2">
-      <img class="parallax-img" src="images/back-cover.jpg" alt="Soroi Blue Diani at dusk">
+      <img class="parallax-img" src="images/back-cover-portal.jpg" alt="Soroi Blue Diani at dusk">
     </div>
   </div>
   <div class="back-overlay"></div>
@@ -1847,122 +1845,164 @@ function copyWifi(btn){
     applyP();
   }
 })();
-
-// Weather card (Open-Meteo, Soroi Blue Diani GPS: 4.2718°S 39.5971°E)
+</script>
+<script>
+/* Coast Today widgets. Open-Meteo (no key). Coordinates are Soroi Blue Diani (4.2718S, 39.5971E);
+   marine point is just offshore. Tide times are model-derived (sea_level_height_msl),
+   indicative only. */
 (function(){
-  var WMO={
-    0:{d:'Clear skies',i:'wi-clear'},1:{d:'Mainly clear',i:'wi-partly'},2:{d:'Partly cloudy',i:'wi-partly'},3:{d:'Overcast',i:'wi-cloudy'},
-    45:{d:'Foggy',i:'wi-cloudy'},48:{d:'Foggy',i:'wi-cloudy'},
-    51:{d:'Light drizzle',i:'wi-rain'},53:{d:'Drizzle',i:'wi-rain'},55:{d:'Heavy drizzle',i:'wi-rain'},
-    56:{d:'Freezing drizzle',i:'wi-rain'},57:{d:'Freezing drizzle',i:'wi-rain'},
-    61:{d:'Light rain',i:'wi-rain'},63:{d:'Rain',i:'wi-rain'},65:{d:'Heavy rain',i:'wi-rain'},
-    66:{d:'Freezing rain',i:'wi-rain'},67:{d:'Freezing rain',i:'wi-rain'},
-    71:{d:'Light snow',i:'wi-rain'},73:{d:'Snow',i:'wi-rain'},75:{d:'Heavy snow',i:'wi-rain'},77:{d:'Snow grains',i:'wi-rain'},
-    80:{d:'Rain showers',i:'wi-rain'},81:{d:'Rain showers',i:'wi-rain'},82:{d:'Heavy rain showers',i:'wi-rain'},
-    85:{d:'Snow showers',i:'wi-rain'},86:{d:'Snow showers',i:'wi-rain'},
-    95:{d:'Thunderstorm',i:'wi-storm'},96:{d:'Thunderstorm, hail',i:'wi-storm'},99:{d:'Thunderstorm, hail',i:'wi-storm'}
-  };
+  var LAT=-4.2718,LON=39.5971,MLAT=-4.30,MLON=39.63;
+  function $(id){return document.getElementById(id);}
   function hhmm(iso){return iso?iso.slice(11,16):'--:--';}
-  var card=document.getElementById('weather-card');
-  var iconWrap=document.getElementById('weather-icon');
-  var elTemp=document.getElementById('weather-temp');
-  var elDesc=document.getElementById('weather-desc');
-  var elDetail=document.getElementById('weather-detail');
-  var elSun=document.getElementById('weather-sun');
-  var url='https://api.open-meteo.com/v1/forecast?latitude=-4.2718&longitude=39.5971'
-    +'&current=temperature_2m,apparent_temperature,weather_code'
-    +'&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset'
-    +'&timezone=Africa%2FNairobi';
-  fetch(url).then(function(r){if(!r.ok)throw new Error('weather fetch failed');return r.json();}).then(function(data){
-    var cur=data.current,daily=data.daily;
-    var meta=WMO[cur.weather_code]||{d:'—',i:'wi-clear'};
-    var icon=iconWrap.querySelector('.'+meta.i);
-    if(icon)icon.classList.add('active');
-    elTemp.textContent=Math.round(cur.temperature_2m)+'°';
-    elDesc.textContent=meta.d;
-    elDetail.textContent='Feels like '+Math.round(cur.apparent_temperature)+'° · H '+Math.round(daily.temperature_2m_max[0])+'° / L '+Math.round(daily.temperature_2m_min[0])+'°';
-    elSun.innerHTML='Sunrise <span>'+hhmm(daily.sunrise[0])+'</span> &middot; Sunset <span>'+hhmm(daily.sunset[0])+'</span>';
+  function fail(id){var el=$(id);if(el)el.classList.add('is-error');}
+  var WMO={0:['Clear skies','wi-clear'],1:['Mainly clear','wi-partly'],2:['Partly cloudy','wi-partly'],3:['Overcast','wi-cloudy'],45:['Foggy','wi-cloudy'],48:['Foggy','wi-cloudy'],
+    51:['Light drizzle','wi-rain'],53:['Drizzle','wi-rain'],55:['Heavy drizzle','wi-rain'],56:['Drizzle','wi-rain'],57:['Drizzle','wi-rain'],
+    61:['Light rain','wi-rain'],63:['Rain','wi-rain'],65:['Heavy rain','wi-rain'],66:['Rain','wi-rain'],67:['Rain','wi-rain'],
+    80:['Rain showers','wi-rain'],81:['Rain showers','wi-rain'],82:['Heavy showers','wi-rain'],95:['Thunderstorm','wi-storm'],96:['Thunderstorm','wi-storm'],99:['Thunderstorm','wi-storm']};
+  var DIRS=['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
+  function compass(d){return DIRS[Math.round(d/22.5)%16];}
+  function uvLabel(u){return u<3?'Low':u<6?'Moderate':u<8?'High':u<11?'Very high':'Extreme';}
+  function mins(iso){return Date.UTC(+iso.slice(0,4),+iso.slice(5,7)-1,+iso.slice(8,10),+iso.slice(11,13),+iso.slice(14,16))/60000;}
+  function fmtMin(m){var h=Math.floor(m/60)%24,mm=Math.round(m%60);if(mm===60){mm=0;h=(h+1)%24;}return (h<10?'0':'')+h+':'+(mm<10?'0':'')+mm;}
+
+  // Weather + wind + UV + sun
+  fetch('https://api.open-meteo.com/v1/forecast?latitude='+LAT+'&longitude='+LON
+    +'&current=temperature_2m,apparent_temperature,weather_code,relative_humidity_2m,wind_speed_10m,wind_direction_10m,uv_index'
+    +'&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,uv_index_max&timezone=Africa%2FNairobi')
+  .then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+    var c=d.current,dy=d.daily,m=WMO[c.weather_code]||['—','wi-clear'];
+    var ic=document.querySelector('#weather-icon .'+m[1]);if(ic)ic.classList.add('active');
+    $('weather-temp').textContent=Math.round(c.temperature_2m)+'°';
+    $('weather-desc').textContent=m[0];
+    $('weather-detail').textContent='Feels like '+Math.round(c.apparent_temperature)+'° · H '+Math.round(dy.temperature_2m_max[0])+'° / L '+Math.round(dy.temperature_2m_min[0])+'°';
+    $('weather-sun').innerHTML='Humidity <span>'+Math.round(c.relative_humidity_2m)+'%</span> &middot; Rain chance <span>'+(dy.precipitation_probability_max[0]==null?'--':dy.precipitation_probability_max[0]+'%')+'</span>';
+    $('wind-speed').textContent=Math.round(c.wind_speed_10m)+' km/h';
+    $('wind-desc').textContent='From the '+compass(c.wind_direction_10m);
+    $('uv-now').textContent=Math.round(c.uv_index*10)/10+' · '+uvLabel(c.uv_index);
+    $('uv-max').textContent=Math.round(dy.uv_index_max[0]*10)/10+' · '+uvLabel(dy.uv_index_max[0]);
+    if(dy.uv_index_max[0]>=6)$('uv-note').textContent='UV is high today. Reapply sunscreen after swimming and keep to the shade around midday.';
+    var rise=mins(dy.sunrise[0]),set=mins(dy.sunset[0]),len=set-rise;
+    $('sun-rise').textContent=hhmm(dy.sunrise[0]);
+    $('sun-set').textContent=hhmm(dy.sunset[0]);
+    $('sun-golden').textContent=fmtMin(set-60);
+    $('sun-len').textContent=Math.floor(len/60)+'h '+Math.round(len%60)+'m';
   }).catch(function(){
-    card.classList.add('is-error');
-    var icon=iconWrap.querySelector('.wi-cloudy');
-    if(icon)icon.classList.add('active');
-    elTemp.textContent='--°';
-    elDesc.textContent='[Conditions unavailable — check with reception]';
-    elDetail.textContent='';
-    elSun.innerHTML='';
+    var ic=document.querySelector('#weather-icon .wi-cloudy');if(ic)ic.classList.add('active');
+    $('weather-temp').textContent='--°';$('weather-desc').textContent='Conditions unavailable. Please ask reception.';
+    $('wind-desc').textContent='Unavailable';
   });
-})();
 
-// Moon phase (calculated client-side, no API)
-(function(){
-  var SYNODIC=29.530588853;
-  var KNOWN_NEW_MOON=Date.UTC(2000,0,6,18,14,0); // 2000-01-06 18:14 UTC
-  var daysSince=(Date.now()-KNOWN_NEW_MOON)/86400000;
-  var phase=(daysSince%SYNODIC)/SYNODIC;
-  if(phase<0)phase+=1;
-  var illum=Math.round((1-Math.cos(2*Math.PI*phase))/2*100);
-  var names=['New Moon','Waxing Crescent','First Quarter','Waxing Gibbous','Full Moon','Waning Gibbous','Last Quarter','Waning Crescent'];
-  var classes=['moon-new','moon-waxing-crescent','moon-first-quarter','moon-waxing-gibbous','moon-full','moon-waning-gibbous','moon-last-quarter','moon-waning-crescent'];
-  var idx=Math.floor(phase*8+0.5)%8;
-  var iconWrap=document.getElementById('moon-icon');
-  var icon=iconWrap.querySelector('.'+classes[idx]);
-  if(icon)icon.classList.add('active');
-  document.getElementById('moon-phase-name').textContent=names[idx];
-  document.getElementById('moon-illum').textContent=illum+'% illuminated';
-})();
+  // Sea temp, waves, tides
+  fetch('https://marine-api.open-meteo.com/v1/marine?latitude='+MLAT+'&longitude='+MLON
+    +'&current=sea_surface_temperature,wave_height,wave_period&hourly=sea_level_height_msl&forecast_days=3&timezone=Africa%2FNairobi')
+  .then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+    var c=d.current;
+    $('sea-temp').textContent=Math.round(c.sea_surface_temperature*10)/10+'°C';
+    var t=c.sea_surface_temperature;
+    $('sea-desc').textContent=t>=27?'Warm, ideal for swimming':t>=24?'Pleasantly warm':'Cool for the coast';
+    $('sea-wave').textContent=c.wave_height!=null?c.wave_height.toFixed(1)+' m':'--';
+    $('sea-period').textContent=c.wave_period!=null?Math.round(c.wave_period)+' s':'--';
 
-// Tides (Diani Beach, East Africa)
-// Based on typical semi-diurnal tides in this region
-(function(){
-  var now=new Date();
-  var hours=now.getHours();
-  var minutes=now.getMinutes();
-
-  // Diani tide approximation: high tides roughly 6:30, 18:45; low tides roughly 0:15, 12:30
-  // Simple model: predict next two tides
-  var tideTimesHigh=[6.5,18.75];
-  var tideTimesLow=[0.25,12.5];
-  var currentHours=hours+minutes/60;
-
-  var nextHigh='--:--',nextLow='--:--';
-
-  for(var i=0;i<tideTimesHigh.length;i++){
-    var t=tideTimesHigh[i];
-    if(t>currentHours){
-      var h=Math.floor(t);
-      var m=Math.round((t-h)*60);
-      nextHigh=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
-      break;
+    var T=d.hourly.time,H=d.hourly.sea_level_height_msl,now=mins(d.current.time);
+    var tm=T.map(mins);
+    // extrema with parabolic refinement
+    var ex=[];
+    for(var i=1;i<H.length-1;i++){
+      var hi=H[i]>H[i-1]&&H[i]>=H[i+1],lo=H[i]<H[i-1]&&H[i]<=H[i+1];
+      if(hi||lo){
+        var a=H[i-1],b=H[i],cc=H[i+1],den=a-2*b+cc,off=den?0.5*(a-cc)/den:0;
+        ex.push({t:tm[i]+off*60,h:b-0.25*(a-cc)*off,high:hi});
+      }
     }
-  }
-  if(nextHigh==='--:--' && tideTimesHigh[0]){
-    var t=tideTimesHigh[0]+(24-currentHours);
-    var h=Math.floor(t);
-    if(h>=24)h-=24;
-    var m=Math.round((t-Math.floor(t))*60);
-    if(m>=60){m-=60;h+=1;}
-    nextHigh=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
-  }
+    var up=ex.filter(function(e){return e.t>=now;});
+    var nh=up.filter(function(e){return e.high;})[0],nl=up.filter(function(e){return !e.high;})[0];
+    if(nh)$('tide-high').textContent=fmtMin(nh.t);
+    if(nl)$('tide-low').textContent=fmtMin(nl.t);
+    if(up[0])$('tide-state').textContent=up[0].high?'Rising':'Falling';
 
-  for(var i=0;i<tideTimesLow.length;i++){
-    var t=tideTimesLow[i];
-    if(t>currentHours){
-      var h=Math.floor(t);
-      var m=Math.round((t-h)*60);
-      nextLow=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
-      break;
+    // 24h chart starting 1h ago
+    var start=now-60,end=start+25*60,pts=[];
+    for(var j=0;j<tm.length;j++)if(tm[j]>=start&&tm[j]<=end)pts.push([tm[j],H[j]]);
+    if(pts.length>2){
+      var lo2=Math.min.apply(null,pts.map(function(p){return p[1];})),hi2=Math.max.apply(null,pts.map(function(p){return p[1];}));
+      var W=600,Hh=150,padT=22,padB=24,padX=14;
+      function X(m){return padX+(m-start)/(end-start)*(W-2*padX);}
+      function Y(h){return padT+(hi2-h)/((hi2-lo2)||1)*(Hh-padT-padB);}
+      var path=pts.map(function(p,k){return (k?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);}).join(' ');
+      var svg='<path class="t-area" d="'+path+' L'+X(pts[pts.length-1][0]).toFixed(1)+' '+(Hh-padB)+' L'+X(pts[0][0]).toFixed(1)+' '+(Hh-padB)+'Z"/>'
+        +'<path class="t-line" d="'+path+'"/>';
+      ex.filter(function(e){return e.t>=start&&e.t<=end;}).forEach(function(e){
+        var x=X(e.t),y=Y(e.h);
+        svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="3" fill="var(--cobalt)"/>'
+          +'<text class="t-ex" x="'+x.toFixed(1)+'" y="'+(e.high?y-8:y+16).toFixed(1)+'" text-anchor="middle">'+(e.high?'High ':'Low ')+fmtMin(e.t)+'</text>';
+      });
+      var nx=X(now);
+      svg+='<line class="t-now" x1="'+nx.toFixed(1)+'" y1="'+padT+'" x2="'+nx.toFixed(1)+'" y2="'+(Hh-padB)+'"/><circle class="t-dot" cx="'+nx.toFixed(1)+'" cy="'+Y(H[tm.indexOf(Math.round(now/60)*60)>=0?tm.indexOf(Math.round(now/60)*60):0]).toFixed(1)+'" r="4"/>'
+        +'<text x="'+nx.toFixed(1)+'" y="'+(Hh-6)+'" text-anchor="middle">Now</text>';
+      $('tide-chart').innerHTML=svg;
     }
-  }
-  if(nextLow==='--:--' && tideTimesLow[0]){
-    var t=tideTimesLow[0]+(24-currentHours);
-    var h=Math.floor(t);
-    if(h>=24)h-=24;
-    var m=Math.round((t-Math.floor(t))*60);
-    if(m>=60){m-=60;h+=1;}
-    nextLow=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+  }).catch(function(){
+    $('sea-desc').textContent='Sea conditions unavailable. Please ask reception.';
+    $('tide-state').textContent='--';
+    $('tide-note').textContent='Tide times are unavailable right now. Please ask reception for today’s tide table.';
+  });
+
+  // Moon (client-side)
+  (function(){
+    var SYN=29.530588853,NEW=Date.UTC(2000,0,6,18,14,0);
+    var days=(Date.now()-NEW)/86400000,phase=((days%SYN)+SYN)%SYN/SYN;
+    var illum=Math.round((1-Math.cos(2*Math.PI*phase))/2*100);
+    var names=['New Moon','Waxing Crescent','First Quarter','Waxing Gibbous','Full Moon','Waning Gibbous','Last Quarter','Waning Crescent'];
+    var cls=['moon-new','moon-waxing-crescent','moon-first-quarter','moon-waxing-gibbous','moon-full','moon-waning-gibbous','moon-last-quarter','moon-waning-crescent'];
+    var idx=Math.floor(phase*8+0.5)%8;
+    var ic=document.querySelector('#moon-icon .'+cls[idx]);if(ic)ic.classList.add('active');
+    $('moon-phase-name').textContent=names[idx];
+    $('moon-illum').textContent=illum+'% illuminated';
+    function nextAt(target){var d=((target-phase)+1)%1*SYN;return new Date(Date.now()+d*86400000);}
+    function fmt(dt){return dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'Africa/Nairobi'});}
+    $('moon-full').textContent=fmt(nextAt(0.5));
+    $('moon-new').textContent=fmt(nextAt(0));
+  })();
+})();
+</script>
+<script>
+// Currency converter (open.er-api.com, indicative — one fetch, live client-side
+// conversion) — ported from the Soroi Samburu Lodge guest guide.
+(function(){
+  var amountEl=document.getElementById('conv-amount');
+  var fromEl=document.getElementById('conv-from');
+  var resultsEl=document.getElementById('conv-results');
+  if(!amountEl||!fromEl||!resultsEl)return;
+  var rates=null; // { USD:1, EUR:.., GBP:.., KES:.. } — all relative to USD
+
+  function render(){
+    var cells=resultsEl.querySelectorAll('.converter-cell');
+    var from=fromEl.value;
+    var amount=parseFloat(amountEl.value);
+    cells.forEach(function(cell){
+      var cur=cell.getAttribute('data-currency');
+      var v=cell.querySelector('.v');
+      cell.classList.toggle('is-from',cur===from);
+      if(!rates){v.textContent='[Unavailable]';return;}
+      if(isNaN(amount)){v.textContent='—';return;}
+      var usdAmount = from==='USD' ? amount : amount/rates[from];
+      var converted = cur==='USD' ? usdAmount : usdAmount*rates[cur];
+      v.textContent = converted.toLocaleString(undefined,{maximumFractionDigits:2,minimumFractionDigits:2});
+    });
   }
 
-  document.getElementById('tide-time').textContent='High at '+nextHigh+' · Low at '+nextLow;
+  amountEl.addEventListener('input',render);
+  fromEl.addEventListener('change',render);
+
+  fetch('https://open.er-api.com/v6/latest/USD').then(function(r){if(!r.ok)throw new Error('rate fetch failed');return r.json();}).then(function(data){
+    rates={USD:1,EUR:data.rates.EUR,GBP:data.rates.GBP,KES:data.rates.KES};
+    render();
+  }).catch(function(){
+    rates=null;
+    amountEl.disabled=true;
+    fromEl.disabled=true;
+    render();
+  });
 })();
 </script>
 </body>
